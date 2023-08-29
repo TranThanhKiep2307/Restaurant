@@ -24,36 +24,38 @@ $activate = "reservation";
 		          	<span class="subheading">Book a table</span>
 		            <h2 class="mb-4">Make Reservation</h2>
 		          </div>
-	            <form action="#">
+	            <form onsubmit="showMessageBox()" action="#">
 	              <div class="row">
 	                <div class="col-md-6">
 	                  <div class="form-group">
 	                    <label for="">Name</label>
-	                    <input type="text" class="form-control" placeholder="Your Name">
+	                    <input id="name" type="text" class="form-control" placeholder="Your Name" required>
 	                  </div>
 	                </div>
 	                <div class="col-md-6">
 	                  <div class="form-group">
 	                    <label for="">Email</label>
-	                    <input type="text" class="form-control" placeholder="Your Email">
+	                    <input id="email" type="text" class="form-control" placeholder="Your Email" required>
 	                  </div>
 	                </div>
 	                <div class="col-md-6">
 	                  <div class="form-group">
 	                    <label for="">Phone</label>
-	                    <input type="text" class="form-control" placeholder="Phone">
+	                    <input id="sdt" type="text" class="form-control" placeholder="Phone" required>
 	                  </div>
 	                </div>
 	                <div class="col-md-6">
 	                  <div class="form-group">
-	                    <label for="">Phone</label>
-	                    <input type="text" class="form-control" id="book_date" placeholder="Date">
+	                    <label for="">Date</label>
+	                    <input id="date" type="text" class="form-control" id="book_date" placeholder="Date" required>
 	                  </div>
 	                </div>
 	                <div class="col-md-6">
+
+						
 	                  <div class="form-group">
 	                    <label for="">Time</label>
-	                    <input type="text" class="form-control" id="book_time" placeholder="Time">
+	                    <input id="time" type="text" class="form-control" id="book_time" placeholder="Time" required>
 	                  </div>
 	                </div>
 	                <div class="col-md-6">
@@ -61,7 +63,7 @@ $activate = "reservation";
 	                    <label for="">Person</label>
 	                    <div class="select-wrap one-third">
 	                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-	                      <select name="" id="" class="form-control">
+	                      <select name="" id="person" class="form-control">
 	                        <option value="">Person</option>
 	                        <option value="">1</option>
 	                        <option value="">2</option>
@@ -73,13 +75,30 @@ $activate = "reservation";
 	                </div>
 	                <div class="col-md-12 mt-3">
 	                  <div class="form-group">
-	                    <input type="submit" value="Make a Reservation" class="btn btn-primary py-3 px-5">
+	                    <button onsubmit="showMessageBox()" type="submit" value="" class="btn btn-primary py-3 px-5">Make a Reservation</button>
 	                  </div>
 	                </div>
 	              </div>
 	            </form>
 	          </div>
           </div>
+
+		  <script>
+				 function showMessageBox() {
+    			var message = "Reservation successful!";
+    			alert(message);
+                document.getElementById('name').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('sdt').value = '';
+				document.getElementById('time').value ='';
+				document.getElementById('date').value = '';
+				document.getElementById('person').value = '';
+                // var textarea = document.getElementById("address");
+                //     textarea.value = "";
+                // console.log(document.getElementById('address'));
+             
+					}
+		 </script>
           <div class="col-md-6 d-flex align-items-stretch pb-5 pb-md-0">
 						<div id="map"></div>
 					</div>
