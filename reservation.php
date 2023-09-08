@@ -47,7 +47,7 @@ $activate = "reservation";
 	                <div class="col-md-6">
 	                  <div class="form-group">
 	                    <label for="">Date</label>
-	                    <input id="date" type="text" class="form-control" id="book_date" placeholder="Date" required>
+	                    <input id="date" type="date" class="form-control" id="book_date" placeholder="Date" required>
 	                  </div>
 	                </div>
 	                <div class="col-md-6">
@@ -55,7 +55,7 @@ $activate = "reservation";
 						
 	                  <div class="form-group">
 	                    <label for="">Time</label>
-	                    <input id="time" type="text" class="form-control" id="book_time" placeholder="Time" required>
+	                    <input id="time" type="time" class="form-control" id="book_time" placeholder="Time" required>
 	                  </div>
 	                </div>
 	                <div class="col-md-6">
