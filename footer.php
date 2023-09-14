@@ -3,8 +3,8 @@
         <div class="row mb-5">
           <div class="col-md-6 col-lg-3">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Feliciano</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <h2 class="ftco-heading-2">FOXXOF</h2>
+              <p>Nhà hàng tập sự</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -14,15 +14,15 @@
           </div>
           <div class="col-md-6 col-lg-3">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Open Hours</h2>
+              <h2 class="ftco-heading-2">Giờ mở cửa</h2>
               <ul class="list-unstyled open-hours">
-                <li class="d-flex"><span>Monday</span><span>9:00 - 24:00</span></li>
-                <li class="d-flex"><span>Tuesday</span><span>9:00 - 24:00</span></li>
-                <li class="d-flex"><span>Wednesday</span><span>9:00 - 24:00</span></li>
-                <li class="d-flex"><span>Thursday</span><span>9:00 - 24:00</span></li>
-                <li class="d-flex"><span>Friday</span><span>9:00 - 02:00</span></li>
-                <li class="d-flex"><span>Saturday</span><span>9:00 - 02:00</span></li>
-                <li class="d-flex"><span>Sunday</span><span> 9:00 - 02:00</span></li>
+                <li class="d-flex"><span>Thứ hai</span><span>8:00 - 21:00</span></li>
+                <li class="d-flex"><span>Thứ ba</span><span>8:00 - 21:00</span></li>
+                <li class="d-flex"><span>Thứ tư</span><span>8:00 - 21:00</span></li>
+                <li class="d-flex"><span>Thứ năm</span><span>8:00 - 21:00</span></li>
+                <li class="d-flex"><span>Thứ sáu</span><span>8:00 - 21:00</span></li>
+                <li class="d-flex"><span>Thứ bảy</span><span>8:00 - 21:00</span></li>
+                <li class="d-flex"><span>Chủ nhật</span><span> 8:00 - 21:00</span></li>
               </ul>
             </div>
           </div>
@@ -58,14 +58,6 @@
                 </div>
               </form>
             </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
-
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>
       </div>

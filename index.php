@@ -10,7 +10,7 @@ $activate = "index";
           <div class="row slider-text js-fullheight justify-content-center align-items-center" data-scrollax-parent="true">
 
             <div class="col-md-12 col-sm-12 text-center ftco-animate">
-            	<span class="subheading">Feliciano</span>
+            	<span class="subheading">FOXXOF</span>
               <h1 class="mb-4">Best Restaurant</h1>
             </div>
 
@@ -24,7 +24,7 @@ $activate = "index";
           <div class="row slider-text js-fullheight justify-content-center align-items-center" data-scrollax-parent="true">
 
             <div class="col-md-12 col-sm-12 text-center ftco-animate">
-            	<span class="subheading">Feliciano</span>
+            	<span class="subheading">FOXXOF</span>
               <h1 class="mb-4">Nutritious &amp; Tasty</h1>
             </div>
 
@@ -38,7 +38,7 @@ $activate = "index";
           <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
             <div class="col-md-12 col-sm-12 text-center ftco-animate">
-            	<span class="subheading">Feliciano</span>
+            	<span class="subheading">FOXXOF</span>
               <h1 class="mb-4">Delicious Specialties</h1>
             </div>
 
@@ -47,7 +47,7 @@ $activate = "index";
       </div>
     </section>
 
-    <section class="ftco-section ftco-no-pt ftco-no-pb">
+    <!-- <section class="ftco-section ftco-no-pt ftco-no-pb">
     	<div class="container-fluid">
     		<div class="row">
     			<div class="col-md-12">
@@ -95,9 +95,9 @@ $activate = "index";
     		</div>
     	</div>
     </section>
-	
+	 -->
 
-		<section class="ftco-section ftco-wrap-about">
+		<!-- <section class="ftco-section ftco-wrap-about">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-7 d-flex">
@@ -117,10 +117,10 @@ $activate = "index";
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 
 		
-		<section class="ftco-section ftco-counter img ftco-no-pt" id="section-counter">
+		<!-- <section class="ftco-section ftco-counter img ftco-no-pt" id="section-counter">
     	<div class="container">
     		<div class="row d-md-flex">
     			<div class="col-md-9">
@@ -164,14 +164,14 @@ $activate = "index";
           </div>
         </div>
     	</div>
-    </section>
+    </section> -->
 
 		<section class="ftco-section bg-light">
 			<div class="container">
 				<div class="row justify-content-center mb-5 pb-2">
           <div class="col-md-12 text-center heading-section ftco-animate">
-          	<span class="subheading">Services</span>
-            <h2 class="mb-4">Catering Services</h2>
+          	<span class="subheading">Dịch vụ</span>
+            <h2 class="mb-4">Dịch vụ ăn uống</h2>
           </div>
         </div>
         <div class="row">
@@ -181,8 +181,8 @@ $activate = "index";
             		<span class="flaticon-cake"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <h3 class="heading">Birthday Party</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <h3 class="heading">Tiệc sinh nhật</h3>
+                <!-- <p>Sẵn sàng cho bữa tiệc sinh nhật của bạn</p> -->
               </div>
             </div>      
           </div>
@@ -192,8 +192,8 @@ $activate = "index";
             		<span class="flaticon-meeting"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <h3 class="heading">Business Meetings</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <h3 class="heading">Bàn ăn</h3>
+                <!-- <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p> -->
               </div>
             </div>    
           </div>
@@ -203,8 +203,8 @@ $activate = "index";
             		<span class="flaticon-tray"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <h3 class="heading">Wedding Party</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <h3 class="heading">Tiệc cưới</h3>
+                <!-- <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p> -->
               </div>
             </div>      
           </div>
@@ -217,7 +217,7 @@ $activate = "index";
     		<div class="row no-gutters justify-content-center mb-5 pb-2">
           <div class="col-md-12 text-center heading-section ftco-animate">
           	<span class="subheading">Specialties</span>
-            <h2 class="mb-4">Our Menu</h2>
+            <h2 class="mb-4">Menu</h2>
           </div>
         </div>
         <div class="row no-gutters d-flex align-items-stretch">
@@ -341,7 +341,7 @@ $activate = "index";
     	</div>
     </section>
     
-		<section class="ftco-section">
+		<!-- <section class="ftco-section">
 			<div class="container">
 				<div class="row justify-content-center mb-5 pb-2">
           <div class="col-md-12 text-center heading-section ftco-animate">
@@ -420,9 +420,9 @@ $activate = "index";
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 
-		<section class="ftco-section img" style="background-image: url(images/bg_3.jpg)" data-stellar-background-ratio="0.5">
+		<section class="ftco-section img" style="background-image: url(images/bg_3.jpg)" data-stellar-background-ratio="0.1">
 			<div class="container">
 				<div class="row d-flex">
           <div class="col-md-7 ftco-animate makereservation p-4 px-md-5 pb-md-5">
@@ -489,7 +489,7 @@ $activate = "index";
 			</div>
 		</section>
 		
-		<section class="ftco-section testimony-section img">
+		<!-- <section class="ftco-section testimony-section img">
 			<div class="overlay"></div>
       <div class="container">
         <div class="row justify-content-center mb-5">
@@ -575,14 +575,14 @@ $activate = "index";
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 		
 		<section class="ftco-section bg-light">
 			<div class="container">
 				<div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center heading-section ftco-animate">
-          	<span class="subheading">Blog</span>
-            <h2 class="mb-4">Recent Posts</h2>
+          	<span class="subheading">Tin tức</span>
+            <h2 class="mb-4">FOXXOF</h2>
           </div>
         </div>
 				<div class="row">
