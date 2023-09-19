@@ -8,7 +8,7 @@ $activate = "menu";
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
           <div class="col-md-9 ftco-animate text-center mb-4">
-            <h1 class="mb-2 bread">Specialties</h1>
+            <h1 class="mb-2 bread">Thực đơn</h1>
             <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Trang chủ <i class="ion-ios-arrow-forward"></i></a></span> <span>Thực đơn <i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
@@ -28,11 +28,11 @@ $activate = "menu";
 
 	              <a class="nav-link ftco-animate" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">Các loại thịt</a>
 
-	              <a class="nav-link ftco-animate" id="v-pills-4-tab" data-toggle="pill" href="#v-pills-4" role="tab" aria-controls="v-pills-4" aria-selected="false">Drinks</a>
+	              <a class="nav-link ftco-animate" id="v-pills-4-tab" data-toggle="pill" href="#v-pills-4" role="tab" aria-controls="v-pills-4" aria-selected="false">Nước uống</a>
 
-	              <a class="nav-link ftco-animate" id="v-pills-5-tab" data-toggle="pill" href="#v-pills-5" role="tab" aria-controls="v-pills-5" aria-selected="false">Desserts</a>
+	              <a class="nav-link ftco-animate" id="v-pills-5-tab" data-toggle="pill" href="#v-pills-5" role="tab" aria-controls="v-pills-5" aria-selected="false">Món tráng miệng</a>
 
-	              <a class="nav-link ftco-animate" id="v-pills-6-tab" data-toggle="pill" href="#v-pills-6" role="tab" aria-controls="v-pills-6" aria-selected="false">Wine</a>
+	              <a class="nav-link ftco-animate" id="v-pills-6-tab" data-toggle="pill" href="#v-pills-6" role="tab" aria-controls="v-pills-6" aria-selected="false">Rượu</a>
 
 	            </div>
 	          </div>
@@ -56,7 +56,7 @@ $activate = "menu";
 							                </div>
 							              </div>
 							              <p><span>Thịt bò Mỹ</span>, <span>Tôm</span>, <span>Mực</span>, <span>2 Món khai vị</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -75,7 +75,7 @@ $activate = "menu";
 							                </div>
 							              </div>
 							              <p><span>Thịt bò Mỹ</span>, <span>Tôm</span>, <span>Mực</span>, <span>2 món khai vị</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -95,7 +95,7 @@ $activate = "menu";
 							                </div>
 							              </div>
 							              <p><span>Thịt bò Mỹ</span>, <span>Tôm</span>, <span>Mực</span>, <span>Gà</span,<span>3 món khai vị</span>></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -114,7 +114,7 @@ $activate = "menu";
 							                </div>
 							              </div>
 							              <p><span>Thịt bò Mỹ</span>, <span>Tôm</span>, <span>Nghêu</span>, <span>Cá</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -134,7 +134,7 @@ $activate = "menu";
 							                </div>
 							              </div>
 							              <p><span>Thịt bò Mỹ</span>, <span>Cá</span>, <span>Tôm</span>, <span>Mực</span>,<span>Nghêu</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -153,7 +153,7 @@ $activate = "menu";
 							                </div>
 							              </div>
 							              <p><span>Thịt bò Mỹ</span>, <span>Tôm</span>, <span>Cá</span>, <span>Mực</span>,<span>Nghêu</span>,<span>3 món khai vị</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -173,7 +173,7 @@ $activate = "menu";
 							                </div>
 							              </div>
 							              <p><span>Thị bò Mỹ</span>, <span>Tôm</span>, <span>Mực</span>, <span>Chân gà</span>,<span>3 món khai vị</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -192,7 +192,7 @@ $activate = "menu";
 							                </div>
 							              </div>
 							              <p><span>Thịt bò</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -216,7 +216,7 @@ $activate = "menu";
 							                </div>
 							              </div>
 							              <p><span>Tương đen</span>, <span>Cà ri</span>, <span>Kem</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -235,7 +235,7 @@ $activate = "menu";
 							                </div>
 							              </div>
 							              <p><span>Salad</span>, <span>Cà chua</span>, <span>phô mai</span>, <span>Ớt chuông</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -255,7 +255,7 @@ $activate = "menu";
 							                </div>
 							              </div>
 							              <p><span>Bí đỏ</span>, <span>Kem tươi</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -274,7 +274,7 @@ $activate = "menu";
 							                </div>
 							              </div>
 							              <p><span>Tôm</span>, <span>Thịt</span>, <span>Nấm </span>, <span>Bắp</span>,<span>hành tím</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -294,7 +294,7 @@ $activate = "menu";
 							                </div>
 							              </div>
 							              <p><span>Thịt bò</span>, <span>Phô mai</span>, <span>Hành tây</span>, <span>Bánh mỳ</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -313,7 +313,7 @@ $activate = "menu";
 							                </div>
 							              </div>
 							              <p><span>Mực</span>, <span>Dưa leo</span>, <span>cà rốt</span>, <span>Ớt</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -333,7 +333,7 @@ $activate = "menu";
 							                </div>
 							              </div>
 							              <p><span>Thịt</span>, <span>Tôm</span>, <span>Bắp cải</span>, <span>Đậu phụ</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -352,7 +352,7 @@ $activate = "menu";
 							                </div>
 							              </div>
 							              <p><span>Thịt</span>, <span>Củ sắn</span>, <span>Trứng </span>, <span>Nấm</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -376,7 +376,7 @@ $activate = "menu";
 							                </div>
 							              </div>
 							              <p><span>Thịt bò Mỹ</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -395,7 +395,7 @@ $activate = "menu";
 							                </div>
 							              </div>
 							              <p><span>Thịt thăn vai</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -415,7 +415,7 @@ $activate = "menu";
 							                </div>
 							              </div>
 							              <p><span>Thịt bắp bò Mỹ</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -434,7 +434,7 @@ $activate = "menu";
 							                </div>
 							              </div>
 							              <p><span>Thăn ngoại bò Wagyu</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -454,7 +454,7 @@ $activate = "menu";
 							                </div>
 							              </div>
 							              <p><span>Thịt bò hữu cơ Obe</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -473,7 +473,7 @@ $activate = "menu";
 							                </div>
 							              </div>
 							              <p><span>Thịt ba chỉ bò Mỹ</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -490,14 +490,14 @@ $activate = "menu";
 													<div>
 						              	<div class="d-flex">
 							                <div class="one-half">
-							                  <h3>Grilled Beef with potatoes</h3>
+							                  <h3>Cocktail Bloody Mary</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$29</span>
+							                  <span class="price">39.000đ</span>
 							                </div>
 							              </div>
-							              <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><span>nước cốt chanh</span>, <span>Cần tây</span>, <span>Ôliu</span>, <span>Ớt</span></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -509,14 +509,14 @@ $activate = "menu";
 													<div>
 						              	<div class="d-flex">
 							                <div class="one-half">
-							                  <h3>Grilled Beef with potatoes</h3>
+							                  <h3>Cocktail Mojito</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$29</span>
+							                  <span class="price">49.000đ</span>
 							                </div>
 							              </div>
-							              <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><span>Rượu rum</span>, <span>Nước cốt chanh</span>, <span>Bạc hà</span></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -529,14 +529,14 @@ $activate = "menu";
 													<div>
 						              	<div class="d-flex">
 							                <div class="one-half">
-							                  <h3>Grilled Beef with potatoes</h3>
+							                  <h3>Nước ép cam</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$29</span>
+							                  <span class="price">29.000đ</span>
 							                </div>
 							              </div>
-							              <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><span>Cam tươi</span></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -548,14 +548,14 @@ $activate = "menu";
 													<div>
 						              	<div class="d-flex">
 							                <div class="one-half">
-							                  <h3>Grilled Beef with potatoes</h3>
+							                  <h3>Pepsi</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$29</span>
+							                  <span class="price">19.000đ</span>
 							                </div>
 							              </div>
-							              <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><span>Pepsi</span></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -568,14 +568,14 @@ $activate = "menu";
 													<div>
 						              	<div class="d-flex">
 							                <div class="one-half">
-							                  <h3>Grilled Beef with potatoes</h3>
+							                  <h3>COOKTAIL FRUIT SEASON</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$29</span>
+							                  <span class="price">49.000đ</span>
 							                </div>
 							              </div>
-							              <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><span>Rượu Rhum</span>, <span>Nước trái cây tươi</span></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -587,14 +587,14 @@ $activate = "menu";
 													<div>
 						              	<div class="d-flex">
 							                <div class="one-half">
-							                  <h3>Grilled Beef with potatoes</h3>
+							                  <h3>Cocktail trái cây</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$29</span>
+							                  <span class="price">39.000đ</span>
 							                </div>
 							              </div>
-							              <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><span>Soda</span>, <span>trái cây tươi</span></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -611,14 +611,14 @@ $activate = "menu";
 													<div>
 						              	<div class="d-flex">
 							                <div class="one-half">
-							                  <h3>Grilled Beef with potatoes</h3>
+							                  <h3>Bánh Macarons</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$29</span>
+							                  <span class="price">39.000</span>
 							                </div>
 							              </div>
-							              <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><span>Trứng</span>, <span>Sữa</span></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -630,14 +630,14 @@ $activate = "menu";
 													<div>
 						              	<div class="d-flex">
 							                <div class="one-half">
-							                  <h3>Grilled Beef with potatoes</h3>
+							                  <h3>Meringue Sữa Chua Hoa Quả</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$29</span>
+							                  <span class="price">49.000đ</span>
 							                </div>
 							              </div>
-							              <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><span>Xoài</span>, <span>Việt quốc</span>, <span>Sữa chua Hy Lạp</span>, <span>Kem tươi</span></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -650,14 +650,14 @@ $activate = "menu";
 													<div>
 						              	<div class="d-flex">
 							                <div class="one-half">
-							                  <h3>Grilled Beef with potatoes</h3>
+							                  <h3>Chocolate Soufflé</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$29</span>
+							                  <span class="price">39.000đ</span>
 							                </div>
 							              </div>
-							              <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><span>Trứng</span>, <span>Đường</span>, <span>Sôcôla</span></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -669,14 +669,14 @@ $activate = "menu";
 													<div>
 						              	<div class="d-flex">
 							                <div class="one-half">
-							                  <h3>Grilled Beef with potatoes</h3>
+							                  <h3>Kem</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$29</span>
+							                  <span class="price">29.000đ</span>
 							                </div>
 							              </div>
-							              <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><span>Dâu tươi</span>, <span>Sữa</span></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -689,33 +689,33 @@ $activate = "menu";
 													<div>
 						              	<div class="d-flex">
 							                <div class="one-half">
-							                  <h3>Grilled Beef with potatoes</h3>
+							                  <h3>Bánh Creme</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$29</span>
+							                  <span class="price">39.000đ</span>
 							                </div>
 							              </div>
-							              <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><span>Trứng</span>, <span>Đường nâu</span></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
 					        	</div>
 					        	<div class="col-md-12 col-lg-6 d-flex align-self-stretch">
 					        		<div class="menus d-sm-flex ftco-animate align-items-stretch">
-					              <div class="menu-img img" style="background-image: url(images/drink-6.jpg);"></div>
+					              <div class="menu-img img" style="background-image: url(images/dessert-6.jpg);"></div>
 					              <div class="text d-flex align-items-center">
 													<div>
 						              	<div class="d-flex">
 							                <div class="one-half">
-							                  <h3>Grilled Beef with potatoes</h3>
+							                  <h3>Bánh flan</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$29</span>
+							                  <span class="price">19.000đ</span>
 							                </div>
 							              </div>
-							              <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><span>Trứng</span>, <span>Sữa</span></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -732,14 +732,14 @@ $activate = "menu";
 													<div>
 						              	<div class="d-flex">
 							                <div class="one-half">
-							                  <h3>Grilled Beef with potatoes</h3>
+							                  <h3>Rượu vang đỏ</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$29</span>
+							                  <span class="price">$59</span>
 							                </div>
 							              </div>
-							              <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><span>Rượu vang đỏ</span></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -751,14 +751,14 @@ $activate = "menu";
 													<div>
 						              	<div class="d-flex">
 							                <div class="one-half">
-							                  <h3>Grilled Beef with potatoes</h3>
+							                  <h3>Rượu Cognac</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$29</span>
+							                  <span class="price">$119</span>
 							                </div>
 							              </div>
-							              <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><span>Rượu Cognac</span></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -771,14 +771,14 @@ $activate = "menu";
 													<div>
 						              	<div class="d-flex">
 							                <div class="one-half">
-							                  <h3>Grilled Beef with potatoes</h3>
+							                  <h3> Rượu nho Sherry</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$29</span>
+							                  <span class="price">$105</span>
 							                </div>
 							              </div>
-							              <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><span> Rượu nho Sherry</span></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -790,14 +790,14 @@ $activate = "menu";
 													<div>
 						              	<div class="d-flex">
 							                <div class="one-half">
-							                  <h3>Grilled Beef with potatoes</h3>
+							                  <h3>Rượu vang trắng</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$29</span>
+							                  <span class="price">$69</span>
 							                </div>
 							              </div>
-							              <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><span>Rượu vang trắng</span></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -810,14 +810,14 @@ $activate = "menu";
 													<div>
 						              	<div class="d-flex">
 							                <div class="one-half">
-							                  <h3>Grilled Beef with potatoes</h3>
+							                  <h3>Rum trắng</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$29</span>
+							                  <span class="price">$79</span>
 							                </div>
 							              </div>
-							              <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><span>Rum trắng</span></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -829,14 +829,14 @@ $activate = "menu";
 													<div>
 						              	<div class="d-flex">
 							                <div class="one-half">
-							                  <h3>Grilled Beef with potatoes</h3>
+							                  <h3>Tequila </h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$29</span>
+							                  <span class="price">$69</span>
 							                </div>
 							              </div>
-							              <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><span>Tequila </span></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -849,14 +849,14 @@ $activate = "menu";
 													<div>
 						              	<div class="d-flex">
 							                <div class="one-half">
-							                  <h3>Grilled Beef with potatoes</h3>
+							                  <h3>Rượu Whisky</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$29</span>
+							                  <span class="price">$69</span>
 							                </div>
 							              </div>
-							              <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><span>Rượu Whisky</span></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -868,14 +868,14 @@ $activate = "menu";
 													<div>
 						              	<div class="d-flex">
 							                <div class="one-half">
-							                  <h3>Grilled Beef with potatoes</h3>
+							                  <h3>Rượu Vodka</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$29</span>
+							                  <span class="price">$59</span>
 							                </div>
 							              </div>
-							              <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-							              <p><a href="#" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><span>Rượu Vodka</span></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
