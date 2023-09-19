@@ -430,7 +430,7 @@ $activate = "index";
 	          	<span class="subheading">Book a table</span>
 	            <h2 class="mb-4">Make Reservation</h2>
 	          </div>
-            <form action="#">
+            <form action="reservation.php">
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
