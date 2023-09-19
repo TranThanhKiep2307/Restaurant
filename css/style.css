@@ -8133,12 +8133,14 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6; } }
 
 body {
+  text-align: -webkit-center;
   font-family: "Poppins", Arial, sans-serif;
   background: #fff;
   font-size: 17px;
   line-height: 2;
   font-weight: 400;
   color: #666666; }
+
   body.menu-show {
     overflow: hidden;
     position: fixed;
