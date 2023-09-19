@@ -17,7 +17,7 @@ $activate = "reservation";
 		
 		<section class="ftco-section ftco-no-pt ftco-no-pb">
 			<div class="container-fluid px-0">
-				<div class="row d-flex no-gutters">
+				<div class="container-fluid px-0">
           <div class="col-md-6 order-md-last ftco-animate makereservation p-4 p-md-5 pt-5">
           	<div class="py-md-5">
 	          	<div class="heading-section ftco-animate mb-5">
@@ -99,9 +99,7 @@ $activate = "reservation";
              
 					}
 		 </script>
-          <div class="col-md-6 d-flex align-items-stretch pb-5 pb-md-0">
-						<div id="map"></div>
-					</div>
+          <!--   -->
         </div>
 			</div>
 		</section>
