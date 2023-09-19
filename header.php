@@ -29,11 +29,11 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div class="py-1 bg-black top">
-    	<div class="container">
+    <!-- <div class="py-1 bg-black top">
+    	 <div class="container">
     		<div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
 	    		<div class="col-lg-12 d-block">
-		    		<div class="row d-flex">
+		<div class="row d-flex">
 		    			<div class="col-md pr-4 d-flex topper align-items-center">
 					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
 						    <span class="text">0123 456 789</span>
@@ -45,11 +45,11 @@
 					    <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right justify-content-end">
 						    <p class="mb-0 register-link"><span>Giờ mở cửa:</span> <span>Thứ hai - Chủ nhật</span> <span>8:00AM - 9:00PM</span></p>
 					    </div>
-				    </div>
+				    </div> 
 			    </div>
 		    </div>
-		  </div>
-    </div>
+		  </div> 
+    </div> -->
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index.php">FOXXOF</a>
