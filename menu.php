@@ -8,7 +8,7 @@ $activate = "menu";
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
           <div class="col-md-9 ftco-animate text-center mb-4">
-            <h1 class="mb-2 bread">Thực đơn</h1>
+            <h1 class="mb-2 bread">Menu</h1>
             <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Trang chủ <i class="ion-ios-arrow-forward"></i></a></span> <span>Thực đơn <i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
@@ -94,7 +94,7 @@ $activate = "menu";
 							                  <span class="price">239.00đ</span>
 							                </div>
 							              </div>
-							              <p><span>Thịt bò Mỹ</span>, <span>Tôm</span>, <span>Mực</span>, <span>Gà</span,<span>3 món khai vị</span>></p>
+							              <p><span>Thịt bò Mỹ</span>, <span>Tôm</span>, <span>Mực</span>, <span>Gà</span>, <span>3 món khai vị</span></p>
 							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
@@ -191,7 +191,7 @@ $activate = "menu";
 							                  <span class="price">289.000đ</span>
 							                </div>
 							              </div>
-							              <p><span>Thịt bò</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
+							              <p><span>Thịt bò</span>, <span>Chân gà</span>, <span>Tôm</span>, <span>Mực</span>, <span> 3 món khai vị</span></p>
 							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
