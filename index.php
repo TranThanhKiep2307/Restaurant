@@ -228,14 +228,14 @@ $activate = "index";
 								<div>
 	              	<div class="d-flex">
 		                <div class="one-half">
-		                  <h3>Grilled Beef with potatoes</h3>
-		                </div>
-		                <div class="one-forth">
-		                  <span class="price">$29</span>
-		                </div>
-		              </div>
-		              <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-		              <p><a href="#" class="btn btn-primary">Order now</a></p>
+						<h3>Combo Nướng</h3>
+						</div>
+							<div class="one-forth">
+							    <span class="price">169.000đ</span>
+							</div>
+						</div>
+						<p><span>Thịt bò Mỹ</span>, <span>Tôm</span>, <span>Mực</span>, <span>2 Món khai vị</span></p>
+						<p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 	              </div>
               </div>
             </div>
@@ -247,14 +247,14 @@ $activate = "index";
 								<div>
 	              	<div class="d-flex">
 		                <div class="one-half">
-		                  <h3>Grilled Beef with potatoes</h3>
-		                </div>
-		                <div class="one-forth">
-		                  <span class="price">$29</span>
-		                </div>
-		              </div>
-		              <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-		              <p><a href="#" class="btn btn-primary">Order now</a></p>
+						<h3>Combo Nướng</h3>
+						</div>
+							<div class="one-forth">
+							    <span class="price">219.000đ</span>
+							</div>
+						</div>
+						<p><span>Thịt bò Mỹ</span>, <span>Tôm</span>, <span>Mực</span>, <span>2 món khai vị</span></p>
+						<p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 	              </div>
               </div>
             </div>
@@ -267,14 +267,14 @@ $activate = "index";
 								<div>
 	              	<div class="d-flex">
 		                <div class="one-half">
-		                  <h3>Grilled Beef with potatoes</h3>
-		                </div>
-		                <div class="one-forth">
-		                  <span class="price">$29</span>
-		                </div>
-		              </div>
-		              <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-		              <p><a href="#" class="btn btn-primary">Order now</a></p>
+						<h3>Combo nướng </h3>
+						</div>
+							<div class="one-forth">
+							    <span class="price">239.00đ</span>
+							</div>
+						</div>
+						<p><span>Thịt bò Mỹ</span>, <span>Tôm</span>, <span>Mực</span>, <span>Gà</span>, <span>3 món khai vị</span></p>
+						<p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 	              </div>
               </div>
             </div>
@@ -286,14 +286,14 @@ $activate = "index";
 								<div>
 	              	<div class="d-flex">
 		                <div class="one-half">
-		                  <h3>Grilled Beef with potatoes</h3>
-		                </div>
-		                <div class="one-forth">
-		                  <span class="price">$29</span>
-		                </div>
-		              </div>
-		              <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-		              <p><a href="#" class="btn btn-primary">Order now</a></p>
+						<h3>Combo lẩu </h3>
+						</div>
+							<div class="one-forth">
+							    <span class="price">259.000đ</span>
+							</div>
+						</div>
+						<p><span>Thịt bò Mỹ</span>, <span>Cá</span>, <span>Tôm</span>, <span>Mực</span>,<span>Nghêu</span></p>
+						<p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 	              </div>
               </div>
             </div>
@@ -306,37 +306,37 @@ $activate = "index";
 								<div>
 	              	<div class="d-flex">
 		                <div class="one-half">
-		                  <h3>Grilled Beef with potatoes</h3>
-		                </div>
-		                <div class="one-forth">
-		                  <span class="price">$29</span>
-		                </div>
-		              </div>
-		              <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-		              <p><a href="#" class="btn btn-primary">Order now</a></p>
+						<h3>Combo lẩu - nướng</h3>
+						</div>
+							<div class="one-forth">
+							    <span class="price">289.000đ</span>
+							</div>
+						</div>
+						<p><span>Thịt bò Mỹ</span>, <span>Tôm</span>, <span>Cá</span>, <span>Mực</span>,<span>Nghêu</span>,<span>3 món khai vị</span></p>
+						<p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 	              </div>
               </div>
             </div>
         	</div>
         	<div class="col-md-12 col-lg-6 d-flex align-self-stretch">
-        		<div class="menus d-sm-flex ftco-animate align-items-stretch">
-              <div class="menu-img img" style="background-image: url(images/breakfast-2.jpg);"></div>
-              <div class="text d-flex align-items-center">
+					<div class="menus d-sm-flex ftco-animate align-items-stretch">
+					    <div class="menu-img img order-md-last" style="background-image: url(images/breakfast-7.jpg);"></div>
+					        <div class="text d-flex align-items-center">
 								<div>
-	              	<div class="d-flex">
-		                <div class="one-half">
-		                  <h3>Grilled Beef with potatoes</h3>
-		                </div>
-		                <div class="one-forth">
-		                  <span class="price">$29</span>
-		                </div>
-		              </div>
-		              <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-		              <p><a href="#" class="btn btn-primary">Order now</a></p>
-	              </div>
-              </div>
-            </div>
-        	</div>
+						        	<div class="d-flex">
+							        <div class="one-half">
+							            <h3>Combo nướng cho 2 Người</h3>
+							        </div>
+							        <div class="one-forth">
+							            <span class="price">299.000đ</span>
+							    	</div>
+							    </div>
+							    <p><span>Thị bò Mỹ</span>, <span>Tôm</span>, <span>Mực</span>, <span>Chân gà</span>,<span>3 món khai vị</span></p>
+							    <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
+						    </div>
+					    </div>
+					</div>
+				</div>
         </div>
     	</div>
     </section>
@@ -595,9 +595,9 @@ $activate = "index";
                   <div><a href="#">Sept. 06, 2019</a></div>
                   <div><a href="#">Admin</a></div>
                 </div>
-                <h3 class="heading"><a href="#">Taste the delicious foods in Asia</a></h3>
+                <h3 class="heading"><a href="blog.php">Thưởng thức những món ăn ngon ở Châu Á</a></h3>
                 <p class="clearfix">
-                  <a href="#" class="float-left read">Read more</a>
+                  <a href="blog.php" class="float-left read">Read more</a>
                   <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
                 </p>
               </div>
@@ -612,9 +612,9 @@ $activate = "index";
                   <div><a href="#">Sept. 06, 2019</a></div>
                   <div><a href="#">Admin</a></div>
                 </div>
-                <h3 class="heading"><a href="#">Taste the delicious foods in Asia</a></h3>
+                <h3 class="heading"><a href="#">Thưởng thức những món ăn ngon ở Châu Á</a></h3>
                 <p class="clearfix">
-                  <a href="#" class="float-left read">Read more</a>
+                  <a href="blog.php" class="float-left read">Read more</a>
                   <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
                 </p>
               </div>
@@ -629,9 +629,9 @@ $activate = "index";
                   <div><a href="#">Sept. 06, 2019</a></div>
                   <div><a href="#">Admin</a></div>
                 </div>
-                <h3 class="heading"><a href="#">Taste the delicious foods in Asia</a></h3>
+                <h3 class="heading"><a href="blog.php">Thưởng thức những món ăn ngon ở Châu Á</a></h3>
                 <p class="clearfix">
-                  <a href="#" class="float-left read">Read more</a>
+                  <a href="blog.php" class="float-left read">Read more</a>
                   <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
                 </p>
               </div>
