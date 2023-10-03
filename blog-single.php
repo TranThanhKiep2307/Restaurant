@@ -7,8 +7,8 @@ $activate = "blog-single";
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
           <div class="col-md-9 ftco-animate text-center mb-4">
-            <h1 class="mb-2 bread">Blog</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span class="mr-2"><a href="blog.php">Blog <i class="ion-ios-arrow-forward"></i></a></span> <span>Blog Single<i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-2 bread">Tin tức</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Trang chủ <i class="ion-ios-arrow-forward"></i></a></span> <span class="mr-2"><a href="blog.php">Tin tức <i class="ion-ios-arrow-forward"></i></a></span> <span>Blog Single<i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
       </div>

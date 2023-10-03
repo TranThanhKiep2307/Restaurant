@@ -8,8 +8,8 @@ $activate = "blog";
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
           <div class="col-md-9 ftco-animate text-center mb-4">
-            <h1 class="mb-2 bread">Blog</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Blog <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-2 bread">Tin tức</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Trang chủ <i class="ion-ios-arrow-forward"></i></a></span> <span>Tin tức <i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
       </div>
@@ -27,9 +27,9 @@ $activate = "blog";
                   <div><a href="#">Sept. 06, 2019</a></div>
                   <div><a href="#">Admin</a></div>
                 </div>
-                <h3 class="heading"><a href="#">Taste the delicious foods in Asia</a></h3>
+                <h3 class="heading"><a href="#">Thưởng thức những món ăn ngon ở Châu Á</a></h3>
                 <p class="clearfix">
-                  <a href="#" class="float-left read">Read more</a>
+                  <a href="#" class="float-left read">Xem thêm</a>
                   <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
                 </p>
               </div>
@@ -44,9 +44,9 @@ $activate = "blog";
                   <div><a href="#">Sept. 06, 2019</a></div>
                   <div><a href="#">Admin</a></div>
                 </div>
-                <h3 class="heading"><a href="#">Taste the delicious foods in Asia</a></h3>
+                <h3 class="heading"><a href="#">Thưởng thức những món ăn ngon ở Châu Á</a></h3>
                 <p class="clearfix">
-                  <a href="#" class="float-left read">Read more</a>
+                  <a href="#" class="float-left read">Xem thêm</a>
                   <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
                 </p>
               </div>
@@ -61,9 +61,9 @@ $activate = "blog";
                   <div><a href="#">Sept. 06, 2019</a></div>
                   <div><a href="#">Admin</a></div>
                 </div>
-                <h3 class="heading"><a href="#">Taste the delicious foods in Asia</a></h3>
+                <h3 class="heading"><a href="#">Thưởng thức những món ăn ngon ở Châu Á</a></h3>
                 <p class="clearfix">
-                  <a href="#" class="float-left read">Read more</a>
+                  <a href="#" class="float-left read">Xem thêm</a>
                   <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
                 </p>
               </div>
@@ -78,9 +78,9 @@ $activate = "blog";
                   <div><a href="#">Sept. 06, 2019</a></div>
                   <div><a href="#">Admin</a></div>
                 </div>
-                <h3 class="heading"><a href="#">Taste the delicious foods in Asia</a></h3>
+                <h3 class="heading"><a href="#">Thưởng thức những món ăn ngon ở Châu Á</a></h3>
                 <p class="clearfix">
-                  <a href="#" class="float-left read">Read more</a>
+                  <a href="#" class="float-left read">Xem thêm</a>
                   <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
                 </p>
               </div>
@@ -95,9 +95,9 @@ $activate = "blog";
                   <div><a href="#">Sept. 06, 2019</a></div>
                   <div><a href="#">Admin</a></div>
                 </div>
-                <h3 class="heading"><a href="#">Taste the delicious foods in Asia</a></h3>
+                <h3 class="heading"><a href="#">Thưởng thức những món ăn ngon ở Châu Á</a></h3>
                 <p class="clearfix">
-                  <a href="#" class="float-left read">Read more</a>
+                  <a href="#" class="float-left read">Xem thêm</a>
                   <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
                 </p>
               </div>
@@ -112,9 +112,9 @@ $activate = "blog";
                   <div><a href="#">Sept. 06, 2019</a></div>
                   <div><a href="#">Admin</a></div>
                 </div>
-                <h3 class="heading"><a href="#">Taste the delicious foods in Asia</a></h3>
+                <h3 class="heading"><a href="#">Thưởng thức những món ăn ngon ở Châu Á</a></h3>
                 <p class="clearfix">
-                  <a href="#" class="float-left read">Read more</a>
+                  <a href="#" class="float-left read">Xem thêm</a>
                   <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
                 </p>
               </div>

@@ -10,7 +10,7 @@ $activate = "index";
 
             <div class="col-md-12 col-sm-12 text-center ftco-animate">
             	<span class="subheading">FOXXOF</span>
-              <h1 class="mb-4">Best Restaurant</h1>
+              <h1 class="mb-4">Nhà hàng tốt nhất</h1>
             </div>
 
           </div>
@@ -24,7 +24,7 @@ $activate = "index";
 
             <div class="col-md-12 col-sm-12 text-center ftco-animate">
             	<span class="subheading">FOXXOF</span>
-              <h1 class="mb-4">Nutritious &amp; Tasty</h1>
+              <h1 class="mb-4">Bổ dưỡng&amp; Ngon miệng</h1>
             </div>
 
           </div>
@@ -38,7 +38,7 @@ $activate = "index";
 
             <div class="col-md-12 col-sm-12 text-center ftco-animate">
             	<span class="subheading">FOXXOF</span>
-              <h1 class="mb-4">Delicious Specialties</h1>
+              <h1 class="mb-4">Đặc sản ngon</h1>
             </div>
 
           </div>
@@ -215,7 +215,7 @@ $activate = "index";
     	<div class="container">
     		<div class="row no-gutters justify-content-center mb-5 pb-2">
           <div class="col-md-12 text-center heading-section ftco-animate">
-          	<span class="subheading">Specialties</span>
+          	<span class="subheading">Đặc sản</span>
             <h2 class="mb-4">Menu</h2>
           </div>
         </div>
@@ -426,48 +426,48 @@ $activate = "index";
 				<div class="row d-flex">
           <div class="col-md-7 ftco-animate makereservation p-4 px-md-5 pb-md-5">
           	<div class="heading-section ftco-animate mb-5 text-center">
-	          	<span class="subheading">Book a table</span>
-	            <h2 class="mb-4">Make Reservation</h2>
+	          	<span class="subheading">Đặt bàn</span>
+	            <h2 class="mb-4">Đặt bàn</h2>
 	          </div>
             <form action="reservation.php">
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="">Name</label>
-                    <input type="text" class="form-control" placeholder="Your Name">
+                    <label for="">Họ tên</label>
+                    <input type="text" class="form-control" placeholder="Họ tên của bạn">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="">Email</label>
-                    <input type="text" class="form-control" placeholder="Your Email">
+                    <input type="text" class="form-control" placeholder="Email của bạn">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="">Phone</label>
-                    <input type="text" class="form-control" placeholder="Phone">
+                    <label for="">Số điện thoại</label>
+                    <input type="text" class="form-control" placeholder="Số điện thoại của bạn">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="">Phone</label>
-                    <input type="text" class="form-control" id="book_date" placeholder="Date">
+                    <label for="">Ngày</label>
+                    <input type="text" class="form-control" id="book_date" placeholder="Chọn ngày đặt bàn">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="">Time</label>
-                    <input type="text" class="form-control" id="book_time" placeholder="Time">
+                    <label for="">Giờ</label>
+                    <input type="text" class="form-control" id="book_time" placeholder="Chọn giờ đtặ bàn">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="">Person</label>
+                    <label for="">Số người</label>
                     <div class="select-wrap one-third">
                       <div class="icon"><span class="ion-ios-arrow-down"></span></div>
                       <select name="" id="" class="form-control">
-                        <option value="">Person</option>
+                        <option value="">Số người</option>
                         <option value="">1</option>
                         <option value="">2</option>
                         <option value="">3</option>
@@ -478,7 +478,7 @@ $activate = "index";
                 </div>
                 <div class="col-md-12 mt-3">
                   <div class="form-group text-center">
-                    <input type="submit" value="Make a Reservation" class="btn btn-primary py-3 px-5">
+                    <input type="submit" value="Đặt bàn" class="btn btn-primary py-3 px-5">
                   </div>
                 </div>
               </div>
@@ -596,7 +596,7 @@ $activate = "index";
                 </div>
                 <h3 class="heading"><a href="blog.php">Thưởng thức những món ăn ngon ở Châu Á</a></h3>
                 <p class="clearfix">
-                  <a href="blog.php" class="float-left read">Read more</a>
+                  <a href="blog.php" class="float-left read">Xem thêm</a>
                   <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
                 </p>
               </div>
@@ -613,7 +613,7 @@ $activate = "index";
                 </div>
                 <h3 class="heading"><a href="#">Thưởng thức những món ăn ngon ở Châu Á</a></h3>
                 <p class="clearfix">
-                  <a href="blog.php" class="float-left read">Read more</a>
+                  <a href="blog.php" class="float-left read">Xem thêm</a>
                   <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
                 </p>
               </div>
@@ -630,7 +630,7 @@ $activate = "index";
                 </div>
                 <h3 class="heading"><a href="blog.php">Thưởng thức những món ăn ngon ở Châu Á</a></h3>
                 <p class="clearfix">
-                  <a href="blog.php" class="float-left read">Read more</a>
+                  <a href="blog.php" class="float-left read">Xem thêm</a>
                   <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
                 </p>
               </div>
