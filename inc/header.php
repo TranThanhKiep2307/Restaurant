@@ -1,3 +1,17 @@
+<?php 
+	@include('config/config.php');
+	@include('lib/session.php');
+	Session::init();
+?>
+<?php
+	//@include_once('lib/database.php');
+	//@include_once('helpers/format.php');
+	
+	// spl_autoload_register(function ($class) {
+	// 	include 'classes/' . $class . '.php';
+	// });
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -65,7 +79,7 @@
 	        	<li class="nav-item <?php echo ($activate == "blog" ? "active" : "")?>"><a href="blog.php" class="nav-link">Tin tức</a></li>
 	          <li class="nav-item <?php echo ($activate == "contact" ? "active" : "")?>"><a href="contact.php" class="nav-link">Liên hệ</a></li>
 	          <li class="nav-item cta"><a href="reservation.php" class="nav-link">Đặt bàn</a></li>
-			  <li class="nav-item"><a href="" class="nav-link icon-user"></a></li>
+			  <li class="nav-item <?php echo ($activate == "contact" ? "active" : "")?>"><a href="" class="nav-link icon-user"></a></li>
 	        </ul>
 	      </div>
 	    </div>

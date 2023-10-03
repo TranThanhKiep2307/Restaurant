@@ -1,6 +1,6 @@
 <?php
 $activate = "about";
-@include('header.php');
+@include('inc/header.php');
 ?>
     
     <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_3.jpg');" data-stellar-background-ratio="0.5">
@@ -376,5 +376,5 @@ $activate = "about";
     </section>
 		
 <?php
-@include('footer.php');
+@include('inc/footer.php');
 ?>

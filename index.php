@@ -1,8 +1,7 @@
 <?php
 $activate = "index";
-@include('header.php');
+@include('inc/header.php');
 ?>
-    
     <section class="home-slider owl-carousel js-fullheight">
       <div class="slider-item js-fullheight" style="background-image: url(images/bg_1.jpg);">
       	<div class="overlay"></div>
@@ -641,7 +640,7 @@ $activate = "index";
 			</div>
 		</section>
 <?php
-@include('footer.php');
+@include('inc/footer.php');
 ?>
     		
     
