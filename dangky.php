@@ -20,6 +20,7 @@
               $password = $_POST["psw"];
               $sdt = $_POST["sdt"];
               $diachi = $_POST["diachi"];
+              $qh_ma = $_POST["qh"];
   			//Kiểm tra điều kiện bắt buộc đối với các field không được bỏ trống
 			  if ($usernam == "" || $password == "" ) {
 				   echo "bạn vui lòng nhập đầy đủ thông tin";
@@ -31,7 +32,7 @@
 						        echo "Tài khoản đã tồn tại";
 					        }else{
 						//thực hiện việc lưu trữ dữ liệu vào db
-	    				$sql = "INSERT INTO khachhang(KH_TEN,KH_SDT,KH_EMAIL,KH_DIACHI,KH_USERNAM,KH_PASSWORD )VALUES ('$ten','$sdt','$email','$diachi','$usernam','$password')";
+	    				$sql = "INSERT INTO khachhang(Q_MA,KH_TEN,KH_SDT,KH_EMAIL,KH_DIACHI,KH_USERNAM,KH_PASSWORD )VALUES ($qh_ma,'$ten','$sdt','$email','$diachi','$usernam','$password')";
 					    // thực thi câu $sql với biến conn lấy từ file connection.php
                         if (mysqli_query($conn, $sql)) {
                             echo "Chúc mừng bạn đã đăng ký thành công.";
@@ -64,7 +65,10 @@
             <label for="inputNumberl4" class="form-label">Tên đăng nhập<span class="error">*                                           </span></label>
             <input type="text" class="form-control" id="usernam" name="usernam">
         </div>
-
+        <div class="col-md-6">
+            <label for="inputNumberl4" class="form-label">Địa chỉ<span class="error">                                          </span></label>
+            <input type="text" class="form-control" id="diachi" name="diachi">
+        </div>
         <div class="col-md-6">
             <label for="inputPassword4" class="form-label">Mật khẩu<span class="error">*</span></label>
             <input type="password" class="form-control" id="matkhau" name="psw">
@@ -74,8 +78,30 @@
             <label for="inputPassword4" class="form-label">Nhập lại mật khẩu<span class="error">*</span></label>
             <input type="password" class="form-control" id="matkhau2" name="psw1">
         </div>
+        <div class="col-md-6">
+                                        <label for="inputPassword4" class="form-label">Quận Huyện<span class="error">*</span></label>
+                                        <select class="form-select form-control" id="qh" name="qh">
+                                            <option value="" selected>Chọn quận/huyện</option>
+                                            <?php
+                                            
+                                            // Truy vấn để lấy danh sách quận/huyện
+                                            $sql = "SELECT Q_MA, Q_TEN FROM quan_huyen";
+                                            $result = $conn->query($sql);
 
-        <input type="submit" name="dangky" value="Đăng Ký" />
+                                            if ($result->num_rows > 0) {
+                                                while ($row = $result->fetch_assoc()) {
+                                                    echo '<option value="' . $row["Q_MA"] . '">' . $row["Q_TEN"] . '</option>';
+                                                }
+                                            }
+
+                                            // Đóng kết nối đến cơ sở dữ liệu
+                                            $conn->close();
+                                            ?>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-12">      
+                                        <button type="submit" class="mt-2 btn btn-success"  name="dangky">Đăng ký </button>
+                                    </div>
 
     </form>
 
