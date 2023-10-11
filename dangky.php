@@ -65,6 +65,10 @@
             <label for="inputNumberl4" class="form-label">Tên đăng nhập<span class="error">*                                           </span></label>
             <input type="text" class="form-control" id="usernam" name="usernam">
         </div>
+        <div class="col-12">
+            <label for="inputAddress" class="form-label">Email<span class="error">*</span> </label>
+            <input type="email" class="form-control" id="email" placeholder="Nhập địa chỉ email của bạn" name="email">
+        </div>
         <div class="col-md-6">
             <label for="inputNumberl4" class="form-label">Địa chỉ<span class="error">                                          </span></label>
             <input type="text" class="form-control" id="diachi" name="diachi">
@@ -79,29 +83,29 @@
             <input type="password" class="form-control" id="matkhau2" name="psw1">
         </div>
         <div class="col-md-6">
-                                        <label for="inputPassword4" class="form-label">Quận Huyện<span class="error">*</span></label>
-                                        <select class="form-select form-control" id="qh" name="qh">
-                                            <option value="" selected>Chọn quận/huyện</option>
-                                            <?php
+            <label for="inputPassword4" class="form-label">Quận Huyện<span class="error">*</span></label>
+            <select class="form-select form-control" id="qh" name="qh">
+                <option value="" selected>Chọn quận/huyện</option>
+            <?php
                                             
                                             // Truy vấn để lấy danh sách quận/huyện
-                                            $sql = "SELECT Q_MA, Q_TEN FROM quan_huyen";
-                                            $result = $conn->query($sql);
+                $sql = "SELECT Q_MA, Q_TEN FROM quan_huyen";
+                 $result = $conn->query($sql);
 
-                                            if ($result->num_rows > 0) {
-                                                while ($row = $result->fetch_assoc()) {
-                                                    echo '<option value="' . $row["Q_MA"] . '">' . $row["Q_TEN"] . '</option>';
-                                                }
-                                            }
+                if ($result->num_rows > 0) {
+                     while ($row = $result->fetch_assoc()) {
+                        echo '<option value="' . $row["Q_MA"] . '">' . $row["Q_TEN"] . '</option>';
+                            }
+                        }
 
                                             // Đóng kết nối đến cơ sở dữ liệu
-                                            $conn->close();
-                                            ?>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-12">      
-                                        <button type="submit" class="mt-2 btn btn-success"  name="dangky">Đăng ký </button>
-                                    </div>
+                            $conn->close();
+                ?>
+            </select>
+        </div>
+        <div class="col-md-12">      
+            <button type="submit" class="mt-2 btn btn-success"  name="dangky">Đăng ký </button>
+        </div>
 
     </form>
 
