@@ -1,8 +1,14 @@
 <?php
+ob_start();
 $activate = "reservation";
 @include('inc/header.php');
 ?>
-    
+<?php
+	$ct = new cart();
+	if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
+		$insert_cart = $ct->insert_cart($_POST);
+	}   
+?>
     <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_3.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
@@ -24,30 +30,35 @@ $activate = "reservation";
 		          	<span class="subheading">Book a table</span>
 		            <h2 class="mb-4">Make Reservation</h2>
 		          </div>
-	            <form onsubmit="showMessageBox()" action="#">
+				<?php 
+					if(isset($insert_cart)){
+						echo $insert_cart;
+					}
+                ?> 
+	            <form onsubmit="showMessageBox()" action="" method="post">
 	              <div class="row">
 	                <div class="col-md-6">
 	                  <div class="form-group">
 	                    <label for="">Name</label>
-	                    <input id="name" type="text" class="form-control" placeholder="Your Name" required>
+	                    <input type="text" name="PDH_TENKH" class="form-control" placeholder="Your Name" >
 	                  </div>
 	                </div>
 	                <div class="col-md-6">
 	                  <div class="form-group">
 	                    <label for="">Email</label>
-	                    <input id="email" type="text" class="form-control" placeholder="Your Email" required>
+	                    <input id="email" type="text" name="PDH_EMAILKH" class="form-control" placeholder="Your Email" >
 	                  </div>
 	                </div>
 	                <div class="col-md-6">
 	                  <div class="form-group">
 	                    <label for="">Phone</label>
-	                    <input id="sdt" type="text" class="form-control" placeholder="Phone" required>
+	                    <input id="sdt" type="text" name="PDH_SDTKH" class="form-control" placeholder="Phone" >
 	                  </div>
 	                </div>
 	                <div class="col-md-6">
 	                  <div class="form-group">
 	                    <label for="">Date</label>
-	                    <input id="date" type="date" class="form-control" id="book_date" placeholder="Date" required>
+	                    <input id="date" type="date" name="PDH_NGAYLAP" class="form-control" id="book_date" placeholder="Date" >
 	                  </div>
 	                </div>
 	                <div class="col-md-6">
@@ -55,7 +66,7 @@ $activate = "reservation";
 						
 	                  <div class="form-group">
 	                    <label for="">Time</label>
-	                    <input id="time" type="time" class="form-control" id="book_time" placeholder="Time" required>
+	                    <input id="time" type="time" name="PDH_TG" class="form-control" id="book_time" placeholder="Time" >
 	                  </div>
 	                </div>
 	                <div class="col-md-6">
@@ -63,46 +74,24 @@ $activate = "reservation";
 	                    <label for="">Person</label>
 	                    <div class="select-wrap one-third">
 	                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-	                      <select name="" id="person" class="form-control">
-	                        <option value="">Person</option>
-	                        <option value="">1</option>
-	                        <option value="">2</option>
-	                        <option value="">3</option>
-	                        <option value="">4+</option>
+	                      <select id="person" name="PDH_SONGUOI" class="form-control">
+	                        <option value="1">1</option>
+	                        <option value="2">2</option>
+	                        <option value="3">5</option>
+	                        <option value="4">10+</option>
 	                      </select>
 	                    </div>
 	                  </div>
 	                </div>
 					<div class="col-md-6">
 	                  <div class="form-group">
-	                    <label for="">Món ăn</label>
-	                    <input id="food" type="text" class="form-control" placeholder="" required>
-	                  </div>
-	                </div>
-					<div class="col-md-6">
-	                  <div class="form-group">
-	                    <label for="">Số lượng món</label>
-	                    <input id="email" type="number" class="form-control" value="1" min="1" placeholder="" required>
-	                  </div>
-	                </div>
-					<div class="col-md-6">
-	                  <div class="form-group">
-	                    <label for="">Bàn</label>
-	                    <div class="select-wrap one-third">
-	                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-	                      <select name="" id="person" class="form-control">
-	                        <option value="">Số bàn</option>
-	                        <option value="">1</option>
-	                        <option value="">2</option>
-	                        <option value="">3</option>
-	                        <option value="">4+</option>
-	                      </select>
-	                    </div>
+	                    <label for="">Notice</label>
+	                    <textarea id="note" type="text" name="PDH_GHICHU" class="form-control" placeholder="Notice..."></textarea>
 	                  </div>
 	                </div>
 	                <div class="col-md-12 mt-3">
 	                  <div class="form-group">
-	                    <button onsubmit="showMessageBox()" type="submit" value="" class="btn btn-primary py-3 px-5">Make a Reservation</button>
+	                    <button type="submit" name="submit" class="btn btn-primary py-3 px-5">Make a Reservation</button>
 	                  </div>
 	                </div>
 	              </div>
@@ -110,7 +99,7 @@ $activate = "reservation";
 	          </div>
           </div>
 
-		  <script>
+		  <!-- <script>
 				 function showMessageBox() {
     			var message = "Reservation successful!";
     			alert(message);
@@ -125,7 +114,7 @@ $activate = "reservation";
                 // console.log(document.getElementById('address'));
              
 					}
-		 </script>
+		 </script> -->
           <div class="col-md-6 d-flex align-items-stretch pb-5 pb-md-0">
 		  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.7906871911864!2d105.78347907475415!3d10.03412409007305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a062a1bbe2da77%3A0x780e866b3e9801a6!2sKing%20BBQ%20Buffet%20Sense%20City%20C%E1%BA%A7n%20Th%C6%A1!5e0!3m2!1svi!2s!4v1695120112261!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		</div>

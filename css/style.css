@@ -9792,3 +9792,12 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+    .success{
+      color: green;
+      font-size: 18px;
+    }
+    .error{
+      color: #D10024;
+      font-size: 18px;
+    }

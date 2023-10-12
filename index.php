@@ -117,7 +117,7 @@ $activate = "index";
 						<h3><?php echo $result['LTA_TEN']?></h3>
 						</div>
 							<div class="one-forth">
-							    <span class="price"><?php echo $result['CTTA_DONGIA'].' '.'VNĐ'?></span>
+							    <span class="price"><?php echo $result['CTTA_DONGIA'].' '.'Đ'?></span>
 							</div>
 						</div>
 						<p><span><?php echo $result['TA_TEN']?></span></p>

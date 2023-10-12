@@ -82,5 +82,34 @@ class cart
         $result = $this->db->select($query);
         return $result;
     }
+
+    //dat ban
+    public function insert_cart($data){
+        $PDH_TENKH      = mysqli_real_escape_string($this->db->link, $data['PDH_TENKH']);
+        $PDH_EMAILKH    = mysqli_real_escape_string($this->db->link, $data['PDH_EMAILKH']);
+        $PDH_SDTKH      = mysqli_real_escape_string($this->db->link, $data['PDH_SDTKH']);
+        $PDH_TG         = mysqli_real_escape_string($this->db->link, $data['PDH_TG']);
+        $PDH_NGAYLAP    = mysqli_real_escape_string($this->db->link, $data['PDH_NGAYLAP']);
+        $PDH_SONGUOI    = mysqli_real_escape_string($this->db->link, $data['PDH_SONGUOI']);
+        $PDH_GHICHU     = mysqli_real_escape_string($this->db->link, $data['PDH_GHICHU']);
+
+
+        if($PDH_TENKH == "" || $PDH_EMAILKH == "" || $PDH_SDTKH == "" || $PDH_TG == "" || $PDH_NGAYLAP == "" || $PDH_SONGUOI == ""){
+            $alert = "<span class='error'> Các thành phần này không được trống!!!</span>";
+            return $alert;
+        }else{
+            $query = "INSERT INTO phieudathang(PDH_TENKH, PDH_EMAILKH, PDH_SDTKH, PDH_TG, PDH_NGAYLAP, PDH_SONGUOI, PDH_GHICHU) 
+            VALUES ('$PDH_TENKH','$PDH_EMAILKH','$PDH_SDTKH','$PDH_TG','$PDH_NGAYLAP','$PDH_SONGUOI','$PDH_GHICHU')";
+            $result = $this->db->insert($query);
+            if($result){
+                $alert = "<span class='success'>Đặt bàn thành công!!! Chúng tôi sẽ sớm liên hệ với bạn!!!</span>";
+                return $alert; 
+            }else{
+                $alert = "<span class='error'> Đặt bàn thất bại!!! Vui lòng đặt lại!!!</span>";
+                return $alert; 
+            }
+           
+        }
+    }
 }
 ?>
