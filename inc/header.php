@@ -75,6 +75,8 @@
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
+	</button>
+
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 	        	<li class="nav-item <?php echo ($activate == "index" ? "active" : "")?>"><a href="index.php" class="nav-link">Trang chủ</a></li>
@@ -84,7 +86,6 @@
 	          <li class="nav-item <?php echo ($activate == "contact" ? "active" : "")?>"><a href="contact.php" class="nav-link">Liên hệ</a></li>
 			  <li class="nav-item cta"><a href="reservation.php" class="nav-link">Đặt bàn</a></li>
 			  <li class="nav-item <?php echo ($activate == "nav-link icon-user" ? "active" : "")?>"><a href="login.php" class="nav-link icon-user"></a></li>
-
 	        </ul>
 	      </div>
 	    </div>
