@@ -26,7 +26,7 @@ public static function set($key, $val){
     }
  }
 
- public static function checkSession(){
+ public static function check_adminSession(){
     self::init();
     if (self::get("adminlogin")== false) {
      self::destroy();
@@ -34,12 +34,28 @@ public static function set($key, $val){
     }
  }
 
- public static function checkLogin(){
+ public static function check_adminLogin(){
     self::init();
     if (self::get("adminlogin") == true) {
      header("Location:index.php");
     }
  }
+
+ public static function check_userSession(){
+    self::init();
+    if (self::get("user")== false) {
+     self::destroy();
+     header("Location:login.php");
+    }
+ }
+
+ public static function check_userLogin(){
+    self::init();
+    if (self::get("user") == true) {
+     header("Location:index.php");
+    }
+ }
+
 
  public static function destroy(){
   session_destroy();

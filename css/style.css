@@ -925,6 +925,9 @@ pre {
     flex: 0 0 91.66667%;
     max-width: 91.66667%; }
   .col-md-12 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
@@ -9793,6 +9796,7 @@ textarea.form-control {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
 
+<<<<<<< HEAD
     .success{
       color: green;
       font-size: 18px;
@@ -9801,3 +9805,10 @@ textarea.form-control {
       color: #D10024;
       font-size: 18px;
     }
+=======
+.dangki{
+  padding: auto;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+>>>>>>> 1211ad10c33cfacd85402265ec20d8848c60ec9c
