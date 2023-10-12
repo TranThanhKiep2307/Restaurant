@@ -73,12 +73,8 @@ $activate = "index";
             		<span class="flaticon-meeting"></span>
               </div>
               <div class="media-body p-2 mt-3">
-<<<<<<< HEAD
-                <h3 class="heading">Bàn ăn</h3>
-=======
                 <h3 class="heading">Buổi họp mặt làm ăn</h3>
                 <!-- <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p> -->
->>>>>>> df4224cbb532158096e76eb363cbfe4e927ccd4f
               </div>
             </div>    
           </div>

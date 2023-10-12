@@ -75,11 +75,6 @@
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
-<<<<<<< HEAD
-
-=======
-	
->>>>>>> f19cabbc3df3288ac0d95b2125479a938f17af3d
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 	        	<li class="nav-item <?php echo ($activate == "index" ? "active" : "")?>"><a href="index.php" class="nav-link">Trang chủ</a></li>
@@ -87,13 +82,9 @@
 	        	<li class="nav-item <?php echo ($activate == "menu" ? "active" : "")?>"><a href="menu.php" class="nav-link">Thực đơn</a></li>
 	        	<li class="nav-item <?php echo ($activate == "blog" ? "active" : "")?>"><a href="blog.php" class="nav-link">Tin tức</a></li>
 	          <li class="nav-item <?php echo ($activate == "contact" ? "active" : "")?>"><a href="contact.php" class="nav-link">Liên hệ</a></li>
-<<<<<<< HEAD
-	          <li class="nav-item cta"><a href="reservation.php" class="nav-link">Đặt bàn</a></li>
-			  <li class="nav-item <?php echo ($activate == "contact" ? "active" : "")?>"><a href="" class="nav-link icon-user"></a></li>
-=======
 			  <li class="nav-item cta"><a href="reservation.php" class="nav-link">Đặt bàn</a></li>
 			  <li class="nav-item <?php echo ($activate == "nav-link icon-user" ? "active" : "")?>"><a href="login.php" class="nav-link icon-user"></a></li>
->>>>>>> f19cabbc3df3288ac0d95b2125479a938f17af3d
+
 	        </ul>
 	      </div>
 	    </div>
