@@ -1,7 +1,6 @@
 <?php
 $activate = "reservation";
 @include('inc/header.php');
-@include('./connect.php');
 ?>
 
 
@@ -16,7 +15,7 @@ $activate = "reservation";
 </head>
 <body>
     <?php
-		require_once("connect.php");
+		
 		if (isset($_POST["dangky"])) {
   			//lấy thông tin từ các form bằng phương thức POST
               $ten = $_POST["ten"];
@@ -45,7 +44,7 @@ $activate = "reservation";
 					    // thực thi câu $sql với biến conn lấy từ file connection.php
                         if (mysqli_query($conn, $sql)) {
                             echo "Chúc mừng bạn đã đăng ký thành công.";
-                            header('Location: login.php');
+                            header("Location:index.php");
                             exit();
                         } else {
                             echo "Lỗi: " . $sql . "<br>" . mysqli_error($conn);

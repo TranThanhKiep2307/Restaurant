@@ -1,10 +1,4 @@
 <?php
-$username = "root"; // Khai báo username
-$password = "";      // Khai báo password
-$server   = "localhost";   // Khai báo server
-$dbname   = "restaurant";      // Khai báo database
-
-
 // Hàm để kết nối database và trả về kết nối
 function connectToDatabase() {
     $username = "root";
@@ -24,8 +18,8 @@ function connectToDatabase() {
 }
 
 // Bắt đầu session
-// session_start();
-$conn = connectToDatabase();
+session_start();
+$conn=connectToDatabase();
 
 
 ?>

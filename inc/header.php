@@ -1,12 +1,12 @@
-<?php 
+<?php
+  @include('./connect.php');
 	@include('config/config.php');
 	@include('lib/session.php');
-	Session::init();
+  @include_once('lib/database.php');
+  @include_once('helpers/format.php');
+
 ?>
 <?php
-	@include_once('lib/database.php');
-	@include_once('helpers/format.php');
-	
 	spl_autoload_register(function ($class) {
 		include 'classes/' . $class . '.php';
 	});
@@ -75,7 +75,6 @@
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
-	</button>
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
@@ -84,10 +83,38 @@
 	        	<li class="nav-item <?php echo ($activate == "menu" ? "active" : "")?>"><a href="menu.php" class="nav-link">Thực đơn</a></li>
 	        	<li class="nav-item <?php echo ($activate == "blog" ? "active" : "")?>"><a href="blog.php" class="nav-link">Tin tức</a></li>
 	          <li class="nav-item <?php echo ($activate == "contact" ? "active" : "")?>"><a href="contact.php" class="nav-link">Liên hệ</a></li>
-			  <li class="nav-item cta"><a href="reservation.php" class="nav-link">Đặt bàn</a></li>
-			  <li class="nav-item <?php echo ($activate == "nav-link icon-user" ? "active" : "")?>"><a href="login.php" class="nav-link icon-user"></a></li>
-	        </ul>
+			      <li class="nav-item cta"><a href="reservation.php" class="nav-link">Đặt bàn</a></li>  
+	      </ul>
 	      </div>
 	    </div>
 	  </nav>
+	  <style>
+      /* Điều chỉnh kiểu hiển thị của dropdown */
+      .menu {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+      }
+
+      .nav-item {
+          position: relative; /* Để làm cho dropdown-menu hiển thị tương đối */
+      }
+
+      .dropdown-menu {
+          display: none; /* Ẩn dropdown ban đầu */
+          position: absolute; /* Hiển thị tuyệt đối trong khoảng cách của nav-item */
+          top: 100%; /* Hiển thị bên dưới nav-item */
+          left: 0;
+          background-color: white;
+          border: 1px solid #ddd;
+          padding: 10px;
+          min-width: 200px;
+      }
+
+      /* Hiển thị dropdown khi nav-link được hover hoặc click */
+      .nav-item:hover .dropdown-menu {
+          display: block;
+      }
+
+    </style>
     <!-- END nav -->
