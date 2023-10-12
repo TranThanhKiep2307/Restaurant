@@ -736,7 +736,7 @@ $activate = "menu";
 							                  <h3>Rượu vang đỏ</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$59</span>
+							                  <span class="price">1.090.000đ</span>
 							                </div>
 							              </div>
 							              <p><span>Rượu vang đỏ</span></p>
@@ -755,7 +755,7 @@ $activate = "menu";
 							                  <h3>Rượu Cognac</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$119</span>
+							                  <span class="price">1.190.000đ</span>
 							                </div>
 							              </div>
 							              <p><span>Rượu Cognac</span></p>
@@ -775,7 +775,7 @@ $activate = "menu";
 							                  <h3> Rượu nho Sherry</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$105</span>
+							                  <span class="price">1.050.000đ</span>
 							                </div>
 							              </div>
 							              <p><span> Rượu nho Sherry</span></p>
@@ -794,7 +794,7 @@ $activate = "menu";
 							                  <h3>Rượu vang trắng</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$69</span>
+							                  <span class="price">6.900.000đ</span>
 							                </div>
 							              </div>
 							              <p><span>Rượu vang trắng</span></p>
@@ -814,7 +814,7 @@ $activate = "menu";
 							                  <h3>Rum trắng</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$79</span>
+							                  <span class="price">790.000đ</span>
 							                </div>
 							              </div>
 							              <p><span>Rum trắng</span></p>
@@ -833,7 +833,7 @@ $activate = "menu";
 							                  <h3>Tequila </h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$69</span>
+							                  <span class="price">990.000đ</span>
 							                </div>
 							              </div>
 							              <p><span>Tequila </span></p>
@@ -853,7 +853,7 @@ $activate = "menu";
 							                  <h3>Rượu Whisky</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$69</span>
+							                  <span class="price">790.000đ</span>
 							                </div>
 							              </div>
 							              <p><span>Rượu Whisky</span></p>
@@ -872,7 +872,7 @@ $activate = "menu";
 							                  <h3>Rượu Vodka</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$59</span>
+							                  <span class="price">1.590.000đ</span>
 							                </div>
 							              </div>
 							              <p><span>Rượu Vodka</span></p>
