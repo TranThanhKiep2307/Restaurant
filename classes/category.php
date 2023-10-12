@@ -23,7 +23,7 @@ class category
             $alert = "<span class='error'> Danh mục sản phẩm không được trống!!!</span>";
             return $alert;
         }else{
-            $query = "INSERT INTO danhmuc(LTA_TEN) VALUES ('$LTA_TEN')";
+            $query = "INSERT INTO loai_thuc_an(LTA_TEN) VALUES ('$LTA_TEN')";
             $result = $this->db->insert($query);
             if($result){
                 $alert = "<span class='success'> Thêm danh mục sản phẩm thành công!</span>";
@@ -38,7 +38,7 @@ class category
 
     }
     public function show_category (){
-        $query = "SELECT * FROM danhmuc ORDER BY LTA_MA DESC";
+        $query = "SELECT * FROM loai_thuc_an ORDER BY LTA_MA DESC";
         $result = $this->db->select($query);
         return $result;
     }
@@ -52,7 +52,7 @@ class category
             $alert = "<span class='error'> Danh mục sản phẩm không được trống!!!</span>";
             return $alert;
         }else{
-            $query = "UPDATE danhmuc SET LTA_TEN = '$LTA_TEN' WHERE LTA_MA = '$id'";
+            $query = "UPDATE loai_thuc_an SET LTA_TEN = '$LTA_TEN' WHERE LTA_MA = '$id'";
             $result = $this->db->update($query);
             if($result){
                 $alert = "<span class='success'> Cập nhật danh mục sản phẩm thành công!</span>";
@@ -67,7 +67,7 @@ class category
     }
 
     public function delete_category($id) {
-        $query = "DELETE FROM danhmuc WHERE LTA_MA = '$id'";
+        $query = "DELETE FROM loai_thuc_an WHERE LTA_MA = '$id'";
         $result = $this->db->delete($query);
         if($result){
             $alert = "<span class='success'> Xóa danh mục sản phẩm thành công!</span>";
@@ -78,7 +78,12 @@ class category
         }   
     }
     public function getcatbyId($id){
-        $query = "SELECT * FROM danhmuc WHERE LTA_MA = '$id'";
+        $query = "SELECT * FROM loai_thuc_an WHERE LTA_MA = '$id'";
+        $result = $this->db->select($query);
+        return $result;
+    }
+    public function show_category_menu (){
+        $query = "SELECT * FROM loai_thuc_an ORDER BY LTA_MA DESC";
         $result = $this->db->select($query);
         return $result;
     }

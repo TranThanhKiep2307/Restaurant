@@ -15,7 +15,11 @@ class Session{
     }
  }
 
+<<<<<<< HEAD
+ public static function set($key, $val){
+=======
 public static function set($key, $val){
+>>>>>>> df4224cbb532158096e76eb363cbfe4e927ccd4f
     $_SESSION[$key] = $val;
  }
 
