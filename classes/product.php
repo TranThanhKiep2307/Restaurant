@@ -148,7 +148,10 @@ class product
     }
 
     public function getproduct_new(){
-        $query = "SELECT * FROM sanpham ORDER BY SP_MA DESC LIMIT 4";
+        $query = "SELECT thucan.*, chitietthucan.CTTA_DONGIA, loai_thuc_an.LTA_TEN
+        FROM thucan INNER JOIN chitietthucan ON thucan.TA_MA = chitietthucan.TA_MA
+        INNER JOIN loai_thuc_an ON thucan.LTA_MA = loai_thuc_an.LTA_MA 
+        ORDER BY thucan.LTA_MA DESC LIMIT 4";
         $result = $this->db->select($query);
         return $result;
     }
