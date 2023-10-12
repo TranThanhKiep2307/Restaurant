@@ -1,6 +1,6 @@
 <?php
 $activate = "reservation";
-@include('header.php');
+@include('inc/header.php');
 ?>
     
     <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_3.jpg');" data-stellar-background-ratio="0.5">
@@ -73,6 +73,33 @@ $activate = "reservation";
 	                    </div>
 	                  </div>
 	                </div>
+					<div class="col-md-6">
+	                  <div class="form-group">
+	                    <label for="">Món ăn</label>
+	                    <input id="food" type="text" class="form-control" placeholder="" required>
+	                  </div>
+	                </div>
+					<div class="col-md-6">
+	                  <div class="form-group">
+	                    <label for="">Số lượng món</label>
+	                    <input id="email" type="number" class="form-control" value="1" min="1" placeholder="" required>
+	                  </div>
+	                </div>
+					<div class="col-md-6">
+	                  <div class="form-group">
+	                    <label for="">Bàn</label>
+	                    <div class="select-wrap one-third">
+	                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+	                      <select name="" id="person" class="form-control">
+	                        <option value="">Số bàn</option>
+	                        <option value="">1</option>
+	                        <option value="">2</option>
+	                        <option value="">3</option>
+	                        <option value="">4+</option>
+	                      </select>
+	                    </div>
+	                  </div>
+	                </div>
 	                <div class="col-md-12 mt-3">
 	                  <div class="form-group">
 	                    <button onsubmit="showMessageBox()" type="submit" value="" class="btn btn-primary py-3 px-5">Make a Reservation</button>
@@ -107,5 +134,5 @@ $activate = "reservation";
 		</section>
 		
 <?php
-@include('footer.php');
+@include('inc/footer.php');
 ?>

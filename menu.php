@@ -1,6 +1,6 @@
 <?php
 $activate = "menu";
-@include('header.php');
+@include('inc/header.php');
 ?>
     
     <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_3.jpg');" data-stellar-background-ratio="0.5">
@@ -8,7 +8,7 @@ $activate = "menu";
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
           <div class="col-md-9 ftco-animate text-center mb-4">
-            <h1 class="mb-2 bread">Thực đơn</h1>
+            <h1 class="mb-2 bread">Menu</h1>
             <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Trang chủ <i class="ion-ios-arrow-forward"></i></a></span> <span>Thực đơn <i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
@@ -94,7 +94,7 @@ $activate = "menu";
 							                  <span class="price">239.00đ</span>
 							                </div>
 							              </div>
-							              <p><span>Thịt bò Mỹ</span>, <span>Tôm</span>, <span>Mực</span>, <span>Gà</span,<span>3 món khai vị</span>></p>
+							              <p><span>Thịt bò Mỹ</span>, <span>Tôm</span>, <span>Mực</span>, <span>Gà</span>, <span>3 món khai vị</span></p>
 							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
@@ -191,7 +191,7 @@ $activate = "menu";
 							                  <span class="price">289.000đ</span>
 							                </div>
 							              </div>
-							              <p><span>Thịt bò</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
+							              <p><span>Thịt bò</span>, <span>Chân gà</span>, <span>Tôm</span>, <span>Mực</span>, <span> 3 món khai vị</span></p>
 							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
@@ -735,7 +735,7 @@ $activate = "menu";
 							                  <h3>Rượu vang đỏ</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$59</span>
+							                  <span class="price">1.090.000đ</span>
 							                </div>
 							              </div>
 							              <p><span>Rượu vang đỏ</span></p>
@@ -754,7 +754,7 @@ $activate = "menu";
 							                  <h3>Rượu Cognac</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$119</span>
+							                  <span class="price">1.190.000đ</span>
 							                </div>
 							              </div>
 							              <p><span>Rượu Cognac</span></p>
@@ -774,7 +774,7 @@ $activate = "menu";
 							                  <h3> Rượu nho Sherry</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$105</span>
+							                  <span class="price">1.050.000đ</span>
 							                </div>
 							              </div>
 							              <p><span> Rượu nho Sherry</span></p>
@@ -793,7 +793,7 @@ $activate = "menu";
 							                  <h3>Rượu vang trắng</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$69</span>
+							                  <span class="price">6.900.000đ</span>
 							                </div>
 							              </div>
 							              <p><span>Rượu vang trắng</span></p>
@@ -813,7 +813,7 @@ $activate = "menu";
 							                  <h3>Rum trắng</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$79</span>
+							                  <span class="price">790.000đ</span>
 							                </div>
 							              </div>
 							              <p><span>Rum trắng</span></p>
@@ -832,7 +832,7 @@ $activate = "menu";
 							                  <h3>Tequila </h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$69</span>
+							                  <span class="price">990.000đ</span>
 							                </div>
 							              </div>
 							              <p><span>Tequila </span></p>
@@ -852,7 +852,7 @@ $activate = "menu";
 							                  <h3>Rượu Whisky</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$69</span>
+							                  <span class="price">790.000đ</span>
 							                </div>
 							              </div>
 							              <p><span>Rượu Whisky</span></p>
@@ -871,7 +871,7 @@ $activate = "menu";
 							                  <h3>Rượu Vodka</h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price">$59</span>
+							                  <span class="price">1.590.000đ</span>
 							                </div>
 							              </div>
 							              <p><span>Rượu Vodka</span></p>
@@ -890,5 +890,5 @@ $activate = "menu";
     </section>
 		
 <?php
-@include('footer.php');
+@include('inc/footer.php');
 ?>
