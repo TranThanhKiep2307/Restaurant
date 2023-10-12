@@ -1,6 +1,7 @@
 <?php
 $activate = "reservation";
 @include('inc/header.php');
+@include('./connect.php');
 ?>
 
 
@@ -25,18 +26,22 @@ $activate = "reservation";
               $sdt = $_POST["sdt"];
               $diachi = $_POST["diachi"];
               $qh_ma = $_POST["qh"];
+              
   			//Kiểm tra điều kiện bắt buộc đối với các field không được bỏ trống
-			  if ($usernam == "" || $password == "" ) {
+			  if ($username == "" || $password == "" ) {
 				   echo "bạn vui lòng nhập đầy đủ thông tin";
-  			}else{
+  			    }
+            else
+                {
   					// Kiểm tra tài khoản đã tồn tại chưa
-                      $sql = "SELECT KH_PASSWORD FROM khachhang WHERE KH_USERNAM = '".$usernam."'";
+                      $sql = "SELECT KH_PASSWORD FROM khachhang WHERE KH_USERNAME = '".$username."'";
 					    $kt=mysqli_query($conn, $sql);
 					        if(mysqli_num_rows($kt)  > 0){
 						        echo "Tài khoản đã tồn tại";
 					        }else{
 						//thực hiện việc lưu trữ dữ liệu vào db
-	    				$sql = "INSERT INTO khachhang(Q_MA,KH_TEN,KH_SDT,KH_EMAIL,KH_DIACHI,KH_USERNAM,KH_PASSWORD )VALUES ($qh_ma,'$ten','$sdt','$email','$diachi','$usernam','$password')";
+	    				$sql = "INSERT INTO khachhang(Q_MA,KH_TEN,KH_SDT,KH_EMAIL,KH_DIACHI,KH_USERNAME,KH_PASSWORD )
+                                VALUES ('$qh_ma','$ten','$sdt','$email','$diachi','$username','$password')";
 					    // thực thi câu $sql với biến conn lấy từ file connection.php
                         if (mysqli_query($conn, $sql)) {
                             echo "Chúc mừng bạn đã đăng ký thành công.";
@@ -103,7 +108,7 @@ $activate = "reservation";
             <input type="text" class="form-control" id="diachi" name="diachi" required>
         </div>
         <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Quận Huyện<span class="error">*</span></label>
+            <label for="qh" class="form-label">Quận Huyện<span class="error">*</span></label>
             <select class="form-select form-control" id="qh" name="qh" required>
                 <option value="" selected>Chọn quận/huyện</option>
             <?php                            
@@ -131,14 +136,14 @@ $activate = "reservation";
 				 function showMessageBox() {
     			var message = "Reservation successful!";
     			alert(message);
-                document.getElementById('hoten').value = '';
-                document.getElementById('sdt').value = '';
-                document.getElementById('username').value = '';
-                document.getElementById('email').value = '';
-                document.getElementById('matkhau').value = '';
-                document.getElementById('matkhau2').value = '';
-                document.getElementById('diachi').value = '';
-                document.getElementById('qh').value = '';
+                // document.getElementById('hoten').value = '';
+                // document.getElementById('sdt').value = '';
+                // document.getElementById('username').value = '';
+                // document.getElementById('email').value = '';
+                // document.getElementById('matkhau').value = '';
+                // document.getElementById('matkhau2').value = '';
+                // document.getElementById('diachi').value = '';
+                // document.getElementById('qh').value = '';
                 
                 
              
@@ -146,7 +151,7 @@ $activate = "reservation";
                 //     textarea.value = "";
                 // console.log(document.getElementById('address'));
              
-					}s
+					}
 		 </script>
 </body>
 

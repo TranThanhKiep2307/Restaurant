@@ -1,6 +1,7 @@
 <?php
 $activate = "login";
 @include 'inc/header.php';
+@include './connect.php';
 ?>
 
 <head>
@@ -44,8 +45,6 @@ $activate = "login";
 </body>
 
 <?php
-// Kết nối database
-$conn = connectToDatabase();
 
 
 // Hàm để kiểm tra thông tin đăng nhập
