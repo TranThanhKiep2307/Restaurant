@@ -23,11 +23,11 @@ $activate = "login";
             <div class="header-bottom">
                 <div class="header-right w3agile">
                     <div class="header-left-bottom agileinfo">
-                        <form action="connect.php" method="post">
+                        <form action="index.php" method="post">
                             <p>Username:</p>
-                            <input type="text" id="user" name="user" placeholder="Nhập tên đăng nhập tại đây " />
+                            <input type="text" id="username" name="username" placeholder="Nhập tên đăng nhập tại đây " />
                             <p>Password:</p>
-                            <input type="password" id="pass" name="pass" placeholder="Nhập mật khẩu tại đây" />
+                            <input type="password" id="psw" name="psw" placeholder="Nhập mật khẩu tại đây" />
                             <input type="submit" id="login" value="Login">
                             <p>Bạn chưa có tài khoản? <a href="dangky.php">Đăng ký tại đây</a></p>
                         </form>
@@ -44,5 +44,38 @@ $activate = "login";
 </body>
 
 <?php
+// Kết nối database
+$conn = connectToDatabase();
+
+
+// Hàm để kiểm tra thông tin đăng nhập
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST["username"];
+    $psw = $_POST["psw"];
+
+    if (checkLogin($conn, $username, $pass)) {
+        $_SESSION["username"] = $username;
+        header('Location: index.php');
+    } else {
+        echo "Sai username/pass";
+    }
+}
+function checkLogin($conn, $username, $psw) {
+    $sql = "SELECT KH_PASSWORD FROM khachhang WHERE KH_USERNAM = '".$username."'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        if ($row["KH_PASSWORD"] == $psw) {
+            return true;  // Đăng nhập thành công
+        } else {
+            return false; // Sai mật khẩu
+        }
+    } else {
+        return false; // Sai tài khoản
+    }
+}
+
+// Đóng kết nối database
 @include 'inc/footer.php';
 ?>
