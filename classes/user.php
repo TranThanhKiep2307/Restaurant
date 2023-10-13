@@ -44,18 +44,18 @@ class user
             }
         }
     }
-    public function login_user($KH_USERNAME,$KH_PASSWORD){
-        $KH_USERNAME = $this -> fm -> validation ($KH_USERNAME);
-        $KH_PASSWORD = $this -> fm -> validation ($KH_PASSWORD);
+    public function login_user($data){
+        // $KH_USERNAME = $this -> fm -> validation ($KH_USERNAME);
+        // $KH_PASSWORD = $this -> fm -> validation ($KH_PASSWORD);
 
-        $KH_USERNAME = mysqli_real_escape_string($this->db->link, $KH_USERNAME);
-        $KH_PASSWORD = mysqli_real_escape_string($this->db->link, $KH_PASSWORD);
+        $KH_USERNAME = mysqli_real_escape_string($this->db->link, $data('KH_USERNAME'));
+        $KH_PASSWORD = mysqli_real_escape_string($this->db->link, $data('KH_PASSWORD'));
 
         if(empty($KH_USERNAME)||empty($KH_PASSWORD)){
             $alert = "Tài khoản và mật khẩu không được trống!!!";
             return $alert;
         }else{
-            $query = "SELECT * FROM khanhhang WHERE KH_USERNAME = '$KH_USERNAME' AND KH_PASSWORD = '$KH_PASSWORD'";
+            $query = "SELECT * FROM khachhang WHERE KH_USERNAME = '$KH_USERNAME' AND KH_PASSWORD = '$KH_PASSWORD'";
             $result = $this->db->select($query);
             if($result != false){
                 $value = $result->fetch_assoc();
