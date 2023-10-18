@@ -1,14 +1,14 @@
 ﻿<?php include 'inc/header.php';?>
 <?php include 'inc/sidebar.php';?>
 <?php
-    @include('../classes/category.php');
+    @include('../classes/menu.php');
 ?>
 <?php
-	$cat = new category();
+	$cat = new menu();
 
 	if (isset($_GET['delid'])) {
         $id = $_GET['delid'];
-		$delete_cart = $cat -> delete_category($id);
+		$delete_cart = $cat -> delete_menu($id);
     }
 ?>
         <div class="grid_10">
@@ -29,16 +29,17 @@
 							<th>Tên Menu</th>
 							<th>Mã các món </th>
 							<th>Tên các món </th>
+							<th>Giá tiền </th>
 							<th>Hình ảnh</th>
 							<th>Action</th>
 						</tr>
 					</thead>
 					<tbody>
 					<?php
-						$show_category = $cat -> show_category();
-							if($show_category){
+						$show_menu = $cat -> show_menu();
+							if($show_menu){
 								$i = 0;
-								while ($result = $show_category -> fetch_assoc()){
+								while ($result = $show_menu -> fetch_assoc()){
 									$i++;
 					?>
 							<tr class="odd gradeX">
@@ -47,8 +48,9 @@
 								<td><?php echo $result['MN_TEN']?></td>
 								<td><?php echo $result ['TA_MA']?></td>
 								<td><?php echo $result ['TA_TEN']?></td>
+								<td><?php echo $result ['MN_GIA']?></td>
 								<td><img src="../admin/img/<?php echo $result ['MN_HINHANH']?>" width="200px" style="margin: 10px 10px 0px 10px; " ></td>
-								<td><a href="catedit.php?catid=<?php echo $result['MN_MA'] ?>">Edit</a> || 
+								<td><a href="catedit.php?menuid=<?php echo $result['MN_MA'] ?>">Edit</a> || 
 								<a onclick =  "return confirm ('Bạn có chắc muốn xóa không???')" href="?delid=<?php echo $result['MN_MA'] ?>">Delete</a></td>
 							</tr>
 					<?php

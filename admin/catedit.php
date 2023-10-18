@@ -1,19 +1,20 @@
 <?php include 'inc/header.php';?>
 <?php include 'inc/sidebar.php';?>
 <?php 
-@include('../classes/category.php');
+@include('../classes/menu.php');
 ?>
 <?php 
-    $cat = new category();
+    $menu = new menu();
 
-    if (!isset($_GET['catid']) || $_GET['catid'] == NULL) {
+    if (!isset($_GET['menuid']) || $_GET['menuid'] == NULL) {
         echo "<script>window.location = 'catlist.php'</script>";
     } else {
-        $id = $_GET['catid'];
+        $id = $_GET['menuid'];
     }
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $DMSP_TEN = $_POST['DMSP_TEN'];
-        $update_cart = $cat->update_category($DMSP_TEN,$id);
+    if ($_SERVER["REQUEST_METHOD"] == "POST"  && isset($_POST['submit'])) {
+        $MN_TEN= $_POST['MN_TEN'];
+        // $update_menu = $menu->update_menu($MN_TEN,$id);
+        $update_menu = $pd->update_menu($_POST,$_FILES,$id);
     }
    
 ?>
@@ -23,22 +24,82 @@
                 <h2>Sửa danh mục</h2>
                <div class="block copyblock">
                <?php 
-                if(isset($update_cart)){
-                    echo $update_cart;
+                if(isset($update_menu)){
+                    echo $update_menu;
                 }
                 ?>
-                <?php
-                    $get_cate_name = $cat -> getcatbyId($id);
-                    if($get_cate_name){
-                        while($result = $get_cate_name -> fetch_assoc()){
-                ?>
-                 <form action="" method="post">
+            <?php
+                $get_menu_byid = $menu -> getmenubyId($id);
+                    if($get_menu_byid){
+                        while($result = $get_menu_byid -> fetch_assoc()){
+                        
+                    ?>
+                 
+                 
+                 <form action="" method="post" enctype="multipart/form-data" >
                     <table class="form">					
                         <tr>
                             <td>
-                                <input type="text" value= "<?php echo $result['DMSP_TEN'] ?>" name = "DMSP_TEN" placeholder="Sửa danh mục sản phẩm" class="medium" />
+                                <label>Tiêu đề</label>
+                            </td>
+                            <td>
+                                <input type="text" value= "<?php echo $result['MN_TEN'] ?>" name = "MN_TEN" placeholder="Sửa tên menu" class="medium" />
                             </td>
                         </tr>
+
+                        <tr>
+                            <td>
+                                <label>Mã món ăn</label>
+                            </td>
+                            <td>
+                            <select id="select" name="MA_MA">
+                            <option>Chọn mã loại</option>
+                            <?php
+                                $cat = new menu();
+                                $catlist = $cat->show_tenmon();
+                                if($catlist){
+                                    while($result = $catlist -> fetch_assoc()){
+                            ?>
+                            <option 
+                            <?php if($result['MA_MA']==$result['MA_MA']) { echo 'selected'; }?>
+                            value="<?php echo $result['MA_MA']?>"><?php echo $result['MA_TEN']?></option>
+                            <?php
+                                }
+                                }
+                        }
+                            ?>
+                        </select>
+                            </td>
+                        </tr>
+                        
+
+                        <tr>
+                            <td>
+                                <label>Giá tiền </label>
+                            </td>
+                            <td>
+                               
+                                <input type="text" value="<?php echo $result['MN_GIA']?>" name="MN_GIA" class="medium" />
+                            </td>
+                        </tr>
+
+
+
+
+
+                        <tr>
+                            <td>
+                                <label>Hình ảnh menu</label>
+                            </td>
+                            <td>
+                                <img src="../images/ <?php echo $result_review['MN_HINHANH']?>" width="80px"><br>
+                                <input type="file" name="MN_HINHANH"/>
+                            </td>
+                        </tr>
+
+
+
+
 						<tr> 
                             <td>
                                 <input type="submit" name="submit" Value="Update" />
@@ -47,10 +108,12 @@
                     </table>
                 <?php
                   }
-                } 
+            
                 ?>
                     </form>
+             
                 </div>
             </div>
         </div>
+
 <?php include 'inc/footer.php';?>

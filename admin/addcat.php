@@ -8,7 +8,7 @@ $cat= new menu();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$MN_TEN = $_POST['MN_TEN'];
 
-	$insert_cart = $cat->insert_menu($MN_TEN);
+	$insert_nemu = $cat->insert_menu($MN_TEN);
   }
 ?>
 
@@ -17,8 +17,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <h2>Thêm Menu</h2>
                <div class="block copyblock">
                <?php 
-                if(isset($insert_cart)){
-                    echo $insert_cart;
+                if(isset($insert_menu)){
+                    echo $insert_menu;
                 }
                 ?>
                  <form action="addcat.php" method="post">
