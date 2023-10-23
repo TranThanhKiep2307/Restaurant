@@ -14,7 +14,7 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST"  && isset($_POST['submit'])) {
         $MN_TEN= $_POST['MN_TEN'];
         // $update_menu = $menu->update_menu($MN_TEN,$id);
-        $update_menu = $pd->update_menu($_POST,$_FILES,$id);
+        $update_menu = $menu->update_menu($_POST,$_FILES,$id);
     }
    
 ?>
@@ -52,7 +52,7 @@
                                 <label>Mã món ăn</label>
                             </td>
                             <td>
-                            <select id="select" name="MA_MA">
+                            <select id="select" name="TA_MA">
                             <option>Chọn mã loại</option>
                             <?php
                                 $cat = new menu();
@@ -61,8 +61,8 @@
                                     while($result = $catlist -> fetch_assoc()){
                             ?>
                             <option 
-                            <?php if($result['MA_MA']==$result['MA_MA']) { echo 'selected'; }?>
-                            value="<?php echo $result['MA_MA']?>"><?php echo $result['MA_TEN']?></option>
+                            <?php if($result['TA_MA']==$result['TA_MA']) { echo 'selected'; }?>
+                            value="<?php echo $result['TA_MA']?>"><?php echo $result['TA_TEN']?></option>
                             <?php
                                 }
                                 }
@@ -78,11 +78,10 @@
                                 <label>Giá tiền </label>
                             </td>
                             <td>
-                               
                                 <input type="text" value="<?php echo $result['MN_GIA']?>" name="MN_GIA" class="medium" />
                             </td>
-                        </tr>
-
+                    </tr>
+                    
 
 
 

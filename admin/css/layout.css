@@ -65,15 +65,16 @@ h1 a {
 	font-weight:normal;
 }
 
-
 /* branding
 ----------------------------------------------- */
 #branding {
-  font-weight: normal;
-  margin-bottom: 0;
-  padding: 22px 10px 3px;
-  text-align: left;
-}
+	font-family: initial;
+	background-color: peru;
+	color: darkgoldenrod;
+	margin-bottom: 0;
+	padding: 22px 10px 3px;
+	text-align: center;
+  }
 
 .header-repeat{background:url(../img/header-repeat.jpg) repeat-x;}
 
@@ -187,7 +188,7 @@ div.menu .block {
 /* sidebar menu
 ----------------------------------------------- */
 
-.box.sidemenu{ background-color:#D1DEE4; border-right:1px solid #0F172B; padding:0px; margin:0px; cursor:pointer; }
+.box.sidemenu{background-color: beige;border-right: 1px solid;padding:0px;margin:0px;cursor:pointer;font-family: initial;font-size: large;}
 .box.sidemenu .block{padding-top:0px; margin-top:0px;}
 
 /* paragraphs, quotes and lists

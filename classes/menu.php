@@ -70,7 +70,7 @@ class menu
 
         $MN_TEN       = mysqli_real_escape_string($this->db->link, $data['MN_TEN']);
         $MN_GIA       = mysqli_real_escape_string($this->db->link, $data['MN_GIA']);
-        $MA_MA       = mysqli_real_escape_string($this->db->link, $data['MA_MA']);
+        $TA_MA       = mysqli_real_escape_string($this->db->link, $data['TA_MA']);
         // $MA_MOTA      = mysqli_real_escape_string($this->db->link, $data['MA_MOTA']);
         $MN_HINHANH= mysqli_real_escape_string($this->db->link, $data['MN_HINHANH']);
         
@@ -85,7 +85,7 @@ class menu
         $unique_image = substr(md5(time()), 0, 10).'.'.$file_ext;
         $uploaded_image = "../images/".$unique_image;
 
-        if($MN_TEN == "" || $MN_GIA == "" || $MA_MA=="" ){
+        if($MN_TEN == "" || $MN_GIA == "" || $TA_MA=="" ){
             $alert = "<span class='error'> Các thành phần này không được trống!!!</span>";
             return $alert;
         }else{
@@ -102,16 +102,16 @@ class menu
                 $query = "UPDATE menu SET 
                 MN_TEN = '$MN_TEN', 
                 MN_GIA = '$MN_GIA',
-                MA_MA = '$MA_MA',
+                TA_MA = '$TA_MA',
                 
                 MN_HINHANH = '$unique_image'
                 WHERE MN_MA = '$id'";
             }else{
                 //Không chọn ảnh
-                $query = "UPDATE monan SET 
+                $query = "UPDATE menu SET 
                 MN_TEN = '$MN_TEN',
                 MN_GIA = '$MN_GIA',
-                MA_MA = '$MA_MA',
+                MA_MA = '$TA_MA',
              
                 WHERE MN_MA = '$id'";
             }

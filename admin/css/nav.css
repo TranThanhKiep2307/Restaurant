@@ -8,10 +8,12 @@ Navigation
 ul.nav,
 ul.nav * { margin:0;padding:0;}
 ul.nav {
-  background: #0F172B repeat-x scroll 0 8px !important;
-  height: 58px;
-  max-width: 100%;
-  position: relative;
+	background: #0F172B repeat-x scroll 0 8px !important;
+	height: 58px;
+	max-width: 100%;
+	position: relative;
+	font-family: initial;
+	font-size: larger;
 }
 ul.nav li {
 	cursor:pointer;
