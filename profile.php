@@ -86,7 +86,7 @@ h1, h2, h3, h4, h5, h6 {
                         <div class="row">
                             <div class="col-6">
                             <h1>Thay đổi thông tin người dùng</h1>
-                              <form action="" method="post">
+                              <form action="sua.php" method="post">
                               <?php
                                 $id = Session::get('KH_MA');
                                 $get_customers = $us->show_users($id);
@@ -95,7 +95,7 @@ h1, h2, h3, h4, h5, h6 {
                                 ?>
                                 <label for="full_name">Tên đăng nhập:</label>
 
-                                  <input value="<?php echo $result['KH_USERNAME']?>"></input><br>
+                                  <input value="<?php echo $result['KH_USERNAME']?>"  name="username"></input><br>
 
                                   <label for="full_name">Họ tên:</label>
                                   <input type="text" value="<?php echo $result['KH_TEN']?>" name="full_name"><br>

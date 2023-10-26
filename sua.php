@@ -14,15 +14,18 @@ if ($conn->connect_error) {
 
 // Nhận dữ liệu từ biểu mẫu
 $username = $_POST['username'];
-$full_name = $_POST['full_name'];
-$phone = $_POST['phone'];
-$email = $_POST['email'];
+$new_full_name = $_POST['full_name']; // Dữ liệu mới tên của khách hàng
+$new_phone = $_POST['phone']; // Dữ liệu mới số điện thoại của khách hàng
+$new_email = $_POST['email']; // Dữ liệu mới email của khách hàng
+
 
 // Cập nhật thông tin người dùng trong CSDL
-$sql = "UPDATE khachhang SET KH_TEN='$full_name',KH_SDT='$phone', KH_EMAIL='$email' WHERE kH_USERNAME='$username'";
+$sql = "UPDATE khachhang 
+        SET KH_TEN='$new_full_name', KH_SDT='$new_phone', KH_EMAIL='$new_email' 
+        WHERE KH_USERNAME='$username'";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Thông tin người dùng đã được cập nhật thành công.";
+    echo "Thông tin khách hàng đã được cập nhật thành công.";
 } else {
     echo "Lỗi: " . $conn->error;
 }
