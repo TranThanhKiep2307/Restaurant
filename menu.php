@@ -81,9 +81,9 @@ $activate = "menu";
 	            <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-day-2-tab">
 	              	<div class="row no-gutters d-flex align-items-stretch">
 					  <?php
-						$product_new = $product->getproduct_nuong();
-						if($product_new){
-							while($result = $product_new ->fetch_assoc()){
+						$product_nuong = $product->getproduct_nuong();
+						if($product_nuong){
+							while($result = $product_nuong ->fetch_assoc()){
 						?>
 					        	<div class="col-md-12 col-lg-6 d-flex align-self-stretch">
 					        		<div class="menus d-sm-flex ftco-animate align-items-stretch">
@@ -114,9 +114,9 @@ $activate = "menu";
 				  <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-day-3-tab">
 	              	<div class="row no-gutters d-flex align-items-stretch">
 					  <?php
-						$product_new = $product->getproduct_ruou();
-						if($product_new){
-							while($result = $product_new ->fetch_assoc()){
+						$product_ruou = $product->getproduct_ruou();
+						if($product_ruou){
+							while($result = $product_ruou ->fetch_assoc()){
 						?>
 					        	<div class="col-md-12 col-lg-6 d-flex align-self-stretch">
 					        		<div class="menus d-sm-flex ftco-animate align-items-stretch">
@@ -147,9 +147,9 @@ $activate = "menu";
 				  <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-day-4-tab">
 	              	<div class="row no-gutters d-flex align-items-stretch">
 					  <?php
-						$product_new = $product->getproduct_monkem();
-						if($product_new){
-							while($result = $product_new ->fetch_assoc()){
+						$product_monkem = $product->getproduct_monkem();
+						if($product_monkem){
+							while($result = $product_monkem ->fetch_assoc()){
 						?>
 					        	<div class="col-md-12 col-lg-6 d-flex align-self-stretch">
 					        		<div class="menus d-sm-flex ftco-animate align-items-stretch">
@@ -180,9 +180,9 @@ $activate = "menu";
 				  <div class="tab-pane fade" id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-day-5-tab">
 	              	<div class="row no-gutters d-flex align-items-stretch">
 					  <?php
-						$product_new = $product->getproduct_kem();
-						if($product_new){
-							while($result = $product_new ->fetch_assoc()){
+						$product_kem = $product->getproduct_kem();
+						if($product_kem){
+							while($result = $product_kem ->fetch_assoc()){
 						?>
 					        	<div class="col-md-12 col-lg-6 d-flex align-self-stretch">
 					        		<div class="menus d-sm-flex ftco-animate align-items-stretch">
@@ -213,9 +213,9 @@ $activate = "menu";
 				  <div class="tab-pane fade" id="v-pills-6" role="tabpanel" aria-labelledby="v-pills-day-6-tab">
 	              	<div class="row no-gutters d-flex align-items-stretch">
 					  <?php
-						$product_new = $product->getproduct_sot();
-						if($product_new){
-							while($result = $product_new ->fetch_assoc()){
+						$product_sot = $product->getproduct_sot();
+						if($product_sot){
+							while($result = $product_sot ->fetch_assoc()){
 						?>
 					        	<div class="col-md-12 col-lg-6 d-flex align-self-stretch">
 					        		<div class="menus d-sm-flex ftco-animate align-items-stretch">

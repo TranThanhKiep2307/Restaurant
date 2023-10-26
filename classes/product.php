@@ -162,6 +162,60 @@ class product
         $result = $this->db->select($query);
         return $result;
     }
+    public function getproduct_lau(){
+        $query = "SELECT thucan.*, loai_thuc_an.*, chitietthucan.*
+        FROM thucan
+        JOIN loai_thuc_an ON thucan.LTA_MA = loai_thuc_an.LTA_MA
+        JOIN chitietthucan ON thucan.TA_MA = chitietthucan.TA_MA
+        WHERE thucan.LTA_MA = 'L01'";
+        $result = $this->db->select($query);
+        return $result;
+    }
+    public function getproduct_nuong(){
+        $query = "SELECT thucan.*, loai_thuc_an.*, chitietthucan.*
+        FROM thucan
+        JOIN loai_thuc_an ON thucan.LTA_MA = loai_thuc_an.LTA_MA
+        JOIN chitietthucan ON thucan.TA_MA = chitietthucan.TA_MA
+        WHERE thucan.LTA_MA = 'T01'";
+        $result = $this->db->select($query);
+        return $result;
+    }
+    public function getproduct_ruou(){
+        $query = "SELECT thucan.*, loai_thuc_an.*, chitietthucan.*
+        FROM thucan
+        JOIN loai_thuc_an ON thucan.LTA_MA = loai_thuc_an.LTA_MA
+        JOIN chitietthucan ON thucan.TA_MA = chitietthucan.TA_MA
+        WHERE thucan.LTA_MA = 'R01'";
+        $result = $this->db->select($query);
+        return $result;
+    }
+    public function getproduct_monkem(){
+        $query = "SELECT thucan.*, loai_thuc_an.*, chitietthucan.*
+        FROM thucan
+        JOIN loai_thuc_an ON thucan.LTA_MA = loai_thuc_an.LTA_MA
+        JOIN chitietthucan ON thucan.TA_MA = chitietthucan.TA_MA
+        WHERE thucan.LTA_MA = 'K01'";
+        $result = $this->db->select($query);
+        return $result;
+    }
+    public function getproduct_kem(){
+        $query = "SELECT thucan.*, loai_thuc_an.*, chitietthucan.*
+        FROM thucan
+        JOIN loai_thuc_an ON thucan.LTA_MA = loai_thuc_an.LTA_MA
+        JOIN chitietthucan ON thucan.TA_MA = chitietthucan.TA_MA
+        WHERE thucan.LTA_MA = 'K02'";
+        $result = $this->db->select($query);
+        return $result;
+    }
+    public function getproduct_sot(){
+        $query = "SELECT thucan.*, loai_thuc_an.*, chitietthucan.*
+        FROM thucan
+        JOIN loai_thuc_an ON thucan.LTA_MA = loai_thuc_an.LTA_MA
+        JOIN chitietthucan ON thucan.TA_MA = chitietthucan.TA_MA
+        WHERE thucan.LTA_MA = 'S01'";
+        $result = $this->db->select($query);
+        return $result;
+    }
 
 }
 ?>
