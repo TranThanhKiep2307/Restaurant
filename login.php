@@ -1,19 +1,20 @@
 <?php
 $activate = "login";
+ob_start();
 @include 'inc/header.php';
 ?>
 
 <head>
     <title>ĐĂNG NHẬP</title>
 <?php
-   $login_check = Session::get('login_user'); 
+   $login_check = Session::get('user'); 
    if($login_check){ 
       header('Location:index.php'); 
    }	
 ?>
 <?php 
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
-        $login_customers = $cs->login_user($_POST);
+        $login_user = $us->login_user($_POST);
     }   
 ?>
 
@@ -42,7 +43,7 @@ $activate = "login";
                             <input type="text" id="username" name="username" placeholder="Nhập tên đăng nhập tại đây " />
                             <p>Password:</p>
                             <input type="password" id="psw" name="psw" placeholder="Nhập mật khẩu tại đây" />
-                            <input type="submit" id="login" value="Login">
+                            <input type="submit" name="submit" id="login" value="Login">
                             <p>Bạn chưa có tài khoản? <a href="dangky.php">Đăng ký tại đây</a></p>
                         </form>
                     </div>
@@ -57,21 +58,21 @@ $activate = "login";
    
 </body>
 <?php
-$user = new user();
+// $user = new user();
 
 // Hàm để kiểm tra thông tin đăng nhập
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username   = $_POST["username"];
-    $psw        = $_POST["psw"];
-    $login_check = $user->login_user($CTV_username,$psw);
-    // if (Login_users($result)) {
-    //     $_SESSION["username"] = $username;
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//     $username   = $_POST["username"];
+//     $psw        = $_POST["psw"];
+//     $login_check = $user->login_user($CTV_username,$psw);
+//     // if (Login_users($result)) {
+//     //     $_SESSION["username"] = $username;
         
-    //     // header('Location: index.php');
-    // } else {
-    //     echo "Sai username/pass";
-    // }
-}
+//     //     // header('Location: index.php');
+//     // } else {
+//     //     echo "Sai username/pass";
+//     // }
+// }
 // function checkLogin($conn, $username, $psw) {
 //     $sql = "SELECT KH_PASSWORD FROM khachhang WHERE KH_USERNAME = '".$username."'";
 //     $result = $conn->query($sql);

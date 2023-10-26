@@ -1,11 +1,12 @@
 <?php
-$activate = "reservation";
+$activate = "dangky";
+ob_start();
 @include('inc/header.php');
 ?>
 
 
 <head>
-    <title>ĐĂNG KY</title>
+    <title>ĐĂNG KÝ</title>
 
 
     <link href="./css/login.css" rel="stylesheet" type="text/css" media="all" />
@@ -44,19 +45,15 @@ $activate = "reservation";
 					    // thực thi câu $sql với biến conn lấy từ file connection.php
                         if (mysqli_query($conn, $sql)) {
                             echo "Chúc mừng bạn đã đăng ký thành công.";
-                            header("Location:index.php");
+                            header("Location:login.php");
                             exit();
                         } else {
                             echo "Lỗi: " . $sql . "<br>" . mysqli_error($conn);
                         }
-                        
-					}
-									    
-					
+					}	
 			  }
 	    }
 	?>
-
     <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_3.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">

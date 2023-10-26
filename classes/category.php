@@ -20,16 +20,16 @@ class category
         $LTA_TEN = mysqli_real_escape_string($this->db->link, $LTA_TEN);
 
         if(empty($LTA_TEN)){
-            $alert = "<span class='error'> Danh mục sản phẩm không được trống!!!</span>";
+            $alert = "<span class='error'> loai_thuc_an không được trống!!!</span>";
             return $alert;
         }else{
             $query = "INSERT INTO loai_thuc_an(LTA_TEN) VALUES ('$LTA_TEN')";
             $result = $this->db->insert($query);
             if($result){
-                $alert = "<span class='success'> Thêm danh mục sản phẩm thành công!</span>";
+                $alert = "<span class='success'> Thêm loai_thuc_an thành công!</span>";
                 return $alert; 
             }else{
-                $alert = "<span class='error'> Thêm danh mục sản phẩm thất bại!!!</span>";
+                $alert = "<span class='error'> Thêm loai_thuc_an thất bại!!!</span>";
                 return $alert; 
             }
 
@@ -49,16 +49,16 @@ class category
         $id = mysqli_real_escape_string($this->db->link, $id);
 
         if(empty($LTA_TEN)){
-            $alert = "<span class='error'> Danh mục sản phẩm không được trống!!!</span>";
+            $alert = "<span class='error'> Danh mục loai_thuc_an không được trống!!!</span>";
             return $alert;
         }else{
             $query = "UPDATE loai_thuc_an SET LTA_TEN = '$LTA_TEN' WHERE LTA_MA = '$id'";
             $result = $this->db->update($query);
             if($result){
-                $alert = "<span class='success'> Cập nhật danh mục sản phẩm thành công!</span>";
+                $alert = "<span class='success'> Cập nhật loai_thuc_an thành công!</span>";
                 return $alert; 
             }else{
-                $alert = "<span class='error'> Cập nhật danh mục sản phẩm thất bại!!!</span>";
+                $alert = "<span class='error'> Cập nhật loai_thuc_an thất bại!!!</span>";
                 return $alert; 
             }
 
@@ -82,7 +82,7 @@ class category
         $result = $this->db->select($query);
         return $result;
     }
-    public function show_category_menu (){
+    public function show_category_loai_thuc_an (){
         $query = "SELECT * FROM loai_thuc_an ORDER BY LTA_MA DESC";
         $result = $this->db->select($query);
         return $result;
