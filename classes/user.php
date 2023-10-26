@@ -45,11 +45,9 @@ class user
         }
     }
     public function login_user($data){
-        // $KH_USERNAME = $this -> fm -> validation ($KH_USERNAME);
-        // $KH_PASSWORD = $this -> fm -> validation ($KH_PASSWORD);
 
-        $KH_USERNAME = mysqli_real_escape_string($this->db->link, $data('KH_USERNAME'));
-        $KH_PASSWORD = mysqli_real_escape_string($this->db->link, $data('KH_PASSWORD'));
+        $KH_USERNAME = mysqli_real_escape_string($this->db->link, $data['KH_USERNAME']);
+        $KH_PASSWORD = mysqli_real_escape_string($this->db->link, $data['KH_PASSWORD']);
 
         if(empty($KH_USERNAME)||empty($KH_PASSWORD)){
             $alert = "Tài khoản và mật khẩu không được trống!!!";
@@ -57,7 +55,7 @@ class user
         }else{
             $query = "SELECT * FROM khachhang WHERE KH_USERNAME = '$KH_USERNAME' AND KH_PASSWORD = '$KH_PASSWORD'";
             $result = $this->db->select($query);
-            if($result != false){
+            if($result->num_rows > 0){
                 $value = $result->fetch_assoc();
                 session::set('user', true);
                 session::set('KH_MA',$value['KH_MA']);
@@ -75,30 +73,7 @@ class user
         }
 
     }
-//     public function Login_users($data){
-//         $KH_USERNAME = mysqli_real_escape_string($this->db->link, $data['KH_USERNAME']);
-        
-//         $KH_PASSWORD = mysqli_real_escape_string($this->db->link, $data['KH_PASSWORD']);
 
-//         if($KH_USERNAME == "" || $KH_PASSWORD == ""){
-//             $alert = "<span class='error'>Tên hoặc mật khẩu không được trống!!!</span>";
-//             return $alert;
-//         }else{ 
-//             $check_login = "SELECT * FROM khachhang WHERE KH_USERNAME = '$KH_USERNAME' AND KH_PASSWORD = '$KH_PASSWORD'";
-//             $result_check = $this->db->select($check_login);
-//             if($result_check){
-//                 $value = $result_check ->fetch_assoc();
-//                 Session::set('user',true);
-//                 Session::set('KH_MA',$value['KH_MA']);
-//                 Session::set('KH_TEN',$value['KH_TEN']);
-//                 Session::set('KH_USERNAME',$value['KH_USERNAME']);
-//                 header('Location:dangky.php');
-//             }else{
-//                 $alert = "<span class='error'>Tên hoặc mật khẩu không đúng!!!</span>";
-//             return $alert;
-//             }
-// }
-//     }
     public function show_users($id){
         $query = "SELECT * FROM khachhang WHERE KH_MA ='$id'";
         $result = $this->db->select($query);

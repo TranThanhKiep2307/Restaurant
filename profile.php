@@ -1,10 +1,24 @@
 <?php 
-include("header.php");
+$activate ="profile";
+ob_start();
+include("inc/header.php");
+?>
+<?php
+	$login_check = Session::get('user');
+	if($login_check==false){
+		header('Location:login.php');
+	}
+?>
+<?php 
+    $id = Session::get('KH_MA');
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])
+        ) {
+        $update_customers = $cs->update_customers($_POST,$id);
+    }   
 ?>
 <head>
     <title>Thay đổi thông tin người dùng</title>
     <!-- <link rel="stylesheet" href="css/style.css"> -->
-
 </head>
 <style>
 .ftco-navbar-light {
@@ -72,20 +86,31 @@ h1, h2, h3, h4, h5, h6 {
                         <div class="row">
                             <div class="col-6">
                             <h1>Thay đổi thông tin người dùng</h1>
-                              <form action="sua.php" method="post">
-                                  <label for="username">Username:</label>
-                                  <input type="text" value="<?php echo $_row['KH_USERNAME']?>" name="username" required><br>
+                              <form action="" method="post">
+                              <?php
+                                $id = Session::get('KH_MA');
+                                $get_customers = $us->show_users($id);
+                                if ($get_customers){
+                                    while($result = $get_customers->fetch_assoc()){ 
+                                ?>
+                                <label for="full_name">Tên đăng nhập:</label>
+
+                                  <input value="<?php echo $result['KH_USERNAME']?>"></input><br>
 
                                   <label for="full_name">Họ tên:</label>
-                                  <input type="text" value="<?php echo $_row['KH_TEN']?>" name="full_name"><br>
+                                  <input type="text" value="<?php echo $result['KH_TEN']?>" name="full_name"><br>
 
                                   <label for="phone">Số điện thoại:</label>
-                                  <input type="text" value="<?php echo $_row['KH_SDT']?>" name="phone"><br>
+                                  <input type="text" value="<?php echo $result['KH_SDT']?>" name="phone"><br>
 
                                   <label for="email">Email:</label>
-                                  <input type="email" value="<?php echo $_row['KH_EMAIL']?>" name="email"><br>
+                                  <input type="email" value="<?php echo $result['KH_EMAIL']?>" name="email"><br>
 
                                   <input type="submit" value="Cập nhật">
+                                  <?php
+                                        }
+                                    }
+                                  ?>
                               </form>
                             </div>
                         </div>
@@ -99,5 +124,5 @@ h1, h2, h3, h4, h5, h6 {
 </body>
 
 <?php 
-include("footer.php");
+include("inc/footer.php");
 ?>

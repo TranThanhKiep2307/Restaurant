@@ -49,27 +49,6 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <!-- <div class="py-1 bg-black top">
-    	 <div class="container">
-    		<div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
-	    		<div class="col-lg-12 d-block">
-		<div class="row d-flex">
-		    			<div class="col-md pr-4 d-flex topper align-items-center">
-					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
-						    <span class="text">0123 456 789</span>
-					    </div>
-					    <div class="col-md pr-4 d-flex topper align-items-center">
-					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
-						    <span class="text">CT262nhom01@email.com</span>
-					    </div>
-					    <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right justify-content-end">
-						    <p class="mb-0 register-link"><span>Giờ mở cửa:</span> <span>Thứ hai - Chủ nhật</span> <span>8:00AM - 9:00PM</span></p>
-					    </div>
-				    </div> 
-			    </div>
-		    </div>
-		  </div> 
-    </div> -->
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index.php">FOXXOF</a>
@@ -85,7 +64,46 @@
 	        	<li class="nav-item <?php echo ($activate == "blog" ? "active" : "")?>"><a href="blog.php" class="nav-link">Tin tức</a></li>
 	          	<li class="nav-item <?php echo ($activate == "contact" ? "active" : "")?>"><a href="contact.php" class="nav-link">Liên hệ</a></li>
 			  	<li class="nav-item cta"><a href="reservation.php" class="nav-link">Đặt bàn</a></li>
-			  	<li class="nav-item <?php echo ($activate == "login" ? "active" : "")?>"><a href="login.php" class="nav-link icon-user"></a></li>
+				  <?php
+						if(isset($_GET['KH_MA'])){
+							Session::destroy();
+							}
+					?>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+					data-mdb-toggle="dropdown" aria-expanded="false"> <i class="fas fa-user mx-1"></i>Tài khoản</a>
+					<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+						<?php 
+								$login_check = session::get('user'); 
+								if($login_check==false){ 
+									echo '<li><a class="dropdown-item" href="login.php">Đăng nhập</a></li>
+										<li><a class="dropdown-item" href="dangky.php">Đăng ký</a></li>'; 
+								}else{ 
+									echo '<li><a class="dropdown-item">Xin chào '.session::get('KH_TEN').'</a></li>
+									<li><a class="dropdown-item" href="logout.php">Đăng xuất</a></li>'; 
+								}	
+								?>
+						<!-- <li>
+							<a class="dropdown-item" href="#">Đăng xuất</a>
+						</li> -->
+					</ul>
+				</li>
+				  <!-- <?php
+							$login_check = session::get('user');
+							if($login_check == true){
+								echo '';
+							}else{
+								echo '<li class="nav-item <?php echo ($activate == "login" ? "active" : "")?>"><a href="login.php" class="nav-link icon-user"></a></li>';
+							}
+						?>
+				  <?php
+							$login_check = session::get('user');
+							if($login_check== false){
+								echo '';
+							}else{
+								echo '<li class="nav-item' . ($activate == "profile" ? "active" : "").'"><a href="profile.php" class="nav-link">Xin chào '.session::get('KH_TEN').'</a></li>';
+							}
+						?> -->
 	        </ul>    
 	      </div>
 	    </div>
