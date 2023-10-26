@@ -17,6 +17,7 @@
 	$us = new user();
 	$cat = new category();
 	$product = new product();
+	$mn = new menu();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -64,6 +65,14 @@
 	        	<li class="nav-item <?php echo ($activate == "blog" ? "active" : "")?>"><a href="blog.php" class="nav-link">Tin tức</a></li>
 	          	<li class="nav-item <?php echo ($activate == "contact" ? "active" : "")?>"><a href="contact.php" class="nav-link">Liên hệ</a></li>
 			  	<li class="nav-item cta"><a href="reservation.php" class="nav-link">Đặt bàn</a></li>
+				  <?php 
+								$login_check = session::get('user'); 
+								if($login_check==false){ 
+									echo ''; 
+								}else{ 
+									echo '<li class="nav-item cta"><a class="nav-link" href="datmon.php">Đặt món</a></li>'; 
+								}	
+								?>
 				  <?php
 						if(isset($_GET['KH_MA'])){
 							Session::destroy();
@@ -71,7 +80,7 @@
 					?>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
-					data-mdb-toggle="dropdown" aria-expanded="false"> <i class="fas fa-user mx-1"></i>Tài khoản</a>
+					data-mdb-toggle="dropdown" aria-expanded="false">Tài khoản</a>
 					<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
 						<?php 
 								$login_check = session::get('user'); 
