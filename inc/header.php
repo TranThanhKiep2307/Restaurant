@@ -1,20 +1,11 @@
 <?php
-<<<<<<< HEAD
-=======
-
-use Random\Engine\Secure;
-
->>>>>>> 42d1753ac0251e560136c1dfb7ee6b2534f60cc9
   	@include('./connect.php');
 	@include('config/config.php');
 	@include('lib/session.php');
   	@include_once('lib/database.php');
   	@include_once('helpers/format.php');
-<<<<<<< HEAD
 
-=======
 	Session::init();
->>>>>>> 42d1753ac0251e560136c1dfb7ee6b2534f60cc9
 ?>
 <?php
 	spl_autoload_register(function ($class) {
@@ -92,28 +83,10 @@ use Random\Engine\Secure;
 	        	<li class="nav-item <?php echo ($activate == "about" ? "active" : "")?>"><a href="about.php" class="nav-link">Giới thiệu</a></li>
 	        	<li class="nav-item <?php echo ($activate == "menu" ? "active" : "")?>"><a href="menu.php" class="nav-link">Thực đơn</a></li>
 	        	<li class="nav-item <?php echo ($activate == "blog" ? "active" : "")?>"><a href="blog.php" class="nav-link">Tin tức</a></li>
-<<<<<<< HEAD
 	          	<li class="nav-item <?php echo ($activate == "contact" ? "active" : "")?>"><a href="contact.php" class="nav-link">Liên hệ</a></li>
 			  	<li class="nav-item cta"><a href="reservation.php" class="nav-link">Đặt bàn</a></li>
 			  	<li class="nav-item <?php echo ($activate == "login" ? "active" : "")?>"><a href="login.php" class="nav-link icon-user"></a></li>
 	        </ul>    
-=======
-
-	          	<li class="nav-item <?php echo ($activate == "contact" ? "active" : "")?>"><a href="contact.php" class="nav-link">Liên hệ</a></li>
-			  	<li class="nav-item cta"><a href="reservation.php" class="nav-link">Đặt bàn</a></li>
-			  	<li class="nav-item <?php echo ($activate == "login" ? "active" : "")?>">
-				<?php
-				$login_check = Session::get('user');
-				if($login_check==true){
-					echo '<a href="?KH_MA='.Session::get('KH_MA').'" class="nav-link">Xin chào'.Session::get('KH_TEN').'</a></li>';
-
-				}else{
-					echo '<a href="login.php" class="nav-link">Đăng ký</a></li>';
-
-				}
-				?>
-	        </ul>  
->>>>>>> 42d1753ac0251e560136c1dfb7ee6b2534f60cc9
 	      </div>
 	    </div>
 	  </nav>
@@ -146,4 +119,4 @@ use Random\Engine\Secure;
       }
 
     </style>
-    <!-- END nav -->
+    <!-- END nav -->s
