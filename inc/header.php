@@ -80,9 +80,11 @@
 										<li><a class="dropdown-item" href="dangky.php">Đăng ký</a></li>'; 
 								}else{ 
 									echo '<li><a class="dropdown-item">Xin chào '.session::get('KH_TEN').'</a></li>
+									<li><a class="dropdown-item" href="profile.php">Thông tin khách hàng</a></li>
 									<li><a class="dropdown-item" href="logout.php">Đăng xuất</a></li>'; 
 								}	
 								?>
+
 						<!-- <li>
 							<a class="dropdown-item" href="#">Đăng xuất</a>
 						</li> -->
