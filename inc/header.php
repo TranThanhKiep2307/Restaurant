@@ -1,9 +1,9 @@
 <?php
-  @include('./connect.php');
+  	@include('./connect.php');
 	@include('config/config.php');
 	@include('lib/session.php');
-  @include_once('lib/database.php');
-  @include_once('helpers/format.php');
+  	@include_once('lib/database.php');
+  	@include_once('helpers/format.php');
 
 ?>
 <?php
@@ -82,16 +82,10 @@
 	        	<li class="nav-item <?php echo ($activate == "about" ? "active" : "")?>"><a href="about.php" class="nav-link">Giới thiệu</a></li>
 	        	<li class="nav-item <?php echo ($activate == "menu" ? "active" : "")?>"><a href="menu.php" class="nav-link">Thực đơn</a></li>
 	        	<li class="nav-item <?php echo ($activate == "blog" ? "active" : "")?>"><a href="blog.php" class="nav-link">Tin tức</a></li>
-<<<<<<< HEAD
 	          	<li class="nav-item <?php echo ($activate == "contact" ? "active" : "")?>"><a href="contact.php" class="nav-link">Liên hệ</a></li>
 			  	<li class="nav-item cta"><a href="reservation.php" class="nav-link">Đặt bàn</a></li>
 			  	<li class="nav-item <?php echo ($activate == "login" ? "active" : "")?>"><a href="login.php" class="nav-link icon-user"></a></li>
-	        </ul>
-=======
-	          <li class="nav-item <?php echo ($activate == "contact" ? "active" : "")?>"><a href="contact.php" class="nav-link">Liên hệ</a></li>
-			      <li class="nav-item cta"><a href="reservation.php" class="nav-link">Đặt bàn</a></li>  
-	      </ul>
->>>>>>> 1211ad10c33cfacd85402265ec20d8848c60ec9c
+	        </ul>    
 	      </div>
 	    </div>
 	  </nav>
