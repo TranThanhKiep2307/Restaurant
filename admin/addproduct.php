@@ -1,10 +1,7 @@
 ﻿<?php include 'inc/header.php';?>
 <?php include 'inc/sidebar.php';?>
 <?php
-    @include('../classes/brand.php');
-?>
-<?php
-    @include('../classes/type.php');
+    @include('../classes/category.php');
 ?>
 <?php
     @include('../classes/product.php');
@@ -34,7 +31,7 @@
                         <label>Tên món</label>
                     </td>
                     <td>
-                        <input type="text" name = "MA_TEN" placeholder="Nhập tên món" class="medium" />
+                        <input type="text" name = "TA_TEN" placeholder="Nhập tên món" class="medium" />
                     </td>
                 </tr>
 				<tr>
@@ -42,15 +39,15 @@
                         <label>Loại món ăn</label>
                     </td>
                     <td>
-                        <select id="select" name="LMA_MA">
-                            <option>Chọn mã loại</option>
+                        <select id="select" name="LTA_MA">
+                            <option>Chọn loại thức ăn</option>
                             <?php
-                                $cat = new type();
-                                $catlist = $cat->show_type();
-                                if($catlist){
-                                    while($result = $catlist -> fetch_assoc()){
+                                $cat = new category();
+                               $cat = $cat -> show_loai_thuc_an();
+                               if($cat){
+                                   while($result = $cat ->fetch_assoc()){
                             ?>
-                            <option value="<?php echo $result['LMA_MA']?>"><?php echo $result['LMA_TEN']?></option>
+                            <option value="<?php echo $result['LTA_MA']?>"><?php echo $result['LTA_TEN']?></option>
                             <?php
                                }
                             }
@@ -64,7 +61,7 @@
                         <label>Mô tả món ăn</label>
                     </td>
                     <td>
-                        <textarea name="MA_MOTA" class="tinymce"></textarea>
+                        <textarea name="TA_MOTA" class="tinymce"></textarea>
                     </td>
                 </tr>
 				<tr>
@@ -72,7 +69,7 @@
                         <label>Giá gốc</label>
                     </td>
                     <td>
-                        <input type="text" name="MA_GIA" placeholder="Nhập giá món" class="medium" />
+                        <input type="text" name="CTTA_DONGIA" placeholder="Nhập giá món" class="medium" />
                     </td>
                 </tr>
             
@@ -81,25 +78,17 @@
                         <label>Hình ảnh món ăn</label>
                     </td>
                     <td>
-                        <input type="file" name="MA_HINHANH"/>
+                        <input type="file" name="TA_HINHANH"/>
                     </td>
                 </tr>
 				
-                <!-- <tr>
-                    <td>
-                        <label>Màu sản phẩm</label>
-                    </td>
-                    <td>
-                        <input type="text" name="SP_MAU" placeholder="Nhập màu sản phẩm" class="medium" />
-                    </td>
-                </tr> -->
 
 				<tr>
                     <td>
                         <label>Trạng thái món ăn</label>
                     </td>
                     <td>
-                        <select id="select" name="MA_TINHTRANG">
+                        <select id="select" name="TA_TINHTRANG">
                             <option>Chọn trạng thái</option>
                             <option value="0">Còn món </option>
                             <option value="1">Hết món</option>
@@ -107,21 +96,7 @@
                     </td>
                 </tr>
                 
-                <!-- <tr>
-                    <td>
-                        <label>Tình trạng sản phẩm</label>
-                    </td>
-                    <td>
-                        <select id="select" name="SP_TINHTRANG">
-                            <option>Chọn tình trạng</option>
-                            <option value="0">Còn hàng</option>
-                            <option value="1">Hết hàng</option>
-                        </select>
-                    </td>
-                </tr> -->
-
 				<tr>
-                    <td></td>
                     <td>
                         <input type="submit" name="submit" Value="Save" />
                     </td>

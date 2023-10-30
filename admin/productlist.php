@@ -54,20 +54,20 @@
 			?>
 				<tr class="odd gradeX">
 					<td><?php echo $i?></td>
-					<td><?php echo $result['MA_TEN']?></td>
-					<td><?php echo $result['LMA_MA']?></td>
-					<td><?php echo $result['MA_GIA']?></td>
-					<td><img src="../images/<?php echo $result['MA_HINHANH']?>" width="80px"></td>
+					<td><?php echo $result['TA_TEN']?></td>
+					<td><?php echo $result['LTA_MA']?></td>
+					<td><?php echo $result['CTTA_DONGIA']?></td>
+					<td><img src="../images/<?php echo $result['TA_HINHANH']?>" width="80px"></td>
 					<td>
 						<?php 
-						if($result['MA_TINHTRANG'] == 0){
+						if($result['TA_TINHTRANG'] == 0){
 							echo 'Còn món';
 						}else{
 							echo 'Hết món';
 						}
 					?></td>
-					<td><a href="productedit.php?productid=<?php echo $result['MA_MA'] ?>">Edit</a> || 
-					<a onclick =  "return confirm ('Bạn có chắc muốn xóa không???')" href="?productid=<?php echo $result['MA_MA'] ?>">Delete</a></td>
+					<td><a href="productedit.php?productid=<?php echo $result['TA_MA'] ?>">Edit</a> || 
+					<a onclick =  "return confirm ('Bạn có chắc muốn xóa không???')" href="?productid=<?php echo $result['TA_MA'] ?>">Delete</a></td>
 				</tr>
 			<?php
 				}

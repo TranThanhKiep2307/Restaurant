@@ -45,7 +45,7 @@ session::check_adminSession();
         <div class="grid_12 header-repeat">
             <div id="branding">
                 <div class="floatleft logo">
-                    <img src="../images/foxIFOOD.png" alt="Logo" />
+                    <img src="../images/foxxof.png" alt="Logo" />
 				</div>
 				<div class="floatleft middle">
 					<h1>FOXXOF</h1>
@@ -53,7 +53,7 @@ session::check_adminSession();
 				</div>
                 <div class="floatright">
                     <div class="floatleft">
-                        <img src="../images/foxIFOOD.png" style="width: 52px; margin-top:-15px"  alt="Profile Pic" /></div>
+                        <img src="../images/foxxof.png" style="width: 52px; margin-top:-15px"  alt="Profile Pic" /></div>
                     <div class="floatleft marginleft10">
                         <ul class="inline-ul floatleft">
                             <li>Hello <?php echo session::get('AD_ten')?></li>
@@ -77,7 +77,7 @@ session::check_adminSession();
                 <li class="ic-dashboard"><a href="index.php"><span>Thống kê</span></a> </li>
                 <li class="ic-form-style"><a href="changepassword.php"><span>Quản lý khách hàng</span></a></li>
 				<!-- <li class="ic-typography"><a href="changepassword.php"><span>Quản lý khách hàng</span></a></li> -->
-				<li class="ic-grid-tables"><a href="inbox.php"><span>Xem danh sách món ăn </span></a></li>
+				<li class="ic-grid-tables"><a href="productlist.php"><span>Xem danh sách món ăn </span></a></li>
                 <!-- <li class="ic-charts"><a href=""><span></span></a></li> -->
             </ul>
         </div>

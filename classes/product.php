@@ -21,11 +21,6 @@ class product
         $TA_MOTA      = mysqli_real_escape_string($this->db->link, $data['TA_MOTA']);
         $TA_TINHTRANG = mysqli_real_escape_string($this->db->link, $data['TA_TINHTRANG']);
         
-        // $danhmuc      = mysqli_real_escape_string($this->db->link, $data['danhmuc']);
-        // $loai_sp      = mysqli_real_escape_string($this->db->link, $data['loai_sp']);  
-        // $SP_TAU       = mysqli_real_escape_string($this->db->link, $data['SP_TAU']);
-        // $SP_TRANGTHAI = mysqli_real_escape_string($this->db->link, $data['SP_TRANGTHAI']);
-        
 
         //Kiểm tra và lấy hình ảnh cho vào thư mục uploads
         $permited = array('jpg', 'jpeg', 'png', 'gif');
@@ -36,7 +31,7 @@ class product
         $div = explode('.',$file_name);
         $file_ext = strtolower(end($div));
         $unique_iTAge = substr(md5(time()), 0, 10).'.'.$file_ext;
-        $uploaded_iTAge = "../iTAges/".$unique_iTAge;
+        $uploaded_iTAge = "../images/".$unique_iTAge;
 
         if($TA_TEN == "" || $LTA_TA=="" || $TA_GIA == "" || $TA_MOTA == "" || $TA_TINHTRANG =="" ){
             $alert = "<span class='error'> Các thành phần này không được trống!!!</span>";
@@ -58,7 +53,10 @@ class product
 
     }
     public function show_product (){
-        $query = "SELECT * from thucan";
+        $query = "SELECT thucan.*, chitietthucan.* 
+        from thucan
+        JOIN chitietthucan ON thucan.TA_MA = chitietthucan.TA_MA
+        ";
         $result = $this->db->select($query);
         return $result;
     }

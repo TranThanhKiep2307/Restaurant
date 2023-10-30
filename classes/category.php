@@ -37,11 +37,6 @@ class category
         }
 
     }
-    public function show_category (){
-        $query = "SELECT * FROM loai_thuc_an ORDER BY LTA_MA DESC";
-        $result = $this->db->select($query);
-        return $result;
-    }
 
     public function update_category($LTA_TEN,$id){
         $LTA_TEN = $this -> fm -> validation ($LTA_TEN);
@@ -82,7 +77,7 @@ class category
         $result = $this->db->select($query);
         return $result;
     }
-    public function show_category_loai_thuc_an (){
+    public function show_loai_thuc_an (){
         $query = "SELECT * FROM loai_thuc_an ORDER BY LTA_MA DESC";
         $result = $this->db->select($query);
         return $result;

@@ -15,24 +15,40 @@ class menu
         $this -> db = new Database();
         $this -> fm= new Format();
     }
-    public function insert_menu($MN_TEN){
-        $MN_TEN = $this -> fm -> validation ($MN_TEN);
-        $MN_TEN = mysqli_real_escape_string($this->db->link, $MN_TEN);
+    public function insert_menu($data, $files){
+        
+        $MN_TEN       = mysqli_real_escape_string($this->db->link, $data['MN_TEN']);
+        $MN_GIA       = mysqli_real_escape_string($this->db->link, $data['MN_GIA']);
+        $MN_TINHTRANG = mysqli_real_escape_string($this->db->link, $data['MN_TINHTRANG']);
+        $MN_MOTA      = mysqli_real_escape_string($this->db->link, $data['MN_MOTA']);
 
-        if(empty($MN_TEN)){
-            $alert = "<span class='error'> Danh mục sản phẩm không được trống!!!</span>";
+
+        //Kiểm tra và lấy hình ảnh cho vào thư mục uploads
+        $permited = array('jpg', 'jpeg', 'png', 'gif');
+        $file_name = $_FILES['MN_HINHANH']['name'];  
+        $file_size = $_FILES['MN_HINHANH']['size'];  
+        $file_temp = $_FILES['MN_HINHANH']['tmp_name'];
+        
+        $div = explode('.',$file_name);
+        $file_ext = strtolower(end($div));
+        $unique_image = substr(md5(time()), 0, 10).'.'.$file_ext;
+        $uploaded_image = "../images/".$unique_image;
+
+        if($MN_TEN == "" || $MN_GIA == "" || $MN_TINHTRANG =="" || $MN_MOTA ==""){
+            $alert = "<span class='error'> Các thành phần này không được trống!!!</span>";
             return $alert;
         }else{
-            $query = "INSERT INTO loaithucan(MN_TEN) VALUES ('$MN_TEN')";
+            move_uploaded_file($file_temp,$uploaded_image);
+            $query = "INSERT INTO menu(MN_TEN, MN_GIA, MN_TINHTRANG, MN_HINHANH, MN_MOTA)
+            VALUES ('$MN_TEN','$MN_GIA',, '$MN_TINHTRANG','$unique_image', '$MN_MOTA')";
             $result = $this->db->insert($query);
             if($result){
-                $alert = "<span class='success'> Thêm danh mục sản phẩm thành công!</span>";
+                $alert = "<span class='success'> Thêm menu thành công!</span>";
                 return $alert; 
             }else{
-                $alert = "<span class='error'> Thêm danh mục sản phẩm thất bại!!!</span>";
+                $alert = "<span class='error'> Thêm menu thất bại!!!</span>";
                 return $alert; 
             }
-
            
         }
 
@@ -43,28 +59,6 @@ class menu
         return $result;
     }
 
-    // public function update_menu($MN_TEN,$id){
-    //     $MN_TEN = $this -> fm -> validation ($MN_TEN);
-    //     $MU_TEN = mysqli_real_escape_string($this->db->link, $MN_TEN);
-    //     $id = mysqli_real_escape_string($this->db->link, $id);
-
-    //     if(empty($MN_TEN)){
-    //         $alert = "<span class='error'> Tên menu không được trống!!!</span>";
-    //         return $alert;
-    //     }else{
-    //         $query = "UPDATE menu SET MN_TEN = '$MN_TEN' WHERE MN_MA = '$id'";
-    //         $result = $this->db->update($query);
-    //         if($result){
-    //             $alert = "<span class='success'> Cập nhật tên menu thành công!</span>";
-    //             return $alert; 
-    //         }else{
-    //             $alert = "<span class='error'> Cập nhật menu thất bại!!!</span>";
-    //             return $alert; 
-    //         }
-
-           
-    //     }
-    // }
 
     public function update_menu($data,$files,$id){
 

@@ -4,8 +4,8 @@
             <ul class="section menu">
                 <li><a class="menuitem">Danh mục quản lí</a>
                     <ul class="submenu">
-                        <li><a href="addcat.php">Thêm menu</a> </li>
-                        <li><a href="catlist.php">Danh sách menu sẵn có</a> </li>
+                        <li><a href="addmenu.php">Thêm menu</a> </li>
+                        <li><a href="menulist.php">Danh sách menu sẵn có</a> </li>
                     </ul>
                 </li>
                 <!-- <li><a class="menuitem">Thương hiệu sản phẩm</a>

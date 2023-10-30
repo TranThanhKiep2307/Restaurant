@@ -21,7 +21,7 @@
 
         <div class="grid_10">
             <div class="box round first grid">
-                <h2>Sửa danh mục</h2>
+                <h2>Sửa menu</h2>
                <div class="block copyblock">
                <?php 
                 if(isset($update_menu)){
@@ -62,7 +62,7 @@
                             ?>
                             <option 
                             <?php if($result['TA_MA']==$result['TA_MA']) { echo 'selected'; }?>
-                            value="<?php echo $result['TA_MA']?>"><?php echo $result['TA_TEN']?></option>
+                                value="<?php echo $result['TA_MA']?>"><?php echo $result['TA_TEN']?></option>
                             <?php
                                 }
                                 }
@@ -70,8 +70,7 @@
                             ?>
                         </select>
                             </td>
-                        </tr>
-                        
+                        </tr> 
 
                         <tr>
                             <td>
@@ -80,31 +79,30 @@
                             <td>
                                 <input type="text" value="<?php echo $result['MN_GIA']?>" name="MN_GIA" class="medium" />
                             </td>
-                    </tr>
-                    
-
-
-
-
+                        </tr>
+                        <tr>
+                                <td>
+                                    <label>Hình ảnh menu</label>
+                                </td>
+                                <td>
+                                    <img src="../images/ <?php echo $result_review['MN_HINHANH']?>" width="80px"><br>
+                                    <input type="file" name="MN_HINHANH"/>
+                                </td>
+                            </tr>
                         <tr>
                             <td>
-                                <label>Hình ảnh menu</label>
+                                <label>Mô tả </label>
                             </td>
                             <td>
-                                <img src="../images/ <?php echo $result_review['MN_HINHANH']?>" width="80px"><br>
-                                <input type="file" name="MN_HINHANH"/>
+                                <input type="text" value="<?php echo $result['MN_MOTA']?>" name="MN_MOTA" class="medium" />
                             </td>
                         </tr>
-
-
-
-
-						<tr> 
-                            <td>
-                                <input type="submit" name="submit" Value="Update" />
-                            </td>
-                        </tr>
-                    </table>
+                            <tr> 
+                                <td>
+                                    <input type="submit" name="submit" Value="Update" />
+                                </td>
+                            </tr>
+                        </table>
                 <?php
                   }
             
