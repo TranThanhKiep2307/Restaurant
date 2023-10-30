@@ -27,25 +27,59 @@ $activate = "menu";
 			<?php
 					
 				?>
-	              <a class="nav-link ftco-animate active" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Combo Lẩu</a>
+	              <a class="nav-link ftco-animate active" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Combo rẻ</a>
 
-	              <a class="nav-link ftco-animate" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Nướng</a>
+	              <a class="nav-link ftco-animate" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Lẩu</a>
 
-	              <a class="nav-link ftco-animate" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">Rượu</a>
+	              <a class="nav-link ftco-animate" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">Nướng</a>
 
-	              <a class="nav-link ftco-animate" id="v-pills-4-tab" data-toggle="pill" href="#v-pills-4" role="tab" aria-controls="v-pills-4" aria-selected="false">Món kèm</a>
+	              <a class="nav-link ftco-animate" id="v-pills-4-tab" data-toggle="pill" href="#v-pills-4" role="tab" aria-controls="v-pills-4" aria-selected="false">Rượu</a>
 
-	              <a class="nav-link ftco-animate" id="v-pills-5-tab" data-toggle="pill" href="#v-pills-5" role="tab" aria-controls="v-pills-5" aria-selected="false">Kem</a>
+	              <a class="nav-link ftco-animate" id="v-pills-5-tab" data-toggle="pill" href="#v-pills-5" role="tab" aria-controls="v-pills-5" aria-selected="false">Món kèm</a>
 
-	              <a class="nav-link ftco-animate" id="v-pills-6-tab" data-toggle="pill" href="#v-pills-6" role="tab" aria-controls="v-pills-6" aria-selected="false">Sốt</a>
+	              <a class="nav-link ftco-animate" id="v-pills-6-tab" data-toggle="pill" href="#v-pills-6" role="tab" aria-controls="v-pills-6" aria-selected="false">Kem</a>
+
 	
 	            </div>
 	          </div>
 	          <div class="col-md-12 tab-wrap">
 	            
 	            <div class="tab-content" id="v-pills-tabContent">
+
+				<div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="day-1-tab">
+	              	<div class="row no-gutters d-flex align-items-stretch">
+					  	<?php
+						$product_menu = $mn ->getproduct_menu();
+						if($product_menu){
+							while($result = $product_menu ->fetch_assoc()){
+						?>
+					        	<div class="col-md-12 col-lg-6 d-flex align-self-stretch">
+					        		<div class="menus d-sm-flex ftco-animate align-items-stretch">
+					              <div class="menu-img img" style="background-image: url(images/<?php echo $result['TA_HINHANH']?>);"></div>
+					              <div class="text d-flex align-items-center">
+													<div>
+						              	<div class="d-flex">
+							                <div class="one-half">
+							                  <h3><?php echo $result['CB_TEN']?></h3>
+							                </div>
+							                <div class="one-forth">
+							                  <span class="price"><?php echo $result['CTTA_DONGIA'].' '.'Đ'?></span>
+							                </div>
+							              </div>
+							              <p><span><?php echo $result['TA_TEN']?></span></p>
+							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
+						              </div>
+					              </div>
+					            </div>
+					        </div>  
+						<?php
+							}
+						}
+						?>
+					    </div>
+	              </div>
 					
-	              <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="day-1-tab">
+	              <div class="tab-pane fade show active" id="v-pills-2" role="tabpanel" aria-labelledby="day-2-tab">
 	              	<div class="row no-gutters d-flex align-items-stretch">
 					  	<?php
 						$product_new = $product->getproduct_lau();
@@ -78,7 +112,7 @@ $activate = "menu";
 					    </div>
 	              </div>
 
-	            <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-day-2-tab">
+	            <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-day-3-tab">
 	              	<div class="row no-gutters d-flex align-items-stretch">
 					  <?php
 						$product_nuong = $product->getproduct_nuong();
@@ -111,7 +145,7 @@ $activate = "menu";
 					</div>
 	          	</div>
 
-				  <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-day-3-tab">
+				  <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-day-4-tab">
 	              	<div class="row no-gutters d-flex align-items-stretch">
 					  <?php
 						$product_ruou = $product->getproduct_ruou();
@@ -144,7 +178,7 @@ $activate = "menu";
 					</div>
 	          	</div>
 
-				  <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-day-4-tab">
+				  <div class="tab-pane fade" id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-day-5-tab">
 	              	<div class="row no-gutters d-flex align-items-stretch">
 					  <?php
 						$product_monkem = $product->getproduct_monkem();
@@ -177,7 +211,7 @@ $activate = "menu";
 					</div>
 	          	</div>
 
-				  <div class="tab-pane fade" id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-day-5-tab">
+				  <div class="tab-pane fade" id="v-pills-6" role="tabpanel" aria-labelledby="v-pills-day-6-tab">
 	              	<div class="row no-gutters d-flex align-items-stretch">
 					  <?php
 						$product_kem = $product->getproduct_kem();
@@ -210,38 +244,7 @@ $activate = "menu";
 					</div>
 	          	</div>
 
-				  <div class="tab-pane fade" id="v-pills-6" role="tabpanel" aria-labelledby="v-pills-day-6-tab">
-	              	<div class="row no-gutters d-flex align-items-stretch">
-					  <?php
-						$product_sot = $product->getproduct_sot();
-						if($product_sot){
-							while($result = $product_sot ->fetch_assoc()){
-						?>
-					        	<div class="col-md-12 col-lg-6 d-flex align-self-stretch">
-					        		<div class="menus d-sm-flex ftco-animate align-items-stretch">
-					              <div class="menu-img img" style="background-image: url(images/<?php echo $result['TA_HINHANH']?>);"></div>
-					              <div class="text d-flex align-items-center">
-													<div>
-						              	<div class="d-flex">
-							                <div class="one-half">
-							                  <h3><?php echo $result['LTA_TEN']?></h3>
-							                </div>
-							                <div class="one-forth">
-							                  <span class="price"><?php echo $result['CTTA_DONGIA'].' '.'Đ'?></span>
-							                </div>
-							              </div>
-							              <p><span><?php echo $result['TA_TEN']?></span></p>
-							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
-						              </div>
-					              </div>
-					            </div>
-					        </div>
-						<?php
-							}
-						}
-						?>
-					</div>
-	          	</div>
+				  
 				
 	        </div>
         </div>
