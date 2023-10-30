@@ -79,7 +79,7 @@ class menu
         $file_name = $_FILES['MN_HINHANH']['name'];  
         $file_size = $_FILES['MN_HINHANH']['size'];  
         $file_temp = $_FILES['MN_HINHANH']['tmp_name'];
-        
+
         $div = explode('.',$file_name);
         $file_ext = strtolower(end($div));
         $unique_image = substr(md5(time()), 0, 10).'.'.$file_ext;
