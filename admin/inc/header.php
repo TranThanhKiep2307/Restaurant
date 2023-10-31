@@ -53,7 +53,7 @@ session::check_adminSession();
 				</div>
                 <div class="floatright">
                     <div class="floatleft">
-                        <img src="../images/foxxof.png" style="width: 52px; margin-top:-15px"  alt="Profile Pic" /></div>
+                        <img src="../images/foxxof.png" style="width: 70px; margin-top:-15px"  alt="Profile Pic" /></div>
                     <div class="floatleft marginleft10">
                         <ul class="inline-ul floatleft">
                             <li>Hello <?php echo session::get('AD_ten')?></li>
