@@ -1,7 +1,7 @@
 <?php
 $filepath = realpath(dirname(__FILE__));
 @include_once($filepath.'/../lib/database.php');
-@include_once($filepath.'/../helpers/forTAt.php');
+@include_once($filepath.'/../helpers/format.php');
 ?>
 
 <?php 
@@ -15,9 +15,10 @@ class product
         $this -> fm= new Format();
     }
     public function insert_product($data,$files){
+        $TA_MA        = mysqli_real_escape_string($this->db->link, $data['TA_MA']);
         $TA_TEN       = mysqli_real_escape_string($this->db->link, $data['TA_TEN']);
-        $TA_GIA       = mysqli_real_escape_string($this->db->link, $data['TA_GIA']);
-        $LTA_TA      = mysqli_real_escape_string($this->db->link, $data['LTA_TA']);
+        $CTTA_DONGIA  = mysqli_real_escape_string($this->db->link, $data['CTTA_DONGIA']);
+        $LTA_MA       = mysqli_real_escape_string($this->db->link, $data['LTA_MA']);
         $TA_MOTA      = mysqli_real_escape_string($this->db->link, $data['TA_MOTA']);
         $TA_TINHTRANG = mysqli_real_escape_string($this->db->link, $data['TA_TINHTRANG']);
         
@@ -30,27 +31,36 @@ class product
         
         $div = explode('.',$file_name);
         $file_ext = strtolower(end($div));
-        $unique_iTAge = substr(md5(time()), 0, 10).'.'.$file_ext;
-        $uploaded_iTAge = "../images/".$unique_iTAge;
+        $unique_image = substr(md5(time()), 0, 10).'.'.$file_ext;
+        $uploaded_image = "../images/".$unique_image;
 
-        if($TA_TEN == "" || $LTA_TA=="" || $TA_GIA == "" || $TA_MOTA == "" || $TA_TINHTRANG =="" ){
+        if ($TA_MA == "" ||$TA_TEN == "" || $LTA_MA == "" || $CTTA_DONGIA == "" || $TA_MOTA == "" || $TA_TINHTRANG == "") {
             $alert = "<span class='error'> Các thành phần này không được trống!!!</span>";
             return $alert;
-        }else{
-            move_uploaded_file($file_temp,$uploaded_iTAge);
-            $query = "INSERT INTO thucan(TA_TEN, LTA_TA, TA_GIA, TA_MOTA, TA_TINHTRANG, TA_HINHANH)
-            VALUES ('$TA_TEN','$LTA_TA','$TA_GIA','$TA_MOTA', '$TA_TINHTRANG','$unique_iTAge')";
-            $result = $this->db->insert($query);
-            if($result){
-                $alert = "<span class='success'> Thêm sản phẩm thành công!</span>";
-                return $alert; 
-            }else{
-                $alert = "<span class='error'> Thêm sản phẩm thất bại!!!</span>";
-                return $alert; 
-            }
-           
-        }
+        } else {
+            move_uploaded_file($file_temp, $uploaded_image);
 
+            $query_thucan = "INSERT INTO thucan(TA_MA, TA_TEN, LTA_MA, TA_MOTA, TA_TINHTRANG, TA_HINHANH) 
+            VALUES ('$TA_MA', '$TA_TEN','$LTA_MA','$TA_MOTA', '$TA_TINHTRANG','$unique_image')";
+            $result_thucan = $this->db->insert($query_thucan);            
+           
+            if ($result_thucan) {
+                // Lấy ID mới chèn vào bảng "thucan"    
+                $query_chitietthucan = "INSERT INTO chitietthucan(TA_MA, CTTA_DONGIA) VALUES ('$TA_MA','$CTTA_DONGIA')";
+                $result_chitietthucan = $this->db->insert($query_chitietthucan);
+                
+    
+                if ($result_chitietthucan) {
+                    $alert = "<span class='success'> Thêm sản phẩm thành công!</span>";
+                    return $alert;
+                } else {
+                    $alert = "<span class='error'> Thêm sản phẩm thất bại!!!</span>";
+                    return $alert;
+                }
+            } else {
+                echo 'Lỗi rồi fix đi';
+            }
+        }
     }
     public function show_product (){
         $query = "SELECT thucan.*, chitietthucan.* 
@@ -122,18 +132,25 @@ class product
         }
     }
     public function delete_product($id) {
-        $query = "DELETE FROM thucan WHERE TA_MA = '$id'";
-        $result = $this->db->delete($query);
+        $query_xoachitietta = "DELETE FROM chitietthucan WHERE TA_MA = '$id'";
+        $result = $this->db->delete($query_xoachitietta);
         if($result){
-            $alert = "<span class='success'> Xóa sản phẩm thành công!</span>"; 
-            return $alert; 
+            $query_xoata = "DELETE FROM thucan WHERE TA_MA = '$id'";
+            $result_ta = $this->db->delete($query_xoata);
+            if($result_ta){
+                $alert = "<span class='success'> Xóa thức ăn thành công!</span>"; 
+                return $alert;
+            }else{
+                $alert = "<span class='error'> Xóa thức ăn thất bại!!!</span>";
+                return $alert; 
+            } 
         }else{
-            $alert = "<span class='error'> Xóa sản phẩm thất bại!!!</span>";
+            $alert = "<span class='error'> Xóa chi tiết thức ăn thất bại!!!</span>";
             return $alert; 
         }   
     }
     public function getproductbyId($id){
-        $query = "SELECT * FROM thucan WHERE TA_TA = '$id'";
+        $query = "SELECT * FROM thucan WHERE TA_MA = '$id'";
         $result = $this->db->select($query);
         return $result;
     }

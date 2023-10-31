@@ -38,7 +38,7 @@
 					<th>Hình ảnh món ăn</th>
 					<!-- <th>Mã thương hiệu sản phẩm</th>
 					<th>Mô tả sản phẩm</th>  -->
-					<!-- <th>Màu sản phẩm</th> -->
+					<th>Mô tả món ăn</th>
 					<th>Trạng thái món ăn</th>
 					<!-- <th>Tình trạng sản phẩm</th> -->
 					<th>Chỉnh sửa sản phẩm</th>
@@ -58,6 +58,7 @@
 					<td><?php echo $result['LTA_MA']?></td>
 					<td><?php echo $result['CTTA_DONGIA']?></td>
 					<td><img src="../images/<?php echo $result['TA_HINHANH']?>" width="80px"></td>
+					<td><?php echo $result['TA_MOTA']?></td>
 					<td>
 						<?php 
 						if($result['TA_TINHTRANG'] == 0){

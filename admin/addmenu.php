@@ -19,7 +19,7 @@
                     echo $insert_menu;
                 }
                 ?>
-                 <form action="addmenu.php" method="post">
+                 <form action="" method="POST"  enctype="multipart/form-data" >
                     <table class="form">					
                         <tr>
                             <td>
@@ -37,20 +37,21 @@
                                 <input type="text" name= "MN_GIA" placeholder="Nhập giá của menu" class="medium" />
                             </td>
                         </tr>
-                        <tr>
-                            <td>
-                                <label>Hình ảnh Menu</label>
-                            </td>
-                            <td>
-                                <input type="file" name="MA_HINHANH"/>
-                            </td>
-                        </tr>
+                        
                         <tr>
                             <td style="vertical-align: top; padding-top: 9px;">
                                 <label>Mô tả</label>
                             </td>
                             <td>
                                 <textarea name="MN_MOTA" class="tinymce"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Hình ảnh Menu</label>
+                            </td>
+                            <td>
+                                <input type="file" name="MN_HINHANH"/>
                             </td>
                         </tr>
                         <tr>
@@ -67,7 +68,7 @@
                         </tr>
                         <tr> 
                             <td>
-                                <input class="btnfinal" type="submit" name="submit" Value="Thêm món ăn" />
+                                <input type="submit" name="submit" Value="Thêm món ăn" />
                             </td>
                         </tr>
 

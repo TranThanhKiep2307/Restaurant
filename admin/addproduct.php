@@ -1,7 +1,7 @@
 ﻿<?php include 'inc/header.php';?>
 <?php include 'inc/sidebar.php';?>
 <?php
-    @include('../classes/category.php');
+    @include('../classes/type.php');
 ?>
 <?php
     @include('../classes/product.php');
@@ -25,7 +25,14 @@
                 ?>               
          <form action="" method="post" enctype="multipart/form-data">
             <table class="form">
-               
+                <tr>
+                    <td>
+                        <label>Mã món ăn</label>
+                    </td>
+                    <td>
+                        <input type="text" name = "TA_MA" placeholder="Nhập mã món" class="medium" />
+                    </td>
+                </tr>
                 <tr>
                     <td>
                         <label>Tên món</label>
@@ -42,9 +49,9 @@
                         <select id="select" name="LTA_MA">
                             <option>Chọn loại thức ăn</option>
                             <?php
-                                $cat = new category();
-                               $cat = $cat -> show_loai_thuc_an();
-                               if($cat){
+                                $cat = new type();
+                                $cat = $cat -> show_type();
+                                if($cat){
                                    while($result = $cat ->fetch_assoc()){
                             ?>
                             <option value="<?php echo $result['LTA_MA']?>"><?php echo $result['LTA_TEN']?></option>

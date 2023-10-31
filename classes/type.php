@@ -6,7 +6,7 @@ $filepath = realpath(dirname(__FILE__));
 ?>
 
 <?php 
-class category
+class type
 {
     private $db;
     private $fm;
@@ -77,8 +77,16 @@ class category
         $result = $this->db->select($query);
         return $result;
     }
-    public function show_loai_thuc_an (){
+    public function show_type (){
         $query = "SELECT * FROM loai_thuc_an ORDER BY LTA_MA DESC";
+        $result = $this->db->select($query);
+        return $result;
+    }
+    public function show_chitietta ($id){
+        $query = "SELECT chitietthucan.*, thucan.TA_MA
+        FROM chitietthucan 
+        JOIN thucan ON chitietthucan.TA_MA = thucan.TA_MA
+        WHERE chitietthucan.TA_MA = '$id'";
         $result = $this->db->select($query);
         return $result;
     }

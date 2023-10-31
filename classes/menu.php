@@ -30,17 +30,17 @@ class menu
         $file_temp = $_FILES['MN_HINHANH']['tmp_name'];
         
         $div = explode('.',$file_name);
-        $file_ext = strtolower(end($div));
+        $file_ext = strtolower(end($div));  
         $unique_image = substr(md5(time()), 0, 10).'.'.$file_ext;
         $uploaded_image = "../images/".$unique_image;
 
-        if($MN_TEN == "" || $MN_GIA == "" || $MN_TINHTRANG =="" || $MN_MOTA ==""){
+        if($MN_TEN == "" || $MN_GIA == "" || $MN_TINHTRANG =="" || $file_name == "" || $MN_MOTA =="" ){
             $alert = "<span class='error'> Các thành phần này không được trống!!!</span>";
             return $alert;
         }else{
             move_uploaded_file($file_temp,$uploaded_image);
             $query = "INSERT INTO menu(MN_TEN, MN_GIA, MN_TINHTRANG, MN_HINHANH, MN_MOTA)
-            VALUES ('$MN_TEN','$MN_GIA',, '$MN_TINHTRANG','$unique_image', '$MN_MOTA')";
+            VALUES ('$MN_TEN','$MN_GIA', '$MN_TINHTRANG','$unique_image', '$MN_MOTA')";
             $result = $this->db->insert($query);
             if($result){
                 $alert = "<span class='success'> Thêm menu thành công!</span>";
@@ -64,9 +64,8 @@ class menu
 
         $MN_TEN       = mysqli_real_escape_string($this->db->link, $data['MN_TEN']);
         $MN_GIA       = mysqli_real_escape_string($this->db->link, $data['MN_GIA']);
-        $TA_MA       = mysqli_real_escape_string($this->db->link, $data['TA_MA']);
-        // $MA_MOTA      = mysqli_real_escape_string($this->db->link, $data['MA_MOTA']);
-        $MN_HINHANH= mysqli_real_escape_string($this->db->link, $data['MN_HINHANH']);
+        $MN_MOTA      = mysqli_real_escape_string($this->db->link, $data['MN_MOTA']);
+        $MN_TINHTRANG = mysqli_real_escape_string($this->db->link, $data['MN_TINHTRANG']);
         
         //Kiểm tra và lấy hình ảnh cho vào thư mục uploads
         $permited = array('jpg', 'jpeg', 'png', 'gif');
@@ -79,7 +78,7 @@ class menu
         $unique_image = substr(md5(time()), 0, 10).'.'.$file_ext;
         $uploaded_image = "../images/".$unique_image;
 
-        if($MN_TEN == "" || $MN_GIA == "" || $TA_MA=="" ){
+        if($MN_TEN == "" || $MN_GIA == "" || $MN_TINHTRANG == ""  || $MN_MOTA == "" ){
             $alert = "<span class='error'> Các thành phần này không được trống!!!</span>";
             return $alert;
         }else{
@@ -96,25 +95,25 @@ class menu
                 $query = "UPDATE menu SET 
                 MN_TEN = '$MN_TEN', 
                 MN_GIA = '$MN_GIA',
-                TA_MA = '$TA_MA',
-                
+                MN_MOTA = '$MN_MOTA',
+                MN_TINHTRANG = '$MN_TINHTRANG',
                 MN_HINHANH = '$unique_image'
                 WHERE MN_MA = '$id'";
             }else{
                 //Không chọn ảnh
                 $query = "UPDATE menu SET 
-                MN_TEN = '$MN_TEN',
+                 MN_TEN = '$MN_TEN', 
                 MN_GIA = '$MN_GIA',
-                MA_MA = '$TA_MA',
-             
+                MN_MOTA = '$MN_MOTA',
+                MN_TINHTRANG = '$MN_TINHTRANG'
                 WHERE MN_MA = '$id'";
             }
             $result = $this->db->update($query);
             if($result){
-                $alert = "<span class='success'> Sửa sản phẩm thành công!</span>";
+                $alert = "<span class='success'> Sửa menu thành công!</span>";
                 return $alert; 
             }else{
-                $alert = "<span class='error'> Sửa sản phẩm thất bại!!!</span>";
+                $alert = "<span class='error'> Sửa menu thất bại!!!</span>";
                 return $alert; 
             }
             
@@ -125,10 +124,10 @@ class menu
         $query = "DELETE FROM menu WHERE MN_MA = '$id'";
         $result = $this->db->delete($query);
         if($result){
-            $alert = "<span class='success'> Xóa danh mục sản phẩm thành công!</span>";
+            $alert = "<span class='success'> Xóa menu thành công!</span>";
             return $alert; 
         }else{
-            $alert = "<span class='error'> Xóa danh mục sản phẩm thất bại!!!</span>";
+            $alert = "<span class='error'> Xóa menu thất bại!!!</span>";
             return $alert; 
         }   
     }

@@ -47,7 +47,7 @@
 								<td><?php echo $result ['MN_GIA']?></td>
 								<td><img src="../images/<?php echo $result ['MN_HINHANH']?>" width="80px" style="margin: 10px 10px 0px 10px; " ></td>
 								<td><?php echo $result ['MN_MOTA']?></td>
-								<td><a href="catedit.php?menuid=<?php echo $result['MN_MA'] ?>">Edit</a> || 
+								<td><a href="menuedit.php?menuid=<?php echo $result['MN_MA'] ?>">Edit</a> || 
 								<a onclick =  "return confirm ('Bạn có chắc muốn xóa không???')" href="?delid=<?php echo $result['MN_MA'] ?>">Delete</a></td>
 							</tr>
 					<?php

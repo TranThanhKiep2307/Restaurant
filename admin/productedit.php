@@ -1,6 +1,5 @@
 <?php include 'inc/header.php';?>
 <?php include 'inc/sidebar.php';?>
-<?php @include('../classes/brand.php');?>
 <?php @include('../classes/type.php');?>
 <?php @include('../classes/product.php');?>
 
@@ -35,10 +34,18 @@
                
                 <tr>
                     <td>
+                        <label>Mã món ăn</label>
+                    </td>
+                    <td>
+                        <input type="text" name = "TA_MA" value="<?php echo $result_product['TA_MA']?>" class="medium" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                         <label>Tên sản phẩm</label>
                     </td>
                     <td>
-                        <input type="text" name = "MA_TEN" value="<?php echo $result_product['MA_TEN']?>" class="medium" />
+                        <input type="text" name = "TA_TEN" value="<?php echo $result_product['TA_TEN']?>" class="medium" />
                     </td>
                 </tr>
 				<tr>
@@ -46,7 +53,7 @@
                         <label>Loại món ăn</label>
                     </td>
                     <td>
-                        <select id="select" name="LMA_MA">
+                        <select id="select" name="LTA_MA">
                             <option>Chọn mã loại</option>
                             <?php
                                 $cat = new type();
@@ -55,8 +62,8 @@
                                     while($result = $catlist -> fetch_assoc()){
                             ?>
                             <option 
-                            <?php if($result['LMA_MA']==$result_product['LMA_MA']) { echo 'selected'; }?>
-                            value="<?php echo $result['LMA_MA']?>"><?php echo $result['LMA_TEN']?></option>
+                            <?php if($result['LTA_MA']==$result_product['LTA_MA']) { echo 'selected'; }?>
+                            value="<?php echo $result['LTA_MA']?>"><?php echo $result['LTA_TEN']?></option>
                             <?php
                                }
                             }
@@ -70,7 +77,7 @@
                         <label>Mô tả món ăn</label>
                     </td>
                     <td>
-                        <textarea name="MA_MOTA" class="tinymce" <?php echo $result_product['MA_MOTA']?>></textarea>
+                        <textarea name="TA_MOTA" class="tinymce" <?php echo $result_product['TA_MOTA']?>></textarea>
                     </td>
                 </tr>
 				<tr>
@@ -78,7 +85,17 @@
                         <label>Giá gốc</label>
                     </td>
                     <td>
-                        <input type="text" value="<?php echo $result_product['MA_GIA']?>" name="MA_GIA"  class="medium" />
+                        <?php
+                            $cat = new type();
+                            $catlist = $cat->show_chitietta($id);
+                            if($catlist){
+                                while($result = $catlist -> fetch_assoc()){
+                        ?>
+                        <input type="text" value="<?php echo $result['CTTA_DONGIA']?>" name="CTTA_DONGIA"  class="medium" />
+                        <?php
+                            }
+                        }
+                        ?>
                     </td>
                 </tr>
             
@@ -87,19 +104,10 @@
                         <label>Hình ảnh sản phẩm</label>
                     </td>
                     <td>
-                        <img src="../images/ <?php echo $result_product['MA_HINHANH']?>" width="80px"><br>
-                        <input type="file" name="MA_HINHANH"/>
+                        <img src="../images/<?php echo $result_product['TA_HINHANH']?>" width="80px"><br>
+                        <input type="file" name="TA_HINHANH"/>
                     </td>
                 </tr>
-
-				<!-- <tr>
-                    <td>
-                        <label>Màu sản phẩm</label>
-                    </td>
-                    <td>
-                        <input type="text" value="" name="SP_MAU"  class="medium" />
-                    </td>
-                </tr> -->
 
                 
                 <tr>
@@ -107,10 +115,10 @@
                         <label>Tình trạng sản phẩm</label>
                     </td>
                     <td>
-                        <select id="select" name="MA_TINHTRANG">
+                        <select id="select" name="TA_TINHTRANG">
                             <option>Chọn tình trạng</option>
                             <?php
-                            if($result_product['MA_TINHTRANG']==0){
+                            if($result_product['TA_TINHTRANG']==0){
                             ?>
                                 <option selected value="0">Còn món</option>
                                 <option value="1">Hết món</option>
