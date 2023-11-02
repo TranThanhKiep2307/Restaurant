@@ -2,62 +2,54 @@
 <?php include 'inc/sidebar.php';?>
 
 <head>
-    <title>Tính Doanh Thu</title>
+    <title>Tính Doanh Thu và Số Lượng Bàn</title>
 </head>
-<!-- <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #bcbaba;
-            margin: 0;
-            padding: 0;
-        }
-        h1 {
-            text-align: center;
-            background-color: #69594C;
-            color: #fff;
-            padding: 10px;
-            margin-top: 30px;
-        }
-        form {
-            text-align: center;
-            margin-top: 80px;
-        }
-        label, input {
-            display: block;
-            margin: 10px auto; /* Điều này căn giữa input */
-            text-align: center; /* Điều này căn giữa nội dung trong input */
-            color:#fff;
-        }
-        input[type="submit"] {
-            background-color: #333;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-        input[type="submit"]:hover {
-            background-color: #555;
-        }
-        p {
-            text-align: center;
-            margin: 20px;
-            font-size: 18px;
-        }
-    </style> -->
+<style>
+    body {
+    background: #fff ;
+    color: #000;
+    font-size: 14px;
+    padding: 0;
+
+    }
+    input[type="number" i] {
+    padding: 10px 20px;
+    width: 20%;
+   
+    }
+    form {
+    display: block;
+    margin-top: 0em;
+}
+</style>
 <body>
-    <h1>Tính Doanh Thu</h1>
+    <h1>Tính Doanh Thu và Số Lượng Bàn</h1>
 
     <form method="post" action="">
-        <label for="ngay">Chọn ngày:</label>
-        <input  type="number" name="ngay" id="ngay" min="1" max="31">
+      <div class="row"> 
+        <div class="col-6">
+            <label for="ngay    " class="form-label">Chọn ngày:<span class="error"></span> </label>
+            <input type="number" class="form-control" id="ngay" min="1" max="31" placeholder="Nhập ngày" name="ngay" >
+        </div>
+      </div><br>
+      <div class="row"> 
+        <div class="col-6">
+            <label for="thang" class="form-label">Chọn tháng:<span class="error"></span> </label>
+            <input type="number" class="form-control" id="thang" min="1" max="12" placeholder="Nhập tháng" name="thang"required>
+        </div>
+      </div><br>
+      <div class="row"> 
+        <div class="col-6">
+            <label for="nam" class="form-label">Chọn năm:<span class="error"></span> </label>
+            <input type="number" class="form-control" id="nam" min="2000" placeholder="Nhập năm" name="nam" >
+        </div>
+      </div><br>
+      
+      <div class="col-md-12">      
+            <button type="submit"  class="btn btn-primary py-3 px-5" >Xem doanh thu</button>
+      </div>
 
-        <label for="thang">Chọn tháng:</label>
-        <input type="number" name="thang" id="thang" min="1" max="12">
-
-        <label for="nam">Chọn năm:</label>
-        <input type="number" name="nam" id="nam" min="1900">
-
-        <input type="submit" value="Tính Doanh Thu">
+        <!-- <button type="submit" value="Tính Doanh Thu và Số Lượng Bàn"></button> -->
     </form>
 
     <?php
@@ -65,89 +57,73 @@
         $ngay = $_POST["ngay"];
         $thang = $_POST["thang"];
         $nam = $_POST["nam"];
-    
+
         if (!empty($ngay) && !empty($thang) && !empty($nam)) {
             $conn = new mysqli("localhost", "root", "", "restaurant");
-    
+
             if ($conn->connect_error) {
                 die("Kết nối không thành công: " . $conn->connect_error);
             }
-    
-            // Tính tổng doanh thu theo ngày
-            function tinhTongDoanhThuTheoNgay($conn, $ngay, $thang, $nam) {
-                $sql = "SELECT 
-                            SUM(chitiethoadon.CTHD_TONGTIEN) AS tong_doanh_thu
-                        FROM 
-                            chitiethoadon
-                        JOIN 
-                            hoadon ON chitiethoadon.HD_MA = hoadon.HD_MA
-                        WHERE 
-                            DAY(hoadon.HD_NGAYLAP) = $ngay
-                            AND MONTH(hoadon.HD_NGAYLAP) = $thang
-                            AND YEAR(hoadon.HD_NGAYLAP) = $nam";
-    
+
+            // Sử dụng prepared statement để tránh SQL injection
+            function executeQuery($conn, $sql)
+            {
                 $result = $conn->query($sql);
-    
-                if ($result->num_rows > 0) {
+
+                if ($result) {
                     $row = $result->fetch_assoc();
-                    return $row["tong_doanh_thu"];
+                    return $row;
                 } else {
-                    return 0;
+                    return false;
                 }
             }
-    
-            // Tính tổng doanh thu theo tháng
-            function tinhTongDoanhThuTheoThang($conn, $thang, $nam) {
-                $sql = "SELECT 
-                            SUM(chitiethoadon.CTHD_TONGTIEN) AS tong_doanh_thu
-                        FROM 
-                            chitiethoadon
-                        JOIN 
-                            hoadon ON chitiethoadon.HD_MA = hoadon.HD_MA
-                        WHERE 
-                            MONTH(hoadon.HD_NGAYLAP) = $thang
-                            AND YEAR(hoadon.HD_NGAYLAP) = $nam";
-    
-                $result = $conn->query($sql);
-    
-                if ($result->num_rows > 0) {
-                    $row = $result->fetch_assoc();
-                    return $row["tong_doanh_thu"];
-                } else {
-                    return 0;
-                }
+
+            // Hàm tính tổng số lượng bàn đặt theo điều kiện
+            function tinhTongSoLuongBan($conn, $whereClause)
+            {
+                $sql = "SELECT COUNT(hoadon.HD_MA) AS tong_so_luong_ban
+                        FROM hoadon
+                        WHERE $whereClause";
+
+                return executeQuery($conn, $sql);
             }
-    
-            // Tính tổng doanh thu theo năm
-            function tinhTongDoanhThuTheoNam($conn, $nam) {
-                $sql = "SELECT 
-                            SUM(chitiethoadon.CTHD_TONGTIEN) AS tong_doanh_thu
-                        FROM 
-                            chitiethoadon
-                        JOIN 
-                            hoadon ON chitiethoadon.HD_MA = hoadon.HD_MA
-                        WHERE 
-                            YEAR(hoadon.HD_NGAYLAP) = $nam";
-    
-                $result = $conn->query($sql);
-    
-                if ($result->num_rows > 0) {
-                    $row = $result->fetch_assoc();
-                    return $row["tong_doanh_thu"];
-                } else {
-                    return 0;
-                }
+
+            // Hàm tính tổng doanh thu theo điều kiện
+            function tinhTongDoanhThu($conn, $whereClause)
+            {
+                $sql = "SELECT SUM(chitiethoadon.CTHD_TONGTIEN) AS tong_doanh_thu
+                        FROM chitiethoadon
+                        JOIN hoadon ON chitiethoadon.HD_MA = hoadon.HD_MA
+                        WHERE $whereClause";
+
+                return executeQuery($conn, $sql);
             }
-    
-            $doanhThuNgay = tinhTongDoanhThuTheoNgay($conn, $ngay, $thang, $nam);
-            $doanhThuThang = tinhTongDoanhThuTheoThang($conn, $thang, $nam);
-            $doanhThuNam = tinhTongDoanhThuTheoNam($conn, $nam);
-    
-            echo "<p>Doanh thu ngày $ngay/$thang/$nam là: $doanhThuNgay VNĐ</p>";
-            echo "<p>Doanh thu trong tháng $thang/$nam là: $doanhThuThang VNĐ</p>";
-            echo "<p>Doanh thu trong năm $nam là: $doanhThuNam VNĐ</p>";
-    
+
+            $whereClause = "DAY(hoadon.HD_NGAYLAP) = $ngay AND MONTH(hoadon.HD_NGAYLAP) = $thang AND YEAR(hoadon.HD_NGAYLAP) = $nam";
+            $soLuongBanNgay = tinhTongSoLuongBan($conn, $whereClause);
+            $doanhThuNgay = tinhTongDoanhThu($conn, $whereClause);
+
+            $whereClause = "MONTH(hoadon.HD_NGAYLAP) = $thang AND YEAR(hoadon.HD_NGAYLAP) = $nam";
+            $soLuongBanThang = tinhTongSoLuongBan($conn, $whereClause);
+            $doanhThuThang = tinhTongDoanhThu($conn, $whereClause);
+
+            $whereClause = "YEAR(hoadon.HD_NGAYLAP) = $nam";
+            $soLuongBanNam = tinhTongSoLuongBan($conn, $whereClause);
+            $doanhThuNam = tinhTongDoanhThu($conn, $whereClause);
+
+            echo "<p>Doanh thu ngày $ngay/$thang/$nam là: " . $doanhThuNgay['tong_doanh_thu'] . " VNĐ</p>";
+            echo "<p>Số lượng bàn đặt ngày $ngay/$thang/$nam là: " . $soLuongBanNgay['tong_so_luong_ban'] . " Bàn</p>";
+
+            echo "<p>Doanh thu trong tháng $thang/$nam là: " . $doanhThuThang['tong_doanh_thu'] . " VNĐ</p>";
+            echo "<p>Số lượng bàn đặt trong tháng $thang/$nam là: " . $soLuongBanThang['tong_so_luong_ban'] . " Bàn</p>";
+
+            echo "<p>Doanh thu trong năm $nam là: " . $doanhThuNam['tong_doanh_thu'] . " VNĐ</p>";
+            echo "<p>Số lượng bàn đặt trong năm $nam là: " . $soLuongBanNam['tong_so_luong_ban'] . " Bàn</p";
+
             $conn->close();
         }
     }
     ?>
+</body>
+
+</html>
