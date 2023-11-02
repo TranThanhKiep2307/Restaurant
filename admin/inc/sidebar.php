@@ -23,8 +23,8 @@
 
                 <li><a class="menuitem">Quản lý doanh thu</a>
                     <ul class="submenu">
-                        <li><a href="">Xem thống kê doanh thu theo ngày</a> </li>
-                        <li><a href="">Xem thống kê doanh thu theo tháng</a> </li>
+                        <li><a href="doanhthu.php">Xem thống kê doanh thu </a> </li>
+                        <!-- <li><a href="">Xem thống kê doanh thu theo tháng</a> </li> -->
                     </ul>
                 </li>
                <!-- <li><a class="menuitem">Điều chỉnh trang web</a>
