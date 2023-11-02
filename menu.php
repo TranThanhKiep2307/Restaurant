@@ -1,5 +1,6 @@
 <?php
 $activate = "menu";
+ob_start();
 @include('inc/header.php');
 ?>
 <?php
@@ -55,19 +56,19 @@ $activate = "menu";
 						?>
 					        	<div class="col-md-12 col-lg-6 d-flex align-self-stretch">
 					        		<div class="menus d-sm-flex ftco-animate align-items-stretch">
-					              <div class="menu-img img" style="background-image: url(images/<?php echo $result['TA_HINHANH']?>);"></div>
+					              <div class="menu-img img" style="background-image: url(images/<?php echo $result['MN_HINHANH']?>);"></div>
 					              <div class="text d-flex align-items-center">
-													<div>
+									<div>
 						              	<div class="d-flex">
 							                <div class="one-half">
-							                  <h3><?php echo $result['CB_TEN']?></h3>
+							                  <h3><?php echo $result['MN_TEN']?></h3>
 							                </div>
 							                <div class="one-forth">
-							                  <span class="price"><?php echo $result['CTTA_DONGIA'].' '.'Đ'?></span>
+							                  <span class="price"><?php echo number_format($result['MN_GIA']).' '.'Đ'?></span>
 							                </div>
 							              </div>
-							              <p><span><?php echo $result['TA_TEN']?></span></p>
-							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><span><?php echo $result['MN_MOTA']?></span></p>
+							              <p><a href="reservation.php?menuid=<?php echo $result['MN_MA']?>" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>

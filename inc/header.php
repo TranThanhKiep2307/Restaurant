@@ -15,7 +15,7 @@
 	$fm = new Format();
 	$ct = new cart();
 	$us = new user();
-	$cat = new category();
+	$cat = new type();
 	$product = new product();
 	$mn = new menu();
 ?>
@@ -70,7 +70,7 @@
 								if($login_check==false){ 
 									echo ''; 
 								}else{ 
-									echo '<li class="nav-item cta"><a class="nav-link" href="datmon.php">Đặt món</a></li>'; 
+									echo '<li class="nav-item cta"><a class="nav-link" href="orderfood.php">Đặt món</a></li>'; 
 								}	
 								?>
 				  <?php

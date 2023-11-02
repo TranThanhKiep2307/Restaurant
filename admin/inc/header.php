@@ -75,10 +75,8 @@ session::check_adminSession();
         <div class="grid_12">
             <ul class="nav main">
                 <li class="ic-dashboard"><a href="index.php"><span>Thống kê</span></a> </li>
-                <li class="ic-form-style"><a href="changepassword.php"><span>Quản lý khách hàng</span></a></li>
-				<!-- <li class="ic-typography"><a href="changepassword.php"><span>Quản lý khách hàng</span></a></li> -->
+                <li class="ic-form-style"><a href="customers.php"><span>Quản lý khách hàng</span></a></li>
 				<li class="ic-grid-tables"><a href="productlist.php"><span>Xem danh sách món ăn </span></a></li>
-                <!-- <li class="ic-charts"><a href=""><span></span></a></li> -->
             </ul>
         </div>
         <div class="clear">

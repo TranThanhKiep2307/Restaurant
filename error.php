@@ -6,7 +6,7 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
           <div class="col-md-9 ftco-animate text-center mb-4">
-            <h1 class="mb-2 bread">Không tìm thấy món ăn</h1>
+            <h1 class="mb-2 bread">Please choose the meal before making a reservation!</h1>
           </div>
         </div>
       </div>

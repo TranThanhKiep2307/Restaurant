@@ -116,5 +116,11 @@ class user
             $result = $this->db->select($query);
             return $result;
         }
+        public function show_user(){
+            $query = "SELECT * FROM khachhang ORDER BY KH_MA DESC ";
+            $result = $this->db->select($query);
+            return $result;
+        }
+        
 }
 ?>

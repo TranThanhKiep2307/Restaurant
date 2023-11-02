@@ -59,6 +59,11 @@ class menu
         return $result;
     }
 
+    public function show_menuname ($id){
+        $query = "SELECT * FROM menu WHERE MN_MA= '$id'";
+        $result = $this->db->select($query);
+        return $result;
+    }
 
     public function update_menu($data,$files,$id){
 
@@ -149,12 +154,7 @@ class menu
         return $result;
     }
     public function getproduct_menu (){
-        $query = "SELECT thucan.*, loai_thuc_an.*, chitietthucan.*, combo.*
-        FROM thucan
-        JOIN loai_thuc_an ON thucan.LTA_MA = loai_thuc_an.LTA_MA
-        JOIN chitietthucan ON thucan.TA_MA = chitietthucan.TA_MA
-        JOIN combo ON thucan.CB_MA = combo.CB_MA
-        WHERE thucan.CB_MA IS NOT NULL";
+        $query = "SELECT * FROM menu ORDER BY MN_MA DESC";
         $result = $this->db->select($query);
         return $result;
     }

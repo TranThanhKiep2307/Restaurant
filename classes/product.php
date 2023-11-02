@@ -231,6 +231,11 @@ class product
         $result = $this->db->select($query);
         return $result;
     }
+    public function getproduct_name(){
+        $query = "SELECT * FROM thucan ORDER BY TA_MA DESC";
+        $result = $this->db->select($query);
+        return $result;
+    }
 
 }
 ?>
