@@ -8,13 +8,13 @@
     body {
     background: #fff ;
     color: #000;
-    font-size: 14px;
+    font-size: 20px;
     padding: 0;
 
     }
     input[type="number" i] {
     padding: 10px 20px;
-    width: 20%;
+    width: 100%;
    
     }
     form {
@@ -28,22 +28,22 @@
     <form method="post" action="">
       <div class="row"> 
         <div class="col-6">
-            <label for="ngay    " class="form-label">Chọn ngày:<span class="error"></span> </label>
-            <input type="number" class="form-control" id="ngay" min="1" max="31" placeholder="Nhập ngày" name="ngay" >
+            <label for="ngay " class="form-label">Chọn thời điểm:<span class="error"></span> </label>
+            <input type="date" class="form-control" id="ngay" min="1" max="31" placeholder="Nhập ngày" name="ngay" >
         </div>
       </div><br>
-      <div class="row"> 
+      <!-- <div class="row"> 
         <div class="col-6">
             <label for="thang" class="form-label">Chọn tháng:<span class="error"></span> </label>
-            <input type="number" class="form-control" id="thang" min="1" max="12" placeholder="Nhập tháng" name="thang"required>
+            <input type="date" class="form-control" id="thang" min="1" max="12" placeholder="Nhập tháng" name="thang"required>
         </div>
       </div><br>
       <div class="row"> 
         <div class="col-6">
             <label for="nam" class="form-label">Chọn năm:<span class="error"></span> </label>
-            <input type="number" class="form-control" id="nam" min="2000" placeholder="Nhập năm" name="nam" >
+            <input type="year" class="form-control" id="nam" min="2000" placeholder="Nhập năm" name="nam" >
         </div>
-      </div><br>
+      </div><br> -->
       
       <div class="col-md-12">      
             <button type="submit"  class="btn btn-primary py-3 px-5" >Xem doanh thu</button>

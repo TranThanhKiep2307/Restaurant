@@ -170,7 +170,7 @@ h2#page-heading {
 	padding-top:20px;
 }
 .copyblock {
-  border: 1px solid #e6f0f3;
+  /* border: 1px solid #e6f0f3; */
   line-height: 32px;
   margin-left: 100px;
   margin-top: 20px;
@@ -341,14 +341,17 @@ table.form input, table.form select{
 	border-bottom: 1px solid #eaeaea;
 }
 table.form input[type="submit"] {
+	width: 180px;
+	left: 430px;
+	top:20px;
 	font-weight: bold;
 	background-color: lightsteelblue;
 	display: block;
 	justify-content: center;
-	border: 2px solid darkcyan;
-	color: cadetblue;
+	/* border: 2px solid darkcyan;
+	color: cadetblue; */
 	cursor: pointer;
-	font-size: 20px;
+	font-size: 15px;
 	padding: 2px 10px;
 }
 
@@ -958,8 +961,7 @@ td.details {
 
 
 /* Set default button colors */
-.btn, .btn-icon, .btn-mini,
-.btn:visited, .btn-icon:visited, .btn-mini:visited {  background-image: url(../img/bg-lite.png); background-color: #F90; border-color: #D58000; color: #FFF; }
+.btn, .btn-icon, .btn-mini,	.btn:visited, .btn-icon:visited, .btn-mini:visited {  background-image: url(../img/bg-lite.png); background-color:lightsteelblue; border-color: #D58000; color: #FFF; }
 
 .btn:hover, .btn-icon:hover, .btn-mini:hover { background-color: #D58000; color: #FFF; }
 
