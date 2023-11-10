@@ -75,6 +75,7 @@ $activate = "reservation";
                       <div class="select-wrap one-third">
 	                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
 	                      <select id="meal" name="TA_MA" class="form-control">
+                          <option>Chọn thức ăn</option>
                             <?php
                             $getpd = $product->getproduct_name();
                             if ($getpd) {
@@ -84,8 +85,9 @@ $activate = "reservation";
                             }
                             ?>
                         </select>
-
 	                    </div>
+                      <label for="">Price</label>
+	                    <input id="number" type="number" name="GH_SL" class="form-control" placeholder="Quality" min = "1">
 	                  </div>
 	                </div>
 					      <div class="col-md-6">
@@ -120,25 +122,37 @@ $activate = "reservation";
             <h2 class="mb-4">Your order</h2>
           </div>
           <form onsubmit="showMessageBox()" action="" method="post">
+          
                   <div class="row">
+                  <?php
+                      $get_dishes = $ct -> getproduct_cart();
+                      if($get_dishes){
+                        while($result_dishes = $get_dishes->fetch_assoc()){
+                    ?>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="">Name dishes</label>
-                        <input type="text" name="TA_TEN" class="form-control" placeholder="" >
+                        <input type="text" name="TA_TEN" class="form-control" value="<?php echo $result_dishes['TA_MA']?>" >
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="">Quality</label>
-                        <input id="sl" type="number" name="GH_SL" class="form-control" placeholder="" min = "1">
+                        <input id="sl" type="number" name="GH_SL" class="form-control" value="<?php echo $result_dishes['GH_SL']?>" min = "1">
+                        <button type="submit" name="submit" class="btn btn-primary py-3 px-5">Update Quality</button>
                       </div>
                     </div>
+                    <?php
+                        }
+                      }
+                    ?>
                     <div class="col-md-12 mt-3">
                       <div class="form-group">
                         <button type="submit" name="submit" class="btn btn-primary py-3 px-5">Payment</button>
                       </div>
                     </div>
                   </div>
+                  
                 </form>
         </div>
       </div>

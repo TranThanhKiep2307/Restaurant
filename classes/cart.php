@@ -17,25 +17,24 @@ class cart
     public function add_cart($data,$id){
         $GH_SL      = mysqli_real_escape_string($this->db->link, $data['GH_SL']);
         $TA_MA      = mysqli_real_escape_string($this->db->link, $data['TA_MA']);
-        $KH_MA      = mysqli_real_escape_string($this->db->link, $data['KH_MA']);
-        $GH_GIA     = mysqli_real_escape_string($this->db->link, $data['GH_GIA']);
+        $GH_GIA     = mysqli_real_escape_string($this->db->link, $data['GH_GIA']*$GH_SL);
         $GH_MASS    = session_id();
         $id         = mysqli_real_escape_string($this->db->link, $id);
-
+        $GH_GHICHU  = mysqli_real_escape_string($this->db->link, $data['GH_GHICHU']);
         // $query = "SELECT * FROM khachhang WHERE KH_MA = '$id' ";
         // $result = $this->db->select($query)->fetch_assoc();
         
         // $TA_MA = $result["TA_MA"];
         // $TA_TEN = $result["TA_TEN"];
         
-        $query_cart = "SELECT * FROM giohang WHERE SP_MA = '$id' AND GH_MASS = '$GH_MASS'";
+        $query_cart = "SELECT * FROM giohang WHERE TA_MA = '$TA_MA' AND GH_MASS = '$GH_MASS'";
         $check_cart =  $this->db->select($query_cart); 
         if($check_cart){
             $thbao = "<span class = 'error'>Sản phẩm đã có trong giỏ hàng</span>";
             return $thbao;
         }else{
-            $query_insert = "INSERT INTO giohang(SP_MA, TA_MA, GH_MASS, KH_MA, SP_GIA, GH_SL, GIA_GIA) 
-            VALUES ('$id', '$TA_MA','$GH_MASS','$KH_MA','$GH_SL','$GH_SL')";
+            $query_insert = "INSERT INTO giohang(TA_MA, GH_MASS, KH_MA, GH_SL, GH_GIA, GH_GHICHU) 
+            VALUES ('$TA_MA','$GH_MASS','$id', '$GH_SL', '$GH_GIA', '$GH_GHICHU')";
             $insert_cart = $this->db->insert($query_insert);
             if($insert_cart){
                 header('Location: orderfood.php ');
