@@ -8,7 +8,8 @@ $activate = "reservation";
   $id = Session::get('KH_MA');
   if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     $addcart = $ct-> add_cart($_POST,$id);
-} 
+  } 
+  
 ?>
 
     <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_3.jpg');" data-stellar-background-ratio="0.5">
@@ -70,26 +71,29 @@ $activate = "reservation";
 	                  </div>
 	                </div>
 					        <div class="col-md-6">
-	                  <div class="form-group">
-	                    <label for="">Meals</label>
-                      <div class="select-wrap one-third">
-	                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-	                      <select id="meal" name="TA_MA" class="form-control">
-                          <option>Chọn thức ăn</option>
-                            <?php
-                            $getpd = $product->getproduct_name();
-                            if ($getpd) {
-                                while ($result_name = $getpd->fetch_assoc()) {
-                                    echo '<option value= "' . $result_name['TA_MA'] . '">' . $result_name['TA_TEN'] . '</option>';
-                                }
+            <div class="form-group">
+                <label for="">Meals</label>
+                <div class="select-wrap one-third">
+                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                    <select id="meal" name="TA_MA" class="form-control" onchange="updatePrice()">
+                        <option>Chọn thức ăn</option>
+                        <?php
+                        $getpd = $product->getproduct_name();
+                        if ($getpd) {
+                            while ($result_name = $getpd->fetch_assoc()) {
+                                $selected = ($_POST['TA_MA'] == $result_name['TA_MA']) ? 'selected' : '';
+                                echo '<option value="' . $result_name['TA_MA'] . '" ' . $selected . '>' . $result_name['TA_TEN'] . '</option>';
                             }
-                            ?>
-                        </select>
-	                    </div>
-                      <label for="">Price</label>
-	                    <input id="number" type="number" name="GH_SL" class="form-control" placeholder="Quality" min = "1">
-	                  </div>
-	                </div>
+                        }
+                        ?>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="">Price</label>
+                    <span id="price-display" type="number" name="GH_GIA" class="form-control" value="">
+                </div>
+            </div>
+        </div>
 					      <div class="col-md-6">
 	                  <div class="form-group">
 	                    <label for="">Quality</label>

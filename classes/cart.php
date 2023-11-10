@@ -17,7 +17,7 @@ class cart
     public function add_cart($data,$id){
         $GH_SL      = mysqli_real_escape_string($this->db->link, $data['GH_SL']);
         $TA_MA      = mysqli_real_escape_string($this->db->link, $data['TA_MA']);
-        $GH_GIA     = mysqli_real_escape_string($this->db->link, $data['GH_GIA']*$GH_SL);
+        $GH_GIA     = mysqli_real_escape_string($this->db->link, $data['CTTA_DONGIA'] * $GH_SL);
         $GH_MASS    = session_id();
         $id         = mysqli_real_escape_string($this->db->link, $id);
         $GH_GHICHU  = mysqli_real_escape_string($this->db->link, $data['GH_GHICHU']);
