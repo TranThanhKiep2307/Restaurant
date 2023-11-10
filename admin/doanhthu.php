@@ -1,64 +1,53 @@
 <?php include "inc/header.php" ?>
-<?php include 'inc/sidebar.php';?>
+<?php include 'inc/sidebar.php'; ?>
 
 <head>
     <title>Tính Doanh Thu và Số Lượng Bàn</title>
 </head>
 <style>
     body {
-    background: #fff ;
-    color: #000;
-    font-size: 20px;
-    padding: 0;
+        background: #fff;
+        color: #000;
+        font-size: 20px;
+        padding: 0;
+    }
 
+    input[type="number"] {
+        padding: 10px 20px;
+        width: 100%;
     }
-    input[type="number" i] {
-    padding: 10px 20px;
-    width: 100%;
-   
-    }
+
     form {
-    display: block;
-    margin-top: 0em;
-}
+        display: block;
+        margin-top: 0em;
+    }
 </style>
+
 <body>
     <h1>Tính Doanh Thu và Số Lượng Bàn</h1>
 
     <form method="post" action="">
-      <div class="row"> 
-        <div class="col-6">
-            <label for="ngay " class="form-label">Chọn thời điểm:<span class="error"></span> </label>
-            <input type="date" class="form-control" id="ngay" min="1" max="31" placeholder="Nhập ngày" name="ngay" >
-        </div>
-      </div><br>
-      <!-- <div class="row"> 
-        <div class="col-6">
-            <label for="thang" class="form-label">Chọn tháng:<span class="error"></span> </label>
-            <input type="date" class="form-control" id="thang" min="1" max="12" placeholder="Nhập tháng" name="thang"required>
-        </div>
-      </div><br>
-      <div class="row"> 
-        <div class="col-6">
-            <label for="nam" class="form-label">Chọn năm:<span class="error"></span> </label>
-            <input type="year" class="form-control" id="nam" min="2000" placeholder="Nhập năm" name="nam" >
-        </div>
-      </div><br> -->
-      
-      <div class="col-md-12">      
-            <button type="submit"  class="btn btn-primary py-3 px-5" >Xem doanh thu</button>
-      </div>
+        <div class="row">
+            <div class="col-6">
+                <label for="ngay" class="form-label">Chọn thời điểm:<span class="error"></span> </label>
+                <input type="date" class="form-control" id="ngay" name="ngay">
+            </div>
+        </div><br>
 
-        <!-- <button type="submit" value="Tính Doanh Thu và Số Lượng Bàn"></button> -->
+        <div class="col-md-12">
+            <button type="submit" class="btn btn-primary py-3 px-5">Xem doanh thu</button>
+        </div>
     </form>
 
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $ngay = $_POST["ngay"];
-        $thang = $_POST["thang"];
-        $nam = $_POST["nam"];
+        // Kiểm tra và gán giá trị từ form
+        $ngay = isset($_POST["ngay"]) ? $_POST["ngay"] : null;
+        $thang = date('m', strtotime($ngay));
+        $nam = date('Y', strtotime($ngay));
 
-        if (!empty($ngay) && !empty($thang) && !empty($nam)) {
+        if (!empty($ngay)) {
+            // Tiếp tục xử lý nếu có giá trị từ form
             $conn = new mysqli("localhost", "root", "", "restaurant");
 
             if ($conn->connect_error) {
@@ -111,11 +100,11 @@
             $soLuongBanNam = tinhTongSoLuongBan($conn, $whereClause);
             $doanhThuNam = tinhTongDoanhThu($conn, $whereClause);
 
-            echo "<p>Doanh thu ngày $ngay/$thang/$nam là: " . $doanhThuNgay['tong_doanh_thu'] . " VNĐ</p>";
-            echo "<p>Số lượng bàn đặt ngày $ngay/$thang/$nam là: " . $soLuongBanNgay['tong_so_luong_ban'] . " Bàn</p>";
+            echo "<p>Doanh thu ngày $ngay là: " . $doanhThuNgay['tong_doanh_thu'] . " VNĐ</p>";
+            echo "<p>Số lượng bàn đặt ngày $ngay là: " . $soLuongBanNgay['tong_so_luong_ban'] . " Bàn</p>";
 
-            echo "<p>Doanh thu trong tháng $thang/$nam là: " . $doanhThuThang['tong_doanh_thu'] . " VNĐ</p>";
-            echo "<p>Số lượng bàn đặt trong tháng $thang/$nam là: " . $soLuongBanThang['tong_so_luong_ban'] . " Bàn</p>";
+            echo "<p>Doanh thu trong tháng $thang là: " . $doanhThuThang['tong_doanh_thu'] . " VNĐ</p>";
+            echo "<p>Số lượng bàn đặt trong tháng $thang là: " . $soLuongBanThang['tong_so_luong_ban'] . " Bàn</p>";
 
             echo "<p>Doanh thu trong năm $nam là: " . $doanhThuNam['tong_doanh_thu'] . " VNĐ</p>";
             echo "<p>Số lượng bàn đặt trong năm $nam là: " . $soLuongBanNam['tong_so_luong_ban'] . " Bàn</p";
