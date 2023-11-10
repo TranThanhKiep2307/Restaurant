@@ -156,6 +156,20 @@ class product
     }
 
     //end back-end
+    public function getproductbyGIA($selected_TA_MA){
+        $query = "SELECT chitietthucan.CTTA_DONGIA
+		FROM chitietthucan 
+        JOIN thucan ON chitietthucan.TA_MA = thucan.TA_MA
+        WHERE chitietthucan.TA_MA = '$selected_TA_MA'";
+        $result = $this->db->select($query);
+        if ($result) {
+            $row = $result->fetch_assoc();
+            return $row['CTTA_DONGIA'];
+        } else {
+            return 'Lỗi nè';
+        }
+    }
+
     public function getproduct_limit(){
         $query = "SELECT * FROM thucan ORDER BY TA_MA DESC LIMIT 4";
         $result = $this->db->select($query);
