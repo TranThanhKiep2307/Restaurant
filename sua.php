@@ -25,7 +25,11 @@ $sql = "UPDATE khachhang
         WHERE KH_USERNAME='$username'";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Thông tin khách hàng đã được cập nhật thành công.";
+    echo '<script>
+        alert("Thông tin khách hàng đã được cập nhật thành công. ");
+        location="index.php";</script>';
+    // echo "";
+    // header ('Location : index.php');
 } else {
     echo "Lỗi: " . $conn->error;
 }
