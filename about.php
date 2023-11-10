@@ -145,9 +145,9 @@ $activate = "about";
 				<div class="row">
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff">
-							<div class="img" style="background-image: url(images/chef-4.jpg);"></div>
+							<!-- <div class="img" style="background-image: url(images/chef-4.jpg);"></div> -->
 							<div class="text pt-4">
-								<h3>John Smooth</h3>
+								<h3>Trần Thanh Kiệp</h3>
 								<span class="position mb-2">Chủ nhà hàng</span>
 								<!-- <p>A small river named Duden flows by their place and supplies</p> -->
 								<div class="faded">
@@ -164,9 +164,9 @@ $activate = "about";
 					</div>
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff">
-							<div class="img" style="background-image: url(images/chef-2.jpg);"></div>
+							<!-- <div class="img" style="background-image: url(images/chef-2.jpg);"></div> -->
 							<div class="text pt-4">
-								<h3>Rebeca Welson</h3>
+								<h3>Nguyễn Thị Phương Thư</h3>
 								<span class="position mb-2">Bếp trưởng</span>
 								<!-- <p>A small river named Duden flows by their place and supplies</p> -->
 								<div class="faded">
@@ -183,9 +183,9 @@ $activate = "about";
 					</div>
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff">
-							<div class="img" style="background-image: url(images/chef-3.jpg);"></div>
+							<!-- <div class="img" style="background-image: url(images/chef-3.jpg);"></div> -->
 							<div class="text pt-4">
-								<h3>Kharl Branyt</h3>
+								<h3>Nguyễn Ngọc Kiều Hân</h3>
 								<span class="position mb-2">Đầu bếp</span>
 								<!-- <p>A small river named Duden flows by their place and supplies</p> -->
 								<div class="faded">
@@ -200,15 +200,14 @@ $activate = "about";
 							</div>
 						</div>
 					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
+					<!-- <div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff">
 							<div class="img" style="background-image: url(images/chef-1.jpg);"></div>
 							<div class="text pt-4">
 								<h3>Luke Simon</h3>
 								<span class="position mb-2">Đầu bếp</span>
-								<!-- <p>A small river named Duden flows by their place and supplies</p> -->
+					
 								<div class="faded">
-									<!-- <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p> -->
 									<ul class="ftco-social d-flex">
 		                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
 		                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -218,7 +217,7 @@ $activate = "about";
 	              </div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</section>

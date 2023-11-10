@@ -75,12 +75,12 @@ ob_start();
             <input type="text" class="form-control" id="hoten" placeholder="Nhập tên của bạn" name="ten" required>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-6">
             <label for="inputNumberl4" class="form-label">Số điện thoại<span class="error" ></span></label>
             <input type="text" class="form-control" id="sdt" name="sdt" required>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-6">
             <label for="username" class="form-label">Tên đăng nhập<span class="error">*                                           </span></label>
             <input type="text" class="form-control" id="username" name="username" required>
         </div>
@@ -89,21 +89,21 @@ ob_start();
             <input type="email" class="form-control" id="email" placeholder="Nhập địa chỉ email của bạn" name="email" required>
         </div>
         
-        <div class="col-md-6">
+        <div class="col-6">
             <label for="inputPassword4" class="form-label">Mật khẩu<span class="error">*</span></label>
             <input type="password" class="form-control" id="matkhau" name="psw" required>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-6">
             <label for="inputPassword4" class="form-label">Nhập lại mật khẩu<span class="error">*</span></label>
             <input type="password" class="form-control" id="matkhau2" name="psw1" required>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-6">
             <label for="inputNumberl4" class="form-label">Địa chỉ<span class="error">                                          </span></label>
             <input type="text" class="form-control" id="diachi" name="diachi" required>
         </div>
-        <div class="col-md-6">
+        <div class="col-6">
             <label for="qh" class="form-label">Quận Huyện<span class="error">*</span></label>
             <select class="form-select form-control" id="qh" name="qh" required>
                 <option value="" selected>Chọn quận/huyện</option>

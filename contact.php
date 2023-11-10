@@ -22,13 +22,13 @@ $activate = "contact";
 						<h2 class="h4 mb-2 mb-md-5 font-weight-bold">Liên hệ với chúng tôi</h2>
 						<form action="#">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Họ tên của bạn">
+                <input type="text" class="form-control" placeholder="Họ tên của bạn" required>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Email của bạn">
+                <input type="text" class="form-control" placeholder="Email của bạn" required >
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Địa chỉ của bạn">
+                <input type="text" class="form-control" placeholder="Địa chỉ của bạn" required>
               </div>
               <div class="form-group">
                 <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Lời nhắn của bạn"></textarea>

@@ -126,6 +126,7 @@ ul {
 }
 
 label {
+    font-family: 'Times New Roman', Times, serif;
     margin: 0;
 }
 
@@ -147,7 +148,8 @@ a:hover {
 /*--header start here--*/
 
 .header-main {
-    padding: 100px 0px 50px;
+    padding-bottom: 100px;
+    /* padding: 100px 0px  ; */
     width: 30%;
     margin: 0 auto;
 }
@@ -206,47 +208,47 @@ span.login-color {
 }
 
 .header-left-bottom input[type="text"] {
-    background: url(./images/m.png)no-repeat 0px 5px;
-    outline: none;
-    font-size: 15px;
-    font-weight: 400;
-    color: black;
-    padding: 12px 13px 20px 44px;
-    border: none;
-    border-bottom: 1px solid #fff;
-    width: 87%;
-    margin: 0 0 20px;
-    display: inline-block;
+    height: 52px !important;
+    width: 200px;
+    background: #fff !important;
+    color: #000000 !important;
+    font-size: 16px;
+    border-radius: 0px;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid rgba(0, 0, 0, 0.1); 
 }
 
 .header-left-bottom input[type="password"] {
-    background: url(./images/l.png)no-repeat 0px 5px;
-    outline: none;
-    font-size: 15px;
-    font-weight: 400;
-    color: black;
-    border: none;
-    padding: 12px 13px 20px 44px;
-    width: 87%;
-    margin: 0 0 20px;
-    display: inline-block;
+    height: 52px !important;
+    width: 200px;
+    background: #fff !important;
+    color: #000000 !important;
+    font-size: 16px;
+    border-radius: 0px;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid rgba(0, 0, 0, 0.1); 
 }
 
 .header-left-bottom input[type="submit"] {
-    background: #f8b4c5;
-    color: #FFF;
-    font-size: 26px;
+    margin-top: 40px;
+    margin-left: 180px;
+    background: #c8a97e;
+    border: 1px solid #c8a97e;
+    color: #fff; 
+    /* font-size: 26px; */
     padding: 0.3em 1.2em;
-    width: 100%;
-    font-weight: 500;
-    transition: 0.5s all;
-    -webkit-transition: 0.5s all;
+    /* width: 100%; */
+    font-weight: 50;
+    /* transition: 0.5s all; */
+    /* -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
     -o-transition: 0.5s all;
-    display: inline-block;
-    cursor: pointer;
+    display: inline-block; */
+    /* cursor: pointer;
     outline: none;
-    border: none;
+    border: none; */
     border-radius: 3px;
     font-family: 'Roboto Condensed', sans-serif;
 }
@@ -883,6 +885,12 @@ h5 {
         margin-right: 4%;
     }
 }
-
+.col-6 {
+    padding-left: 100px;
+   padding-right: 100px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%; }
 
 /*--meadia quries end here--*/
