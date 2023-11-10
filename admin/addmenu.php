@@ -68,7 +68,7 @@
                         </tr>
                         <tr> 
                             <td>
-                                <input type="submit" name="submit" Value="Thêm món ăn" />
+                                <input type="submit" class="btn btn-primary py-3 px-5" name="submit" Value="Thêm món ăn" />
                             </td>
                         </tr>
 

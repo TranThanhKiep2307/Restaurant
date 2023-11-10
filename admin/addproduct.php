@@ -17,7 +17,7 @@
 <div class="grid_10">
     <div class="box round first grid">
         <h2>Thêm món ăn</h2>
-        <div class="block">
+        <div class="block copyblock">
         <?php 
                 if(isset($insert_product)){
                     echo $insert_product;
@@ -105,7 +105,7 @@
                 
 				<tr>
                     <td>
-                        <input type="submit" name="submit" Value="Save" />
+                        <input type="submit" class="btn btn-primary py-3 px-5" name="submit" Value="Thêm món" />
                     </td>
                 </tr>
             </table>
