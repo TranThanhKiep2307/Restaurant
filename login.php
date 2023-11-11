@@ -5,7 +5,6 @@ ob_start();
 ?>
 
 <head>
-    <!-- <title>Đăng nhập</title> -->
     <link href="./css/login.css" rel="stylesheet" type="text/css" media="all" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -35,6 +34,7 @@ ob_start();
         </div>
       </div>
     </section>
+
     <div class="header">
         <div class="header-main">
              <h3 class="py-md-5" style="text-align:center">Điền thông tin đăng nhập</h3><br><br>
@@ -47,7 +47,7 @@ ob_start();
                      echo $check_login;
                     }
 					?>
-            <form onsubmit="showMessageBox()" method="post" action="dangky.php">
+    <form onsubmit="showMessageBox()" method="post" action="dangky.php">
 
         <!-- <h2 class="py-md-5" style="text-align:center">Điền thông tin đăng nhập</h2> -->
              <div class="row"> 
@@ -71,7 +71,7 @@ ob_start();
                         </form> -->
                 </div>
 
-
+    </form>
                 </div>
             </div>
 

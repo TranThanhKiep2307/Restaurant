@@ -31,8 +31,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
 <section class="ftco-section ftco-no-pt ftco-no-pb">
     <div class="container-fluid px-0">
-        <div class="row d-flex no-gutters">
-            <div class="col-md-6 order-md-last ftco-animate makereservation p-4 p-md-5 pt-5">
+        <!-- <div class="row d-flex no-gutters"> -->
+        <div class="col-md-6 pt-5 px-2 pb-2 p-md-5 order-md-last" style="right: auto;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.7906871911864!2d105.78347907475415!3d10.03412409007305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a062a1bbe2da77%3A0x780e866b3e9801a6!2sKing%20BBQ%20Buffet%20Sense%20City%20C%E1%BA%A7n%20Th%C6%A1!5e0!3m2!1svi!2s!4v1695120112261!5m2!1svi!2s"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+            
+     <div class="col-md-6 order-md-last ftco-animate makereservation p-4 p-md-5 pt-5">
                 <div class="py-md-5">
                     <div class="heading-section ftco-animate mb-5">
                         <span class="subheading">Book a table</span>
@@ -74,8 +81,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                                 </div>
                             </div>
                             <div class="col-md-6">
-
-
                                 <div class="form-group">
                                     <label for="">Time</label>
                                     <input id="time" type="time" name="PDH_TG" class="form-control" id="book_time"
@@ -135,30 +140,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                 </div>
             </div>
 
-            <!-- <script>
-				 function showMessageBox() {
-    			var message = "Reservation successful!";
-    			alert(message);
-                document.getElementById('name').value = '';
-                document.getElementById('email').value = '';
-                document.getElementById('sdt').value = '';
-				document.getElementById('time').value ='';
-				document.getElementById('date').value = '';
-				document.getElementById('person').value = '';
-                // var textarea = document.getElementById("address");
-                //     textarea.value = "";
-                // console.log(document.getElementById('address'));
-             
-					}
-		 </script> -->
-            <div class="col-md-6 d-flex align-items-stretch pb-5 pb-md-0">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.7906871911864!2d105.78347907475415!3d10.03412409007305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a062a1bbe2da77%3A0x780e866b3e9801a6!2sKing%20BBQ%20Buffet%20Sense%20City%20C%E1%BA%A7n%20Th%C6%A1!5e0!3m2!1svi!2s!4v1695120112261!5m2!1svi!2s"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
+           
+        <!-- </div> -->
     </div>
+    
 </section>
 
 <?php

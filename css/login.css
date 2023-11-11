@@ -94,6 +94,7 @@ img {
 /*end reset*/
 
 body {
+    position: absolute;
     background: url(./images/img_1.jpg)no-repeat;
     background-attachment: fixed;
     background-position: center;

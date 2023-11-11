@@ -65,10 +65,11 @@ ob_start();
         </div>
       </div>
     </section>
-<div class="dangki">
+    
+    <div class="dangki">
     <form onsubmit="showMessageBox()" method="post" action="dangky.php">
 
-    <h2 class="py-md-5" style="text-align:center">Điền thông tin đăng kí</h2>
+    <!-- <h2 class="py-md-5" style="text-align:center">Điền thông tin đăng kí</h2> -->
       <div class="row"> 
         <div class="col-6">
             <label for="hoten" class="form-label">Họ và tên<span class="error"></span> </label>
@@ -140,9 +141,6 @@ ob_start();
                 // document.getElementById('matkhau2').value = '';
                 // document.getElementById('diachi').value = '';
                 // document.getElementById('qh').value = '';
-                
-                
-             
                 // var textarea = document.getElementById("address");
                 //     textarea.value = "";
                 // console.log(document.getElementById('address'));
