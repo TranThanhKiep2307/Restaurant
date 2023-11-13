@@ -47,7 +47,7 @@ ob_start();
                      echo $check_login;
                     }
 					?>
-    <form onsubmit="showMessageBox()" method="post" action="dangky.php">
+    <form onsubmit="showMessageBox()" method="POST" action="">
 
         <!-- <h2 class="py-md-5" style="text-align:center">Điền thông tin đăng nhập</h2> -->
              <div class="row"> 
