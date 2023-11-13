@@ -17,30 +17,36 @@ class cart
     public function add_cart($data,$id){
         $GH_SL      = mysqli_real_escape_string($this->db->link, $data['GH_SL']);
         $TA_MA      = mysqli_real_escape_string($this->db->link, $data['TA_MA']);
-        $GH_GIA     = mysqli_real_escape_string($this->db->link, $data['CTTA_DONGIA'] * $GH_SL);
         $GH_MASS    = session_id();
         $id         = mysqli_real_escape_string($this->db->link, $id);
         $GH_GHICHU  = mysqli_real_escape_string($this->db->link, $data['GH_GHICHU']);
-        // $query = "SELECT * FROM khachhang WHERE KH_MA = '$id' ";
-        // $result = $this->db->select($query)->fetch_assoc();
-        
-        // $TA_MA = $result["TA_MA"];
-        // $TA_TEN = $result["TA_TEN"];
         
         $query_cart = "SELECT * FROM giohang WHERE TA_MA = '$TA_MA' AND GH_MASS = '$GH_MASS'";
         $check_cart =  $this->db->select($query_cart); 
         if($check_cart){
-            $thbao = "<span class = 'error'>Sản phẩm đã có trong giỏ hàng</span>";
-            return $thbao;
+            $alert = "<span class = 'error'>Sản phẩm đã có trong giỏ hàng</span>";
+            return $alert;
         }else{
-            $query_insert = "INSERT INTO giohang(TA_MA, GH_MASS, KH_MA, GH_SL, GH_GIA, GH_GHICHU) 
-            VALUES ('$TA_MA','$GH_MASS','$id', '$GH_SL', '$GH_GIA', '$GH_GHICHU')";
-            $insert_cart = $this->db->insert($query_insert);
-            if($insert_cart){
-                header('Location: orderfood.php ');
+            $query_gia = "SELECT CTTA_DONGIA FROM chitietthucan WHERE TA_MA = '$TA_MA'";
+            $check_gia = $this->db->select($query_gia);
+            if($check_gia ){
+                $check_gia = $check_gia ->fetch_assoc();
+                $GH_GIA =  $check_gia["CTTA_DONGIA"] * $GH_SL;
+                $query_insert = "INSERT INTO giohang(TA_MA, GH_MASS, KH_MA, GH_SL, GH_GIA, GH_GHICHU) 
+                VALUES ('$TA_MA','$GH_MASS','$id', '$GH_SL', '$GH_GIA', '$GH_GHICHU')";
+                $insert_cart = $this->db->insert($query_insert);
+                if($insert_cart){
+                    $alert = "<span class = 'success'>Thêm món ăn thành công</span>";
+                    return $alert;
+                }else{
+                    $alert = "<span class = 'error'>Thêm món ăn thất bại</span>";
+                    return $alert;
+                }
             }else{
-                header('Location: 404.php '); 
+                $alert = "<span class = 'error'>Không lấy được giá sản phẩm</span>";
+                return $alert;
             }
+            
         }
     }
     public function getproduct_cart(){

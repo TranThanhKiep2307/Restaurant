@@ -7,7 +7,7 @@ $activate = "reservation";
 <?php
   $id = Session::get('KH_MA');
   if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
-    $addcart = $ct-> add_cart($_POST,$id);
+    $add_cart = $ct-> add_cart($_POST,$id);
   } 
   
 ?>
@@ -33,13 +33,14 @@ $activate = "reservation";
 		          	<span class="subheading">Order food</span>
 		            <h2 class="mb-4">New order</h2>
 		          </div>
-	            <form onsubmit="showMessageBox()" action="" method="post">
-	              <div class="row">
-                  <?php 
+	            <form onsubmit="" action="" method="post">
+              <?php 
                     if(isset($add_cart)){
                       echo $add_cart;
                     }
                 	?>
+	              <div class="row">
+                
                   <?php
                     $get_user = $us -> get_usersid($id);
                     if($get_user){
@@ -88,11 +89,12 @@ $activate = "reservation";
                         ?>
                     </select>
                 </div>
-                <div class="form-group">
-                    <label for="">Price</label>
-                    <span id="price-display" type="number" name="GH_GIA" class="form-control" value="">
-                </div>
-            </div>
+              </div>
+              <div class="form-group">
+                <label for="">Price</label>
+                  <span id="price-display" type="number" name="GH_GIA" class="form-control">
+              </div>
+            
         </div>
 					      <div class="col-md-6">
 	                  <div class="form-group">
@@ -106,6 +108,7 @@ $activate = "reservation";
 	                  <textarea id="note" type="text" name="GH_GHICHU" class="form-control" placeholder="Notice..."></textarea>
 	                </div>
 	              </div>
+                
 	              <div class="col-md-12 mt-3">
 	                <div class="form-group">
 	                  <button type="submit" name="submit" class="btn btn-primary py-3 px-5">Add order</button>
@@ -132,7 +135,7 @@ $activate = "reservation";
                       $get_dishes = $ct -> getproduct_cart();
                       if($get_dishes){
                         while($result_dishes = $get_dishes->fetch_assoc()){
-                    ?>
+                    ?>                  
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="">Name dishes</label>
