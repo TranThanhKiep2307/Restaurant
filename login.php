@@ -47,7 +47,11 @@ ob_start();
                      echo $check_login;
                     }
 					?>
+<<<<<<< HEAD
     <form onsubmit="showMessageBox()" method="POST" action="">
+=======
+    <form onsubmit="showMessageBox()" method="post" action="">
+>>>>>>> b27bdd30ff24990820f0b24501eb4d6bdf8bb778
 
         <!-- <h2 class="py-md-5" style="text-align:center">Điền thông tin đăng nhập</h2> -->
              <div class="row"> 
