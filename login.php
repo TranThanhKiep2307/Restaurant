@@ -18,54 +18,59 @@ ob_start();
     //   header('Location:profile.php'); 
    }	
 ?>
-<?php 
+    <?php 
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
         $check_login = $us->login_user($_POST);
     }   
 ?>
-  <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_3.jpg');" data-stellar-background-ratio="0.5">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text align-items-end justify-content-center">
-          <div class="col-md-9 ftco-animate text-center mb-4">
-            <h1 class="mb-2 bread">LOGIN</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Login <i class="ion-ios-arrow-forward"></i></span></p>
-          </div>
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_3.jpg');"
+        data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-end justify-content-center">
+                <div class="col-md-9 ftco-animate text-center mb-4">
+                    <h1 class="mb-2 bread">LOGIN</h1>
+                    <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i
+                                    class="ion-ios-arrow-forward"></i></a></span> <span>Login <i
+                                class="ion-ios-arrow-forward"></i></span></p>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
     <div class="header">
         <div class="header-main">
-             <h3 class="py-md-5" style="text-align:center">Điền thông tin đăng nhập</h3><br><br>
-             
+            <h3 class="py-md-5" style="text-align:center">Điền thông tin đăng nhập</h3><br><br>
+
             <div class="header-bottom">
                 <div class="header-right w3agile">
                     <div class="header-left-bottom agileinfo">
-                    <?php
+                        <?php
 					if(isset($check_login)){
                      echo $check_login;
                     }
 					?>
-<<<<<<< HEAD
-    <form onsubmit="showMessageBox()" method="POST" action="">
-=======
-    <form onsubmit="showMessageBox()" method="post" action="">
->>>>>>> b27bdd30ff24990820f0b24501eb4d6bdf8bb778
+                        <form onsubmit="showMessageBox()" method="POST" action="">
+                            <form onsubmit="showMessageBox()" method="post" action="">
 
-        <!-- <h2 class="py-md-5" style="text-align:center">Điền thông tin đăng nhập</h2> -->
-             <div class="row"> 
-                <div class="col-md-6">
-                    <label for="hoten" class="form-label"> Username<span class="error"></span> </label>
-                    <input type="text" class="form-control" id="username" placeholder="Nhập username" name="KH_USERNAME" required>
-                </div>
+                                <!-- <h2 class="py-md-5" style="text-align:center">Điền thông tin đăng nhập</h2> -->
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="hoten" class="form-label"> Username<span class="error"></span>
+                                        </label>
+                                        <input type="text" class="form-control" id="username"
+                                            placeholder="Nhập username" name="KH_USERNAME" required>
+                                    </div>
 
-            <div class="col-md-6">
-                <label for="inputNumberl4" class="form-label">Password<span class="error" name="KH_PASSWORD" ></span></label>
-                <input type="password" class="form-control"  id="psw" placeholder="Nhập password" name="KH_PASSWORD" required>
-             </div>
-             <input type="submit" name="submit" id="login" class="btn btn-primary py-3 px-5" value="Login">
-                        <!-- <form action="" method="POST">
+                                    <div class="col-md-6">
+                                        <label for="inputNumberl4" class="form-label">Password<span class="error"
+                                                name="KH_PASSWORD"></span></label>
+                                        <input type="password" class="form-control" id="psw" placeholder="Nhập password"
+                                            name="KH_PASSWORD" required>
+                                    </div>
+                                    <input type="submit" name="submit" id="login" class="btn btn-primary py-3 px-5"
+                                        value="Login">
+                                    <!-- <form action="" method="POST">
                             <p>Username:</p>
                             <input type="text" id="username" name="KH_USERNAME" placeholder="Nhập tên đăng nhập tại đây " />
                             <p>Password:</p>
@@ -73,16 +78,16 @@ ob_start();
                             <input type="submit" name="submit" id="login" class="btn btn-primary py-3 px-5" value="Login">
                             <p>Bạn chưa có tài khoản? <a href="dangky.php">Đăng ký tại đây</a></p>
                         </form> -->
+                                </div>
+
+                            </form>
+                    </div>
                 </div>
 
-    </form>
-                </div>
             </div>
-
         </div>
     </div>
-    </div>
-   
+
 </body>
 <?php
 @include 'inc/footer.php';
