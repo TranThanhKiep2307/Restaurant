@@ -27,13 +27,13 @@ if (isset($_POST["dangky"])) {
 }
 
 if (isset($_POST["rsmk"])) {
-    $username = $_SESSION["KH_USERNAME"];
+    $email = $_SESSION["KH_EMAIL"];
     $currentPassword = $_POST["psw2"];
     $newPassword = $_POST["psw"];
     $confirmPassword = $_POST["psw1"];
 
     // Kiểm tra mật khẩu tại phía máy chủ
-    $sqlCheckPassword = "SELECT KH_PASSWORD FROM khachhang WHERE KH_USERNAME = '$username'";
+    $sqlCheckPassword = "SELECT KH_PASSWORD FROM khachhang WHERE KH_EMAIL= '$email'";
     $result = $conn->query($sqlCheckPassword);
 
     if ($result->num_rows > 0) {
@@ -42,7 +42,7 @@ if (isset($_POST["rsmk"])) {
 
         if ($currentPassword === $hashedCurrentPassword) {
             if ($newPassword == $confirmPassword) {
-                $sqlUpdatePassword = "UPDATE khachhang SET KH_PASSWORD = '$newPassword' WHERE KH_USERNAME = '$username'";
+                $sqlUpdatePassword = "UPDATE khachhang SET KH_PASSWORD = '$newPassword' WHERE KH_EMAIL = '$email'";
                 $result = $conn->query($sqlUpdatePassword);
 
                 echo '<script language="javascript">

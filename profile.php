@@ -64,16 +64,13 @@ if ($login_check == false) {
 ?>
 
 
-<section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_3.jpg');"
-    data-stellar-background-ratio="0.5">
+<section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_3.jpg');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
             <div class="col-md-9 ftco-animate text-center mb-4">
                 <h1 class="mb-2 bread">Change your profile</h1>
-                <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i
-                                class="ion-ios-arrow-forward"></i></a></span> <span>Profile <i
-                            class="ion-ios-arrow-forward"></i></span></p>
+                <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Profile <i class="ion-ios-arrow-forward"></i></span></p>
             </div>
         </div>
     </div>
@@ -97,24 +94,20 @@ if ($login_check == false) {
                                         if ($get_customers) {
                                             while ($result = $get_customers->fetch_assoc()) {
                                         ?>
-                                        <label class="lab" for="full_name">Tên đăng nhập:</label>
+                                                <label class="lab" for="full_name">Tên đăng nhập:</label>
 
-                                        <input class="form-control" value="<?php echo $result['KH_USERNAME'] ?>"
-                                            name="username"></input><br>
+                                                <input class="form-control" value="<?php echo $result['KH_USERNAME'] ?>" name="username"></input><br>
 
-                                        <label class="lab" for="full_name">Họ tên:</label>
-                                        <input type="text" class="form-control" value="<?php echo $result['KH_TEN'] ?>"
-                                            name="full_name"><br>
+                                                <label class="lab" for="full_name">Họ tên:</label>
+                                                <input type="text" class="form-control" value="<?php echo $result['KH_TEN'] ?>" name="full_name"><br>
 
-                                        <label class="lab" for="phone">Số điện thoại:</label>
-                                        <input type="text" class="form-control" value=" <?php echo $result['KH_SDT'] ?>"
-                                            name="phone"><br>
+                                                <label class="lab" for="phone">Số điện thoại:</label>
+                                                <input type="text" class="form-control" value=" <?php echo $result['KH_SDT'] ?>" name="phone"><br>
 
-                                        <label class="lab" for="email">Email:</label>
-                                        <input type="email" class="form-control"
-                                            value=" <?php echo $result['KH_EMAIL'] ?>" name="email"><br>
+                                                <label class="lab" for="email">Địa chỉ:</label>
+                                                <input type="text" class="form-control" value=" <?php echo $result['KH_DIACHI'] ?>" name="diachi"><br>
 
-                                        <input class="btn btn-primary py-3 px-5" type="submit" value="Cập nhật">
+                                                <input class="btn btn-primary py-3 px-5" type="submit" value="Cập nhật">
                                         <?php
                                             }
                                         }
@@ -130,26 +123,22 @@ if ($login_check == false) {
                                         if ($get_customers) {
                                             while ($result = $get_customers->fetch_assoc()) {
                                         ?>
-                                        <label class="lab" for="full_name">Tên đăng nhập:</label>
+                                                <label class="lab" for="full_name">Email:</label>
 
-                                        <input class="form-control" value="<?php echo $result['KH_USERNAME'] ?>"
-                                            name="username"></input><br>
-                                        <label class="lab" for="current_password">Mật Khẩu Hiện Tại:</label>
-                                        <input class="form-control" type="password" name="psw2" id="current_password"
-                                            value="<?php echo $result['KH_PASSWORD'] ?>"
-                                            data-password="<?php echo $result['KH_PASSWORD']; ?>" required>
-                                        <span id="currentPasswordError" style="color: red;"></span>
-                                        <br>
+                                                <input class="form-control" value="<?php echo $result['KH_EMAIL'] ?>" name="KH_EMAIL"></input><br>
+                                                <label class="lab" for="current_password">Mật Khẩu Hiện Tại:</label>
+                                                <input class="form-control" type="password" name="psw2" id="current_password" value="<?php echo $result['KH_PASSWORD'] ?>" data-password="<?php echo $result['KH_PASSWORD']; ?>" required>
+                                                <span id="currentPasswordError" style="color: red;"></span>
+                                                <br>
 
-                                        <label class="lab" for="new_password">Mật Khẩu Mới:</label>
-                                        <input class="form-control" type="password" name="psw" required>
-                                        <br>
+                                                <label class="lab" for="new_password">Mật Khẩu Mới:</label>
+                                                <input class="form-control" type="password" name="psw" required>
+                                                <br>
 
-                                        <label class="lab" for="confirm_password">Xác Nhận Mật Khẩu Mới:</label>
-                                        <input class="form-control" type="password" name="psw1" required>
-                                        <br>
-                                        <input class="btn btn-primary py-3 px-5" name="rsmk" type="submit"
-                                            value="Đổi mật khẩu">
+                                                <label class="lab" for="confirm_password">Xác Nhận Mật Khẩu Mới:</label>
+                                                <input class="form-control" type="password" name="psw1" required>
+                                                <br>
+                                                <input class="btn btn-primary py-3 px-5" name="rsmk" type="submit" value="Đổi mật khẩu">
                                         <?php }
                                         }
                                         ?>
