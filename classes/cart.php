@@ -55,31 +55,43 @@ class cart
         $result = $this->db->select($query);
         return $result;
     }
-    public function up_quantity_cart($GH_SOLUONG, $GH_MA){
-        $GH_SOLUONG      = mysqli_real_escape_string($this->db->link, $GH_SOLUONG);
-        $GH_MA          = mysqli_real_escape_string($this->db->link, $GH_MA);
+    public function get_product_info($GH_MA){
+        $GH_MASS = session_id();
+        $GH_MA = mysqli_real_escape_string($this->db->link, $GH_MA);
+        $query = "SELECT * FROM giohang WHERE GH_MA = '$GH_MA' AND GH_MASS = '$GH_MASS'";
+        $result = $this->db->select($query);
+        if ($result) {
+            return $result->fetch_assoc();
+        } else {
+            return false;
+        }
+    }
+    public function up_quantity_cart($GH_SL, $GH_MA, $new_price){
+        $GH_SL      = mysqli_real_escape_string($this->db->link, $GH_SL);
+        $GH_MA      = mysqli_real_escape_string($this->db->link, $GH_MA);
+        $new_price  = mysqli_real_escape_string($this->db->link, $new_price);
 
-        $query = "UPDATE giohang SET GH_SOLUONG = '$GH_SOLUONG' WHERE GH_MA = '$GH_MA'";
-                
+        $query = "UPDATE giohang SET GH_SL = '$GH_SL', GH_GIA = '$new_price' WHERE GH_MA = '$GH_MA'";                
         $result = $this->db->update($query);
         if($result){
-            header('Location:cart.php');
+            header('Location:orderfood.php');
         }else{
             $thbao = "<span class = 'error'>Cập nhật số lượng sản phẩm thất bại</span>";
             return $thbao;
         }
-
     }
     public function delete_cart($GH_MA){
         $GH_MA  = mysqli_real_escape_string($this->db->link, $GH_MA);
         $query  = "DELETE FROM giohang WHERE GH_MA = '$GH_MA'";
         $result = $this->db->delete($query);
         if($result){
-            header('Location:cart.php');
+            header('Location:orderfood.php');
         }else{
             $thbao = "<span class = 'error'>Xóa sản phẩm thất bại</span>";
             return $thbao;
         }
+
+       
     }
     public function check_cart(){
         $GH_MASS = session_id();

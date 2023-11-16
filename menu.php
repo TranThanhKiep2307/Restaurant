@@ -101,8 +101,8 @@ ob_start();
 							                </div>
 							              </div>
 							              <p><span><?php echo $result['TA_TEN']?></span></p>
-							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
-						              </div>
+							              <p><a href="orderfood.php" class="btn btn-primary">Đặt ngay</a></p>
+						              </div> 
 					              </div>
 					            </div>
 					        </div>  
@@ -134,7 +134,7 @@ ob_start();
 							                </div>
 							              </div>
 							              <p><span><?php echo $result['TA_TEN']?></span></p>
-							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><a href="orderfood.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -167,7 +167,7 @@ ob_start();
 							                </div>
 							              </div>
 							              <p><span><?php echo $result['TA_TEN']?></span></p>
-							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><a href="orderfood.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -200,7 +200,7 @@ ob_start();
 							                </div>
 							              </div>
 							              <p><span><?php echo $result['TA_TEN']?></span></p>
-							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><a href="orderfood.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>
@@ -233,7 +233,7 @@ ob_start();
 							                </div>
 							              </div>
 							              <p><span><?php echo $result['TA_TEN']?></span></p>
-							              <p><a href="reservation.php" class="btn btn-primary">Đặt ngay</a></p>
+							              <p><a href="orderfood.php" class="btn btn-primary">Đặt ngay</a></p>
 						              </div>
 					              </div>
 					            </div>

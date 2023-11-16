@@ -154,6 +154,19 @@ class product
         $result = $this->db->select($query);
         return $result;
     }
+    public function showproduct_TA_MA($TA_MA){
+        $query = "SELECT * FROM thucan WHERE TA_MA = '$TA_MA'";
+        $result = $this->db->select($query);
+        return $result;
+    }
+    public function getname(){
+        $GH_MASS = session_id();
+        $query = "SELECT thucan.TA_TEN FROM thucan
+        JOIN giohang ON thucan.TA_MA = giohang.TA_MA
+        WHERE  giohang.GH_MASS = '$GH_MASS'";
+        $result = $this->db->select($query);
+        return $result;
+    }
 
     //end back-end
     public function getproductbyGIA($selected_TA_MA){

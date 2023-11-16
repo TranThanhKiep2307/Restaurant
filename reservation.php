@@ -96,8 +96,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                                             placeholder="Chọn số người">
                                             <option value="1">1</option>
                                             <option value="2">2</option>
-                                            <option value="3">5</option>
-                                            <option value="4">10+</option>
+                                            <option value="5">5</option>
+                                            <option value="10+">10+</option>
                                         </select>
                                     </div>
                                 </div>
