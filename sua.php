@@ -16,12 +16,12 @@ if ($conn->connect_error) {
 $username = $_POST['username'];
 $new_full_name = $_POST['full_name']; // Dữ liệu mới tên của khách hàng
 $new_phone = $_POST['phone']; // Dữ liệu mới số điện thoại của khách hàng
-$new_email = $_POST['email']; // Dữ liệu mới email của khách hàng
+$new_diachi = $_POST['diachi']; // Dữ liệu mới email của khách hàng
 
 
 // Cập nhật thông tin người dùng trong CSDL
 $sql = "UPDATE khachhang 
-        SET KH_TEN='$new_full_name', KH_SDT='$new_phone', KH_EMAIL='$new_email' 
+        SET KH_TEN='$new_full_name', KH_SDT='$new_phone', KH_DIACHI='$new_diachi' 
         WHERE KH_USERNAME='$username'";
 
 if ($conn->query($sql) === TRUE) {
@@ -35,4 +35,3 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
-?>
