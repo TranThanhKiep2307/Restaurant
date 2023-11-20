@@ -80,13 +80,13 @@ if ($login_check == false) {
     <section class="ftco-section contact-section">
         <div class="container">
             <div class="container-fluid pt-1">
-                <div class="row px-xl-5">
+                <div class="row px-xl-55">
                     <div class="col-lg-12 mb-5" style="margin-top: -40px;">
-                        <section class="text-again:center">
+                        <section class="ftco-section contact-section">
                             <div class="row">
                                 <!-- <h1 class="mb-2 bread">Thay đổi thông tin người dùng</h1> -->
 
-                                <div class="col-md-6">
+                                <div class="col-md-62">
                                     <form action="sua.php" style="text-align:center" method="post">
                                         <?php
                                         $id = Session::get('KH_MA');
@@ -96,18 +96,18 @@ if ($login_check == false) {
                                         ?>
                                                 <label class="lab" for="full_name">Tên đăng nhập:</label>
 
-                                                <input class="form-control" value="<?php echo $result['KH_USERNAME'] ?>" name="username"></input><br>
+                                                <input class="form-controll" value="<?php echo $result['KH_USERNAME'] ?>" name="username"></input><br>
 
                                                 <label class="lab" for="full_name">Họ tên:</label>
-                                                <input type="text" class="form-control" value="<?php echo $result['KH_TEN'] ?>" name="full_name"><br>
+                                                <input type="text" class="form-controll" value="<?php echo $result['KH_TEN'] ?>" name="full_name"><br>
 
                                                 <label class="lab" for="phone">Số điện thoại:</label>
-                                                <input type="text" class="form-control" value=" <?php echo $result['KH_SDT'] ?>" name="phone"><br>
+                                                <input type="text" class="form-controll" value=" <?php echo $result['KH_SDT'] ?>" name="phone"><br>
 
                                                 <label class="lab" for="email">Địa chỉ:</label>
-                                                <input type="text" class="form-control" value=" <?php echo $result['KH_DIACHI'] ?>" name="diachi"><br>
+                                                <input type="text" class="form-controll" value=" <?php echo $result['KH_DIACHI'] ?>" name="diachi"><br>
 
-                                                <input class="btn btn-primary py-3 px-5" type="submit" value="Cập nhật">
+                                                <input class="btn btn-primary2 py-3 px-5" type="submit" value="Cập nhật">
                                         <?php
                                             }
                                         }
@@ -115,7 +115,7 @@ if ($login_check == false) {
                                     </form>
                                 </div>
 
-                                <div class="col-md-6">
+                                <div class="col-md-62">
                                     <form action="doimk.php" method="post">
                                         <?php
                                         $id = Session::get('KH_MA');
@@ -125,20 +125,20 @@ if ($login_check == false) {
                                         ?>
                                                 <label class="lab" for="full_name">Email:</label>
 
-                                                <input class="form-control" value="<?php echo $result['KH_EMAIL'] ?>" name="KH_EMAIL"></input><br>
+                                                <input class="form-controll" value="<?php echo $result['KH_EMAIL'] ?>" name="KH_EMAIL"></input><br>
                                                 <label class="lab" for="current_password">Mật Khẩu Hiện Tại:</label>
-                                                <input class="form-control" type="password" name="psw2" id="current_password" value="<?php echo $result['KH_PASSWORD'] ?>" data-password="<?php echo $result['KH_PASSWORD']; ?>" required>
+                                                <input class="form-controll" type="password" name="psw2" id="current_password" value="<?php echo $result['KH_PASSWORD'] ?>" data-password="<?php echo $result['KH_PASSWORD']; ?>" required>
                                                 <span id="currentPasswordError" style="color: red;"></span>
-                                                <br>
+                                        
 
                                                 <label class="lab" for="new_password">Mật Khẩu Mới:</label>
-                                                <input class="form-control" type="password" name="psw" required>
-                                                <br>
+                                                <input class="form-controll" type="password" name="psw" required>
+                                             
 
                                                 <label class="lab" for="confirm_password">Xác Nhận Mật Khẩu Mới:</label>
-                                                <input class="form-control" type="password" name="psw1" required>
-                                                <br>
-                                                <input class="btn btn-primary py-3 px-5" name="rsmk" type="submit" value="Đổi mật khẩu">
+                                                <input class="form-controll" type="password" name="psw1" required>
+                                           
+                                                <input class="btn btn-primary2 py-3 px-5" name="rsmk" type="submit" value="Đổi mật khẩu">
                                         <?php }
                                         }
                                         ?>
@@ -152,35 +152,7 @@ if ($login_check == false) {
         </div>
     </section>
 
-    <!-- <script>
-    function validateForm() {
-        var currentPasswordInput = document.getElementById("current_password");
-        var currentPassword = currentPasswordInput.value;
-        var correctPassword = currentPasswordInput.dataset.password;
-
-
-        if (currentPassword === "") {
-
-            document.getElementById("currentPasswordError").innerHTML = "Vui lòng nhập mật khẩu hiện tại.";
-
-            return false;
-        } else {
-
-            document.getElementById("currentPasswordError").innerHTML = "";
-
-            if (currentPassword !== correctPassword) {
-
-                alert("Mật khẩu hiện tại không đúng. Vui lòng nhập lại.");
-
-                return false;
-            }
-
-            return true;
-        }
-    }
-    </script> -->
-
-
+   
 
 </body>
 

@@ -18,7 +18,7 @@
 <div class="grid_10">
     <div class="box round first grid">
         <h2>Sửa sản phẩm</h2>
-        <div class="block">
+        <div class="block copyblock">
         <?php 
             if(isset($update_pro)){
                 echo $update_pro;
@@ -29,9 +29,8 @@
             if($get_product_byid){
                 while($result_product = $get_product_byid->fetch_assoc()){               
         ?>        
-         <form action=" " method="post" enctype="multipart/form-data">
+         <form action="" method="POST" enctype="multipart/form-data">
             <table class="form">
-               
                 <tr>
                     <td>
                         <label>Mã món ăn</label>
@@ -40,6 +39,7 @@
                         <input type="text" name = "TA_MA" value="<?php echo $result_product['TA_MA']?>" class="medium" />
                     </td>
                 </tr>
+
                 <tr>
                     <td>
                         <label>Tên sản phẩm</label>
@@ -48,6 +48,7 @@
                         <input type="text" name = "TA_TEN" value="<?php echo $result_product['TA_TEN']?>" class="medium" />
                     </td>
                 </tr>
+
 				<tr>
                     <td>
                         <label>Loại món ăn</label>
@@ -80,6 +81,7 @@
                         <textarea name="TA_MOTA" class="tinymce" <?php echo $result_product['TA_MOTA']?>></textarea>
                     </td>
                 </tr>
+
 				<tr>
                     <td>
                         <label>Giá gốc</label>
@@ -135,17 +137,18 @@
                 </tr>
 
 				<tr>
-                    <td></td>
+                    
                     <td>
-                        <input type="submit" name="submit" value="Update" />
+                        <input class="btn" type="submit" name="submit" value="Update" />
                     </td>
                 </tr>
             </table>
-            </form>
+            
             <?php
                 }
             }
             ?>
+            </form>
         </div>
     </div>
 </div>

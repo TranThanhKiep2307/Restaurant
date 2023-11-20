@@ -20,7 +20,7 @@
         <div class="grid_10">
             <div class="box round first grid">
                 <h2>Sửa menu</h2>
-               <div class="block copyblock">
+               <div class="copyblock">
                <?php 
                 if(isset($update_menu)){
                     echo $update_menu;
@@ -92,7 +92,7 @@
                         </tr>
                         <tr> 
                             <td>
-                                <input type="submit" name="submit" Value="Sửa món ăn" />
+                                <input type="submit" class="btn" name="submit" Value="Sửa món ăn" />
                             </td>
                         </tr>
 

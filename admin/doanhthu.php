@@ -1,6 +1,6 @@
 <?php include "inc/header.php" ?>
 <?php include 'inc/sidebar.php'; ?>
-
+<html style = "background: #69594C">
 <head>
     <title>Tính Doanh Thu và Số Lượng Bàn</title>
 </head>
@@ -24,7 +24,7 @@
 </style>
 
 <body>
-    <h1>Tính Doanh Thu và Số Lượng Bàn</h1>
+    <h1 style="color:#fff">Tính Doanh Thu và Số Lượng Bàn</h1>
 
     <form method="post" action="">
         <div class="row">

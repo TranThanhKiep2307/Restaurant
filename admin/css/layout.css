@@ -342,7 +342,7 @@ table.form input, table.form select{
 }
 table.form input[type="submit"] {
 	width: 180px;
-	left: 430px;
+	left: 440px;
 	top:20px;
 	font-weight: bold;
 	background-color: lightsteelblue;
