@@ -6,6 +6,6 @@
     if (isset($_POST['TA_MA'])) {
         $selected_TA_MA = $_POST['TA_MA'];
         $getgia = $product->getproductbyGIA($selected_TA_MA);
-        echo $getgia;
+        echo number_format($getgia).' '. 'VNĐ';
 }
 ?>
