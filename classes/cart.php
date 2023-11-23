@@ -192,6 +192,27 @@ class cart
         WHERE KH_MA = '$id' ";
         $result = $this->db->select($sql);
         return $result;
+    }
+    public function getphieudatmonadmin() {
+        $sql = "SELECT * FROM phieudatmon 
+        JOIN thucan ON phieudatmon.TA_MA = thucan.TA_MA
+        JOIN khachhang ON phieudatmon.KH_MA = khachhang.KH_MA
+        ";
+        $result = $this->db->select($sql);
+        return $result;
+
+    }
+    public function updatepdm($id, $PDM_TRANGTHAI) {
+        $PDM_TRANGTHAI      = mysqli_real_escape_string($this->db->link, $PDM_TRANGTHAI);
+        $sql = "UPDATE phieudatmon SET PDM_TRANGTHAI = '$PDM_TRANGTHAI' WHERE PDM_MA = '$id'";
+        $result = $this->db->update($sql);
+        if ($result) {
+            $thbao = "<span class = 'sussucce'>Cập nhật trạng thái thành công</span>";
+            return $thbao;
+        } else {
+            $thbao = "<span class = 'error'>Cập nhật trạng thái thất bại</span>";
+            return $thbao;
+        }
 
     }
 }

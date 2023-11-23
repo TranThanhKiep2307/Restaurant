@@ -49,11 +49,11 @@ $activate = "orderfood";
                                 <thead>
                                     <tr>
                                         <th>STT</th>
-                                        <th>Mã đơn hàng</th>
-                                        <th>Tổng số lượng món ăn</th>
-                                        <th>Tổng giá tiền</th>
+                                        <th>Tên món ăn</th>
                                         <th>Thời gian đặt hàng</th>
                                         <th>Trạng thái đơn hàng</th>
+                                        <th>Tổng số lượng món ăn</th>
+                                        <th>Tổng giá tiền</th>
                                     </tr>
                                 </thead>
                                 <?php
