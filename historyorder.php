@@ -44,7 +44,6 @@ $activate = "orderfood";
                     <div class="col-lg-12 mb-5" style="margin-top: -40px;">
                         <section class="ftco-section contact-section">
                             <h2>Your old order</h2>
-
                             <table>
                                 <thead>
                                     <tr>
@@ -61,7 +60,7 @@ $activate = "orderfood";
                                 $getphieudatmon = $ct->getphieudatmon($id);
                                 $totalQuantity = 0;
                                 $totalPrice = 0;
-                                if ($getphieudatmon) {
+                                if ($getphieudatmon && $getphieudatmon->num_rows > 0) {
                                     $i = 0;
                                     while ($result = $getphieudatmon->fetch_assoc()) {
                                         $i++;
@@ -77,9 +76,15 @@ $activate = "orderfood";
                                                     if ($result['PDM_TRANGTHAI'] == 0) {
                                                         echo "Đang chờ xử lý";
                                                     } elseif ($result['PDM_TRANGTHAI'] == 1) {
-                                                        echo "Đang giao";
+                                                        echo "Đang thực hiện";
                                                     } elseif ($result['PDM_TRANGTHAI'] == 2) {
                                                         echo "Đã hoàn thành";
+                                                    }
+                                                    elseif ($result['PDM_TRANGTHAI'] == 3) {
+                                                        echo "Đang giao";
+                                                    }
+                                                    elseif ($result['PDM_TRANGTHAI'] == 4) {
+                                                        echo "Đã giao";
                                                     }
                                                     ?></td>
                                                 <td><?php echo $result['PDM_SL'] ?></td>
@@ -87,6 +92,8 @@ $activate = "orderfood";
                                             </tr>
                                     <?php
                                     }
+                                }else {
+                                    echo '<tbody><tr><td colspan="6">Bạn chưa có đơn hàng</td></tr></tbody>';
                                 }
                                     ?>
 
