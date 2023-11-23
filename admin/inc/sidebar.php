@@ -23,11 +23,13 @@
 
                 <li><a class="menuitem">Quản lý doanh thu</a>
                     <ul class="submenu">
-                        <li><a href="doanhthu.php">Xem thống kê doanh thu </a> </li>
+                        <li><a href="doanhthudatban.php">Xem thống kê đặt bàn </a> </li>
+                        <li><a href="doanhthu.php">Xem thống kê doanh thu và món </a> </li>
+
                         <!-- <li><a href="">Xem thống kê doanh thu theo tháng</a> </li> -->
                     </ul>
                 </li>
-               <!-- <li><a class="menuitem">Điều chỉnh trang web</a>
+                <!-- <li><a class="menuitem">Điều chỉnh trang web</a>
                     <ul class="submenu">
                         <li><a href="titleslogan.php">Tên và câu khẩu hiệu</a></li>
                         <li><a href="social.php">Truyền Thông</a></li>
@@ -47,7 +49,7 @@
                         <li><a href="sliderlist.php">Danh sách Slider</a> </li>
                     </ul>
                 </li> -->
-                
+
             </ul>
         </div>
     </div>
