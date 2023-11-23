@@ -161,7 +161,7 @@ class product
     }
     public function getname(){
         $GH_MASS = session_id();
-        $query = "SELECT thucan.TA_TEN FROM thucan
+        $query = "SELECT thucan.* FROM thucan
         JOIN giohang ON thucan.TA_MA = giohang.TA_MA
         WHERE  giohang.GH_MASS = '$GH_MASS'";
         $result = $this->db->select($query);

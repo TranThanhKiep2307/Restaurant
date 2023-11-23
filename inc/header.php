@@ -90,6 +90,7 @@
 								}else{ 
 									echo '<li><a class="dropdown-item">Xin chào '.session::get('KH_TEN').'</a></li>
 									<li><a class="dropdown-item" href="profile.php">Thông tin khách hàng</a></li>
+									<li><a class="dropdown-item" href="historyorder.php">Lịch sử mua hàng</a></li>
 									<li><a class="dropdown-item" href="logout.php">Đăng xuất</a></li>'; 
 								}	
 								?>

@@ -9,60 +9,6 @@ if ($login_check == false) {
     header('Location:login.php');
 }
 ?>
-<?php
-// $id = Session::get('KH_MA');
-// $update_customers = '';
-// $passwordUpdateSuccess = false;
-
-// if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
-//     $update_customers = $cs->update_users($_POST, $id);
-
-//     // Kiểm tra xem form đã được submit chưa
-//     if (isset($_POST["submit"])) {
-//         // Lấy thông tin từ form
-//         $currentPassword = $_POST["current_password"];
-//         $newPassword = $_POST["new_password"];
-//         $confirmPassword = $_POST["confirm_password"];
-
-//         // Lấy ID người dùng từ session
-//         $userId = $_SESSION['KH_MA'];
-
-//         // Kiểm tra xem mật khẩu hiện tại có đúng không
-//         $currentPasswordQuery = "SELECT KH_PASSWORD FROM khachhang WHERE KH_MA = '$userId'";
-//         $currentPasswordResult = $this->db->select($currentPasswordQuery);
-
-//         if ($currentPasswordResult) {
-//             $hashedCurrentPassword = $currentPasswordResult[0]['KH_PASSWORD'];
-
-//             if (password_verify($currentPassword, $hashedCurrentPassword)) {
-//                 // Mật khẩu hiện tại đúng, bạn có thể thực hiện các bước tiếp theo
-//                 if ($newPassword == $confirmPassword) {
-//                     // Hash mật khẩu mới trước khi lưu vào cơ sở dữ liệu
-//                     $hashedNewPassword = password_hash($newPassword, PASSWORD_DEFAULT);
-
-//                     // Cập nhật mật khẩu mới vào cơ sở dữ liệu
-//                     $updateSql = "UPDATE khachhang SET KH_PASSWORD = '$hashedNewPassword' WHERE KH_MA = $userId";
-//                     $updateResult = $this->db->update($updateSql);
-
-//                     if ($updateResult) {
-//                         $passwordUpdateSuccess = true; // Đặt biến kiểm tra thành công
-//                     } else {
-//                         echo "Có lỗi xảy ra khi cập nhật mật khẩu: " . $this->db->error();
-//                     }
-//                 } else {
-//                     echo "Mật khẩu mới và mật khẩu xác nhận không khớp.";
-//                 }
-//             } else {
-//                 echo "Mật khẩu hiện tại không đúng.";
-//             }
-//         } else {
-//             echo "Không tìm thấy thông tin người dùng.";
-//         }
-//     }
-// }
-
-?>
-
 
 <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_3.jpg');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>

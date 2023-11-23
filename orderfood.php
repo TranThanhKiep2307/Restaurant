@@ -9,6 +9,9 @@ $id = Session::get('KH_MA');
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
   $add_cart = $ct->add_cart($_POST, $id);
 }
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['payment'])) {
+  $add_order = $ct->add_order($_POST, $id);
+}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['updateta'])) {
   $GH_MA_update = $_POST['GH_MA'];
@@ -28,11 +31,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['updateta'])) {
   //   header('Location: payment.php');
   // }
 ?>
-<script>
-    function showMessageBox() {
-        alert('Đơn hàng đã được đặt thành công!');
-    }
-</script>
 
 <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_3.jpg');" data-stellar-background-ratio="0.5">
   <div class="overlay"></div>
@@ -160,6 +158,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['updateta'])) {
               echo $delete_cart;
             }
             ?>
+            <?php
+            if (isset($add_order)) {
+              echo $add_order;
+            }
+            ?>
             <div class="row">
               <?php
               $get_dishes = $ct->getproduct_cart();
@@ -175,9 +178,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['updateta'])) {
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="">Tên món ăn</label>
+                      <input type="hidden" name="TA_MA[]" class="form-control" value="<?php echo $resultname['TA_MA']; ?>">
                       <input type="text" name="TA_TEN[]" class="form-control" value="<?php echo $resultname['TA_TEN']; ?>">
                       <label for="">Giá tiền</label>
-                      <input type="text" name="GH_GIA" class="form-control" value="<?php echo number_format($result_dishes['GH_GIA']) .' '. 'VNĐ'; ?>">
+                      <input type="text" name="GH_GIA[]" class="form-control" value="<?php echo number_format($result_dishes['GH_GIA']) .' '. 'VNĐ'; ?>">
                     </div>
                   </div>
 
